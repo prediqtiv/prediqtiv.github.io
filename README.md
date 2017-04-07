@@ -1,2 +1,2 @@
-# prediqtiv.github.io
+# predIQtiv.github.io
 Whatever you wanted, it's gotta be here somewhere, sometime.  No?
