@@ -1,2 +1,2 @@
 # prediqtiv.github.io
-Whatever you wanted, it's gotta be here somewhere, somtime.  No?
+Whatever you wanted, it's gotta be here somewhere, sometime.  No?
