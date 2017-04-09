@@ -15,7 +15,7 @@
 				'<h2>' +
 					'<a href=http://predictiv.github.io/sp500/ title="invest smarter" >📈 pred<i>IQ</i>tiv </a>' + b +
 					'<a href="" title="Click here to refresh this page" >' + 'eyeCue Replay R1' + ' </a>' +
-					' <a href=../../index.htm/README.md onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
+					' <a href=../../index.html/README.md onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
 				'</h2>' +
 
 				'<div class=popUp id=popHelp style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>' +
