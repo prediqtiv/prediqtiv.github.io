@@ -269,6 +269,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 				}
 
 				scene.add( symbols.lines );
+				symbols.lines.visible = chkSnailSlime.checked;
 
 			}
 

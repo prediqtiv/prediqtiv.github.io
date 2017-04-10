@@ -91,6 +91,12 @@
 			}
 
 
+
+
+
+	}
+
+
 			function onWindowResize() {
 
 				camera.aspect = window.innerWidth / window.innerHeight;
@@ -102,15 +108,13 @@
 
 					stats.domElement.style.display = 'none';
 					chkSnailSlime.checked = false;
-					symbols.lines.visible = false;
+					if ( symbols && symbols.lines ) { symbols.lines.visible = false; }
 					container.style.left = '-325px';
 
 				}
 
 			}
 
-
-	}
 
 // See TKS, GND
 	THR.drawSprite = function( text, scale, color, x, y, z ) {
