@@ -36,6 +36,10 @@
 
 		addShadows();
 
+		onWindowResize();
+
+
+
 			function addLights() {
 
 // 2016-02-21 ~ http://jaanga.github.io/cookbook-threejs/templates/add-lights/template-threejs-lights-r2.html
@@ -94,7 +98,14 @@
 
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
-				stats.domElement.style.display = window.innerWidth < 500 ? 'none' : '';
+				if ( window.innerWidth < 500  ) {
+
+					stats.domElement.style.display = 'none';
+					chkSnailSlime.checked = false;
+					symbols.lines.visible = false;
+					container.style.left = '-325px';
+
+				}
 
 			}
 

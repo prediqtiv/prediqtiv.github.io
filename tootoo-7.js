@@ -602,6 +602,8 @@
 
 			'<summary><h3>Settings</h3></summary>' +
 
+			'<p>Just to show we can do things like this. Not final.</p>' +
+
 			'<div><button onclick=TOO.cssColorsDark();  >Dark</button>' +
 				' <button onclick=TOO.cssColorsLight(); >Light</button>' +
 				' <button onclick=TOO.cssColorsSepia(); >Sepia</button>' +

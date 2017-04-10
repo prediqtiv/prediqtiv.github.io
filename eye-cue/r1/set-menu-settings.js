@@ -7,7 +7,7 @@
 
 			'<details>' +
 				'<summary><h3>Settings</h3></summary>' +
-				'<p><input type=checkbox onchange=symbols.lines.visible=!symbols.lines.visible; checked > Snail Slime</p>' +
+				'<p><input type=checkbox id=chkSnailSlime onchange=symbols.lines.visible=!symbols.lines.visible; checked > Snail Slime</p>' +
 				'<p><input type=checkbox id=chkWire onchange=SET.toggleWireframe(); > Wireframe</p>' +
 				'<p><input type=checkbox onchange=GND.ground.visible=!GND.ground.visible; checked > Ground plane</p>' +
 				'<p><input type=checkbox onchange=GND.axisHelper.visible=!GND.axisHelper.visible; checked > Axes</p>' +

@@ -13,8 +13,8 @@
 			'<div id=menu >' +
 
 				'<h2>' +
-					'<a href=https://prediqtiv.github.io/ title="invest smarter" >📈 pred<i>IQ</i>tiv </a>' + b +
-					'<a href="" title="Click here to refresh this page" >' + 'eyeCue Replay R1' + ' </a>' +
+					'<a href=https://prediqtiv.github.io/ title="invest smarter" ><img src=../../images/predIQtiv.png height=48px ></a>' + b +
+					'<a href="" title="Click here to refresh this page" >' + 'eyeCue Replay R1' + '</a>' +
 					' <a href=../../index.html#README.md onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
 				'</h2>' +
 
@@ -56,7 +56,7 @@
 
 				'<hr>' +
 
-				'<center><a href=javascript:menu.scrollTop=0; style=text-decoration:none; onmouseover=pop2.style.display=""; onmouseout=pop2.style.display="none"; ><h1> &#x2766 <h1></a></center>' +
+				'<center><a href=javascript:menu.scrollTop=0; style=text-decoration:none; onmouseover=pop2.style.display=""; onmouseout=pop2.style.display="none"; ><h1><img src=../../images/five-boxes.png height=32 ><h1></a></center>' +
 				'<div class=popUp id=pop2 style=display:none;bottom:100px; >pred<i>IQ</i>tiv - invest smarter.<br>Click here to return to the top of the page</div>' +
 
 			'</div>' +
