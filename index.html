@@ -15,6 +15,8 @@
 // Copyright © 2017 PushMe PullYou authors. MIT license
 // https://github.com/showdownjs/showdown
 
+	let images = 'https://raw.githubusercontent.com/prediqtiv/prediqtiv.github.io/master/images/';
+
 	let user = {
 		user : 'prediqtiv',
 		subText : 'Invest smarter',
@@ -23,6 +25,49 @@
 		folder : '',
 		noIndex : true
 	};
+
+
+	TOO.setMenuContents = function() {
+
+		TOO.files = [];
+		TOO.menuTitle.innerHTML = 'Table of Contents';
+		TOO.breadcrumbs.innerHTML = '';
+		TOO.menuItems.innerHTML = '';
+
+		TOO.fileTitles = [
+
+			[ 'header', 'predIQtiv' ],
+				[ '', 'README.md', 'predIQtiv home page' ],
+				[ '', 'license.md', 'Copyright and license' ],
+			[ 'header', 'eyeCue'],
+				[ 'eye-cue/', 'README.md', 'eyeCue Read Me' ],
+
+		];
+
+		let count = 0;
+		for ( let i = 0; i < TOO.fileTitles.length; i++ ) {
+
+			if ( TOO.fileTitles[ i ][ 0 ] === 'header') {
+
+				TOO.menuItems.innerHTML += '<h4>'  + TOO.fileTitles[ i ][ 1 ] + '</h4>';
+
+			} else {
+
+				TOO.menuItems.innerHTML += '<div id=file' + count++ + ' style=width:100%; >' +
+				'<a href=JavaScript:TOO.getFileSetContents("' + TOO.fileTitles[ i ][ 0 ] + '","' + TOO.fileTitles[ i ][ 1 ] + '"); > ' +
+					TOO.fileTitles[ i ][ 2 ] +
+				' </a>' +
+				'</div>';
+
+				TOO.files.push( TOO.fileTitles[ i ][ 1 ] );
+
+			 }
+		}
+
+		TOO.getFileSetContents( '', 'README.md' );
+
+	}
+
 
 	init();
 
@@ -79,7 +124,7 @@
 
 				'<h2>' +
 //					'<a href=https://' + user.user + '.github.io/ title="' + user.subText + '" > &#x2766 </a>' + b +
-					'<a href="" title="Click here to refresh this page" ><img src=images/predIQtiv.png height=48px ></a>' +
+					'<a href="" title="Click here to refresh this page" ><img src=' + images + 'predIQtiv.png height=48px ></a>' +
 //					' ~ <a href="https://github.com/pushme-pullyou/pushme-pullyou.github.io/tree/master/tootoo/" onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
 					' <a href="https://github.com/' + user.user + '/' + user.repo + '" onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; style=vertical-align:top; > &#x24D8; </a>' +
 
@@ -88,6 +133,11 @@
 				'<div class=popUp id=popHelp style=display:none; ><div>Hi there!</div>Click the i-in-circle, info icon for latest updates.</div>' +
 
 				'<p><small>' + document.head.querySelector( "[name=description]" ).content  + '</small></p>' +
+
+				'<div>' +
+					'<button onclick=TOO.setMenu=TOO.setMenuContents();  >Table of Conntents</button>' +
+					' <button onclick=TOO.setMenu=TOO.setMenuDefault(); >All Files</button>' +
+				'</div>' + b +
 
 				'<details open>' +
 
@@ -119,7 +169,7 @@
 				'</details>' +
 
 				'<hr>' +
-				'<center><a href=javascript:menu.scrollTop=0; style=text-decoration:none; onmouseover=pop2.style.display=""; onmouseout=pop2.style.display="none"; ><h1><img src=images/five-boxes.png height=32 ><h1></a></center>' +
+				'<center><a href=javascript:menu.scrollTop=0; style=text-decoration:none; onmouseover=pop2.style.display=""; onmouseout=pop2.style.display="none"; ><h1><img src=' + images + 'five-boxes.png height=32 ><h1></a></center>' +
 				'<div class=popUp id=pop2 style=display:none;bottom:20px; >' + user.user + ' - ' + user.subText + '.<br>Click here to return to the top of the page</div>' +
 
 			'</div>' +
@@ -150,6 +200,35 @@
 		}
 
 		TOO.init( user );
+
+	}
+
+
+	TOO.getFileMD = function( url ) {
+
+// https://github.com/showdownjs/showdown
+
+		showdown.setFlavor('github');
+
+		let converter = new showdown.Converter();
+
+		TOO.requestFile( url, callbackMD );
+
+		function callbackMD( xhr ) {
+
+			text = xhr.target.response;
+
+			text = text.replace( /images\//g, images );
+
+			TOO.contents.innerHTML =
+
+			'<div style="border: 2px red solid; margin: 0 auto; width: 800px; position: relative;" >' +
+				converter.makeHtml( text ) +
+			'</div>';
+
+			TOO.getFileDataXHR( xhr );
+
+		}
 
 	}
 

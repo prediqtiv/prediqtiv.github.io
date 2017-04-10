@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang=en >
+<head>
+<meta charset=utf-8 >
+<title>Get Trades R1</title>
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
+<meta name=description content='' >
+<meta name=keywords content='WebGL,Three.js,Tween.js,JavaScript,GitHub,FOSS,3D,STEM' >
+<meta name=date content='' >
+</head>
+<body>
+<script>
+
+// https://crossorigin.me/http://chartapi.finance.yahoo.com/instrument/1.0/GOOG/chartdata;type=quote;range=2d/csv
+
+// https://docs.google.com/spreadsheets/d/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/edit#gid=0
+	var WikipediaDataFileName = 'https://spreadsheets.google.com/feeds/list/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/1/public/values?alt=json';
+
+	var sp500;
+y
+// Timestamp,close,high,low,open,volume
+	var symbolList = [
+
+		'MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DD', 'XOM', 'GE', 'GS', 'HD', 'IBM', 'INTC', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UNH', 'UTX', 'VZ', 'V', 'WMT', 'DIS'
+
+	];
+
+
+	var symbols = {}, count;
+
+	init();
+
+	function init() {
+
+		var txt, css, contents;
+
+		css = document.body.appendChild( document.createElement( 'style' ) );
+		css.innerHTML =
+
+			'body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }' +
+
+			'a { color: crimson; text-decoration: none; }' +
+
+			'button, input[type=button] { background-color: #eee; border: 2px #eee solid; color: #888; }' +
+
+			'input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: silver; width: 160px; }' +
+			'input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }' +
+			'input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }' +
+
+//			'#contents { margin: 0 20px; max-width: 300px; position: absolute; }' +
+
+		'';
+
+		contents = document.body.appendChild( document.createElement( 'div' ) );
+		contents.id = 'contents';
+		contents.innerHTML =
+
+			'<h2>' +
+				'<a href="" >' + document.title + '</a>' +
+				'<a href=http://jaanga.github.io/ > &#x24D8; </a>' +
+			'</h2>' +
+
+			'<p>' +
+				'timestamp <input id=inpTimestamp value=' + Date.now().toString().slice(0,-3) + ' >' +
+				' <output id=outTimestamp ></output>' +
+				' <button onclick=inpTimestamp.value=inpTimestamp.value-111400;inpTimestamp.onchange(); >-1 Day</button>' +
+
+			'</p>' +
+			'<p><button onclick=count=0;getTrades(); >Get Trades DJI </button></p>' +
+			'<p><button onclick=count=0;getTradesSP500(); >Get Trades SP500 </button></p>' +
+			'<p><button onclick=saveFile(); >Save File</button></p>' +
+
+			'<div id=divTrades style="border: 1px red solid;" ></div>' +
+
+		'';
+
+		inpTimestamp.onchange = function() {
+
+//console.log( 'mm', inpTimestamp.value );
+
+//			var d, msecs;
+			d = new Date();
+			msecs = parseInt( inpTimestamp.value + '000' );
+			d.setTime( msecs );
+			outTimestamp.value = d.toLocaleString();
+
+		}
+
+		inpTimestamp.onchange();
+
+		var fileName;
+
+//		fileName = 'https://crossorigin.me/http://chartapi.finance.yahoo.com/instrument/1.0/GOOG/chartdata;type=quote;range=1d/csv';
+//		fileName = 'https://crossorigin.me/http://www.google.com/finance/getprices?q=GOOG&i=86400';
+
+		count = 0;
+
+
+		setSymbolsAsObjectsDJI();
+		loadWikiJSON();
+
+	}
+
+
+	function loadWikiJSON() {
+
+		var xhr, data, entries, txt;
+		var entry, symbol;
+
+		xhr = new XMLHttpRequest();
+		xhr.open( 'GET', WikipediaDataFileName + '&t=' + Math.random(), true );
+		xhr.onload = callbackJSON;
+		xhr.send( null );
+
+		function callbackJSON() {
+
+			data = xhr.responseText;
+			data = JSON.parse( data );
+			entries = data.feed.entry;
+			sp500 = [];
+			txt = '';
+
+			for ( var i = 0; i < entries.length; i++  ) {
+
+				entry = entries[i];
+
+// transform in to object
+// use sumbols and symbolsList
+
+				symbol = [
+					entry.gsx$tickersymbol.$t,
+					entry.gsx$security.$t,
+					entry.gsx$gicssector.$t,
+					parseInt( entry.gsx$sectorid.$t, 10 ),
+					entry.gsx$gicssubindustry.$t,
+					parseInt( entry.gsx$cik.$t, 10),
+					parseInt( entry.gsx$volumeavg.$t, 10 ),
+					parseInt( entry.gsx$marketcap.$t, 10 )
+				];
+
+				sp500.push( symbol );
+
+			}
+
+//			drawSymbols();
+console.log( '', sp500 );
+
+		}
+
+	}
+
+
+	function setSymbolsAsObjectsDJI() {
+
+		for ( var i = 0; i < symbolList.length; i++ ) {
+
+			symbols[ symbolList[ i ] ] = {
+
+				symbol: symbolList[ i ]
+
+			}
+
+		}
+
+	}
+
+
+	function getTrades() {
+
+		var txt, len, symbol;
+
+		txt = '';
+		divTrades.innerText = '';
+
+		len = 3; //symbolList.length;
+
+		if ( count < len ) {
+
+			requestFile( symbolList[ count ] );
+
+		} else {
+
+			for ( var i = 0; i < len; i++ ) {
+
+				symbol = symbolList[ i ];
+				txt += symbol + ',' + symbols[ symbol ].trades.toString() + '\n';
+
+			}
+
+			divTrades.innerText = txt;
+
+		}
+
+	}
+
+
+	function getTradesSP500() {
+
+		var txt, len, symbol;
+
+		txt = '';
+		divTrades.innerText = '';
+
+		len = 3; //symbolList.length;
+
+		if ( count < len ) {
+
+			requestFile( sp500[ count ][ 0 ] );
+
+		} else {
+
+			for ( var i = 0; i < len; i++ ) {
+
+				symbol = sp500[ i ][ 0 ];
+				txt += symbol + ',' + sp500[ symbol ].trades.toString() + '\n';
+
+			}
+
+			divTrades.innerText = txt;
+
+		}
+
+	}
+		function requestFile( symbol ) {
+
+//		var trades, tim, fileName;
+//		var xhr, text, lines, line;
+
+		trades = [];
+		tim = new Date();
+
+//		fileName = 'https://crossorigin.me/http://chartapi.finance.yahoo.com/instrument/1.0/GOOG/chartdata;type=quote;range=1d/csv';
+
+		fileName =
+
+			'https://crossorigin.me/http://chartapi.finance.yahoo.com/instrument/2.0/' +
+			symbol +
+			'/chartdata;type=quote;range=1d' +
+//			'ts=' + parseInt( inpTimestamp.value, 10 ) +
+			'/csv' +
+
+		'';
+
+console.log( 'fileName', fileName );
+
+// http://chartapi.finance.yahoo.com/instrument/2.0/GOOG/chartdata;type=quote;range=1d;ts=1489070057/json
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', fileName, true );
+		xhr.onerror = function() { console.log( '23'  ); getTrades(); };
+		xhr.onload = callback;
+		xhr.send( null );
+
+		function callback( xhr ) {
+
+			text = xhr.target.response;
+
+			lines = text.split( '\n' ).slice( 16 );
+
+			line = lines[ 1 ].split( ',' )
+			secs = line[0] + '000';
+
+			tim.setTime( parseInt( secs, 10 ) )
+			console.log( count + 1, symbolList[ count ], tim.toLocaleDateString(), tim.toLocaleTimeString() );
+			console.log( lines[ 1 ] );
+
+			for ( var i = 1; i < lines.length; i++ ) {
+
+				line = lines[ i ].split( ',' );
+
+				line[ 0 ] = i;
+//				msecs = parseInt( line[ 0 ]  + '000' );
+//				tim.setTime( msecs );
+//				line[ 0 ] = '"' + tim.toLocaleString() + '"';
+
+				trades.push( line );
+
+			}
+
+			symbols[ symbolList[ count ] ].trades = trades;
+
+			count++;
+
+			getTrades();
+
+		}
+	}
+
+
+	function saveFile() {
+
+		var date, blob, a;
+		date = new Date();
+		blob = new Blob( [ divTrades.innerText ] );
+		a = document.body.appendChild( document.createElement( 'a' ) );
+		a.href = window.URL.createObjectURL( blob );
+		a.download = date.getFullYear() + '-' + ( '0' + ( 1 + date.getUTCMonth() ) ).slice( -2 ) + '-' + date.getUTCDate() + '.csv';
+		a.click();
+		a = null;
+
+	}
+
+</script>
+</body>
+</html>

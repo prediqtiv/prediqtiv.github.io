@@ -167,6 +167,7 @@
 			}
 
 			if ( location.hash ) {
+
 /*
 				params = (window.location.hash.substr(1)).split("&");
 
@@ -321,6 +322,7 @@
 
 			file =  filesText.slice( start, start + 10 );
 
+// use getFileSetContents...
 			location.hash = path + file;
 
 			TOO.getFileHTML( TOO.urlGHPages + path + file );
@@ -581,7 +583,7 @@
 	}
 
 
-// test: requestFile( 'http://jaanga.github.io/readme.md' , function( xhr ){ console.log( 'xhr', xhr.target.response ); } );
+// test: requestFile( 'http://http://jaanga.github.io/readme.md' , function( xhr ){ console.log( 'xhr', xhr.target.response ); } );
 
 	 TOO.requestFile = function( url, callback ) {
 
@@ -601,8 +603,6 @@
 		'<details>' +
 
 			'<summary><h3>Settings</h3></summary>' +
-
-			'<p>Just to show we can do things like this. Not final.</p>' +
 
 			'<div><button onclick=TOO.cssColorsDark();  >Dark</button>' +
 				' <button onclick=TOO.cssColorsLight(); >Light</button>' +

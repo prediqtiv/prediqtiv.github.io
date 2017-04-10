@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang=en >
+<head>
+<meta charset=utf-8 >
+<title>predIQtiv eyeCue Replay R2.0</title>
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
+<meta name=description content='Select and follow entire days of one minute intraday trades - and tweets - for hundreds of symbols' >
+<meta name=keywords content='predIQtiv,WebGL,Three.js,JavaScript,GitHub,FOSS,3D,STEM' >
+<meta name=date content='2017-04-08' >
+</head>
+<body>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js ></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js ></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/libs/stats.min.js ></script>
+
+<script src=css.js ></script>
+<script src=htm.js ></script>
+<script src=sel.js ></script>
+<script src=sho-show-symbols-sectors.js ></script>
+<script src=set-menu-settings.js ></script>
+
+<script src=thr-three.js ></script>
+<script src=gnd-ground.js ></script>
+<script src=hed-heads-up.js ></script>
+
+<script src=tks-intraday-ticks.js ></script>
+<script src=twt-tweets.js ></script>
+<script src=pla-play-ticks.js ></script>
+
+<script>
+// Copyright 2017 predIQtiv authors ~ MIT license
+
+	let revNumber = 0;
+	let colors = [0x575757,0xAD2323,0x2A4BD7,0x1D6914,0x814A19,0x8126C0,0x81C57A,0x9DAFFF,0x29D0D0,0xFF9233,0xE9DEBB,0xFFCDF3,0xFFEE33,0xA0A0A0,0x000000,0xFFFFFF];
+	let sectors = [
+		'Consumer Discretionary','Consumer Staples','Energy','Financials','Health Care','Industrials',
+		'Information Technology', 'Materials','Real Estate','Telecommunication Services','Utilities'
+	];
+
+
+	init();
+	THR.animate();
+
+	function init(){
+// DOM
+		CSS.init();
+		HTM.init();
+		SEL.init();
+		SHO.init();
+		SET.init();
+
+//Three.hs
+		THR.init();
+		GND.init();
+		HED.init();
+
+// Assets / dara
+		TKS.init();
+		TWT.init();
+
+		onWindowResize();
+
+	}
+
+</script>
+</body>
+</html>

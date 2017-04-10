@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang=en >
+<head>
+<meta charset=utf-8 >
+<title></title>
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
+<meta name=description content='Obtain stock market intraday data sourced from from Wikipedia, Googlr and Yahoo' >
+<meta name=keywords content='YQL,JavaScript,GitHub,FOSS,STEM' >
+<meta name=date content='2017-03-23' >
+</head>
+<body>
+<script>
+// https://www.google.com/finance/getprices?q=AAPL&i=60&p=2d
+// https://www.google.com/finance/getprices?q=MMM&i=60
+
+// https://crossorigin.me/http://chartapi.finance.yahoo.com/instrument/1.0/GOOG/chartdata;type=quote;range=2d/csv
+
+// https://docs.google.com/spreadsheets/d/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/edit#gid=0
+	var WikipediaDataFileName = 'https://spreadsheets.google.com/feeds/list/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/1/public/values?alt=json';
+
+	var symbols, symbolList, symbolsLength;
+	var start, count;
+
+	symbolList = [];
+	symbols = {};
+	var tradesDate;
+	var b = '<br>';
+
+	init();
+
+	function init() {
+
+		var txt, css, contents;
+
+		css = document.body.appendChild( document.createElement( 'style' ) );
+		css.innerHTML =
+
+			'body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }' +
+
+			'a { color: crimson; text-decoration: none; }' +
+
+			'button, input[type=button] { background-color: #eee; border: 2px #eee solid; color: #888; }' +
+
+			'input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: silver; width: 160px; }' +
+			'input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }' +
+			'input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; background-color: #888; height: 20px; width: 10px; }' +
+
+//			'#contents { margin: 0 20px; max-width: 300px; position: absolute; }' +
+
+		'';
+
+		contents = document.body.appendChild( document.createElement( 'div' ) );
+		contents.id = 'contents';
+		contents.innerHTML =
+
+			'<h2>' +
+				'<a href="" >' + location.pathname.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) + '</a>' +
+				'<a href=http://jaanga.github.io/ > &#x24D8; </a>' +
+			'</h2>' +
+
+			'<p>' +
+				'epoch timestamp <input id=inpTimestamp value=' + Date.now().toString().slice(0,-3) + ' >' +
+				' <button onclick=getDateObjFromEpochTime(inpTimestamp.value); >get date object</button>' +
+				' <output id=outTimestamp ></output>' +
+			'</p>' +
+
+			'<p id=log ></p>' +
+
+			'<p><button onclick=initGetTrades(); >Get Trades </button></p>' +
+
+			'<p id=log2 ></p>' +
+
+			'<p><button onclick=saveFile(); >Save File</button></p>' +
+
+			'<p id=divTradesMeta ></p>' +
+
+			'<div id=divTrades style="border: 1px red solid;" ></div>' +
+
+		'';
+
+		getDateObjFromEpochTime( inpTimestamp.value )
+
+		loadWikiJSON();
+
+	}
+
+
+	function getDateObjFromEpochTime( epoch ) {
+
+		var d, msecs;
+		d = new Date();
+		msecs = parseInt( epoch + '000' );
+		d.setTime( msecs );
+		outTimestamp.value=d.toLocaleString();
+		return d;
+
+	}
+
+
+	function initGetTrades(){
+
+		console.time('time');
+
+		symbols.count=start=count=0;
+
+		getTrades();
+
+	}
+
+	function loadWikiJSON() {
+
+		var xhr, data, entries, txt;
+		var entry, symbol;
+
+		xhr = new XMLHttpRequest();
+		xhr.open( 'GET', WikipediaDataFileName + '&t=' + Math.random(), true );
+		xhr.onload = callbackJSON;
+		xhr.send( null );
+
+		function callbackJSON() {
+
+			data = xhr.responseText;
+			data = JSON.parse( data );
+			entries = data.feed.entry;
+			symbols = { count: 0 };
+			txt = '';
+
+			for ( var i = 0; i < entries.length; i++  ) {
+
+				entry = entries[i];
+
+				symbol = {
+					symbol: entry.gsx$tickersymbol.$t, //.replace( '.', '-' ), // for Yahoo
+					name: entry.gsx$security.$t.replace( /,/g, '' ),
+					sector: entry.gsx$gicssector.$t,
+					sectorID: parseInt( entry.gsx$sectorid.$t, 10 ),
+					industry: entry.gsx$gicssubindustry.$t.replace( /,/g, '-' ),
+					cik: parseInt( entry.gsx$cik.$t, 10),
+					volumeAvg: parseInt( entry.gsx$volumeavg.$t, 10 ),
+					marketCap: parseInt( entry.gsx$marketcap.$t, 10 )
+				};
+
+				symbolList[ i ] = symbol.symbol;
+				symbols[ symbol.symbol ] = symbol;
+
+			}
+
+			log.innerText = 'loaded symbols: ' + symbolList.length;
+
+		}
+
+	}
+
+
+	function getTrades() {
+
+		var txt, symbol;
+
+		txt = '';
+		divTrades.innerText = '';
+
+		symbolsLength = symbolList.length;
+
+		if ( symbols.count < symbolsLength ) {
+
+			requestFileYQL( symbolList[ count ] );
+
+		} else {
+
+			getTradeDay( 0 );
+
+console.timeEnd( 'time' );
+
+		}
+
+	}
+
+	function getTradeDay( day ) {
+
+		var txt;
+
+		txt = '';
+
+		for ( var i = 0; i < symbolsLength; i++ ) {
+
+			symbol = symbols[ symbolList[ i ] ];
+
+			txt +=
+				symbol.symbol + ',' +
+				symbol.name.replace( /,/g, '' ) + ',' +
+				symbol.sector + ',' +
+				symbol.sectorID + ',' +
+				symbol.industry + ',' +
+				symbol.marketCap + ',' +
+				symbol.volumeAvg + '\n' +
+				symbol.tradeDays[ day ].trades + '\n###' +
+			'\n';
+
+		}
+
+		divTrades.innerText = txt;
+
+		symbol = symbols[ symbolList[ 0 ] ];
+		divTradesMeta.innerHTML = symbol.symbol + ' ' + symbol.tradeDays[ day ].date + ' ' +
+			symbol.tradeDays[ day ].epoch + ' ' +
+			symbol.tradeDays[ day ].length +
+
+		'';
+
+		tradesDate = symbol.tradeDays[ day ].date;
+
+	}
+
+	function requestFileYQL( symbol ) {
+
+		var trades, tim, secs, fileName;
+		var xhr, text, lines, line;
+		var period = ''; // '&p=2d';
+
+		tim = new Date();
+
+		var statement, scr, query;
+
+// Symbols must be uppercase
+//		statement = 'select%20*%20from%20html%20where%20url%3D%22http%3A%2F%2Fwww.google.com%2Ffinance%2Fgetprices%3Fq%3DGOOG%26i%3D60%22';
+		statement =
+
+			'select * from html where url="http://www.google.com/finance/getprices?q=' +
+			symbol +
+			'&i=60' +
+			period +
+		'"';
+
+		encodedStatement = encodeURIComponent( statement );
+
+		query =	'https://query.yahooapis.com/v1/public/yql?q=' + encodedStatement + '&format=json';
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', query, true );
+		xhr.onerror = function() { console.log( 'error', count, symbol  ); getTrades(); };
+		xhr.onload = callbackQuery;
+		xhr.send( null );
+
+		function callbackQuery( xhr ) {
+
+			text = xhr.target.response;
+			text = JSON.parse( text );
+
+			if ( text.query.results === null ) {
+
+console.log( xhr.target.response );
+
+				getTrades();
+				return;
+
+			}
+
+			lines = text.query.results.body.split( '\n' ).slice( 7 );
+
+			if ( lines.length === 0 ) {
+
+console.log( text );
+
+				getTrades();
+				return;
+
+			}
+
+			trades = lines[ 0 ];
+			epochTime = lines[ 0 ].slice( 1, 11 );
+			getDateObjFromEpochTime( epochTime );
+			tradeDays = [];
+			tradeStart = 0;
+
+			for ( var i = 1; i < lines.length; i++ ) {
+
+				if ( lines[ i ].slice( 0, 1) == 'a' ) {
+
+					tradeFinish = i;
+
+					epochTime = lines[ tradeStart ].slice( 1, 11 );
+
+					str = getDateFromEpochTime( epochTime );
+
+					trades = lines.slice( tradeStart, tradeFinish ).join( '\n' );
+
+					tradeDays.push( { date: str, epoch: epochTime, length: ( tradeFinish - tradeStart + 1 ) , trades: trades } );
+
+					tradeStart = tradeFinish;
+
+				}
+
+			}
+
+// console.log( 'days', tradeDays[ 5 ].trades.length );
+
+			txt = '';
+
+			for ( i = 0; i < tradeDays.length; i++ ) {
+
+				txt += '<button onclick=getTradeDay(' + i + ') >' + tradeDays[ i ].date + '</button> ';
+
+			}
+
+			log2.innerHTML = txt;
+
+			log.innerHTML = count + ' ' + symbolList[ count ] + ' trades:' + trades.length + ' ' + lines[ 0 ];
+
+			symbols[ symbolList[ count ] ].tradeDays = tradeDays;
+
+			count++;
+
+			symbols.count++;
+
+			getTrades();
+
+		}
+
+	}
+
+
+	function getDateFromEpochTime( epoch ) {
+
+		var d, msecs;
+
+		d = new Date();
+		msecs = parseInt( epoch + '000' );
+		d.setTime( msecs );
+		str = d.getFullYear() + '-' + ( '0' + ( d.getMonth() + 1 )).slice( -2 ) + '-' + ( '0' + d.getDate() ).slice( -2 );
+		return str;
+
+	}
+
+
+	function saveFile() {
+
+//		var date, blob, a;
+
+		date = new Date();
+		blob = new Blob( [ divTrades.innerText ] );
+		a = document.body.appendChild( document.createElement( 'a' ) );
+		a.href = window.URL.createObjectURL( blob );
+		a.download = date.getFullYear() + '-' + ( '0' + ( 1 + date.getUTCMonth() ) ).slice( -2 ) + '-' + date.getUTCDate() + '.csv';
+		a.download = tradesDate + '.csv';
+		a.click();
+		a = null;
+
+	}
+
+</script>
+</body>
+</html>
