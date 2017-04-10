@@ -12,9 +12,9 @@
 
 //			function requestTradesFileNames() {
 
-				let fileName, text, files, files2;
+//				let fileName, text, files, files2;
 
-				fileName = 'https://api.github.com/repos/jaanga/sp500/contents/trades';
+				fileName = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades';
 
 				xhr = new XMLHttpRequest();
 				xhr.open( 'GET', fileName, true );
