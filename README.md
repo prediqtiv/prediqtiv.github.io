@@ -19,3 +19,17 @@ Space filler text. What to put here? 'predIQtiv' is the name of the organization
 
 _Development version - may have issues_
 
+
+
+## Change Log
+
+### 2017-04-10 ~ Theo
+
+Most efforts today were behind thw scene
+
+* Updates to Tweets gathering scripts using Google Apps Script
+* Minor fixes to Trades Get R7
+* eyeCue Replay  R2
+	* Added more signage to
+	* Turned off Light box
+* Updated predIQtiv home page script

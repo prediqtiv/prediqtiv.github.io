@@ -61,7 +61,7 @@
 		contents.innerHTML =
 
 			'<h1>' +
-				'<a href="" >' + location.pathname.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) + '</a>' +
+				'<a href="" >' + location.pathname.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) + '.1 </a>' +
 				'<a href=https://prediqtiv.github.io/#trades-get/README.md > &#x24D8; </a>' +
 			'</h1>' +
 
@@ -76,8 +76,6 @@
 			'<p id=symData ></p>' +
 			'<hr>' +
 			'<p id=log ></p>' +
-
-
 
 			'<p><button onclick=initGetTrades(); >Get Trades </button> ' +
 				'start: <input id=inpStart onClick=this.select(); size=4 > ' +
