@@ -14,7 +14,7 @@
 
 				'<h2>' +
 					'<a href=https://prediqtiv.github.io/ title="invest smarter" ><img src=../../images/predIQtiv.png height=48px ></a>' + b +
-					'<a href="" title="Click here to refresh this page" >' + 'eyeCue Replay R1' + '</a>' +
+					'<a href="" title="Click here to refresh this page" >' + 'eyeCue Replay R1.1' + '</a>' +
 					' <a href=../../index.html#README.md onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
 				'</h2>' +
 
