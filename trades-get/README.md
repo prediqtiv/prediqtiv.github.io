@@ -16,7 +16,9 @@ _request and obtain intraday trades for hundreds of stock market symbols for a n
 
 <iframe src="https://jaanga.github.io/sp500/trades-get/index.html" width=100% height=600px ><img src="trades-get-r4.png" ></iframe>
 
+Preliminary version on Google Apps Script
 
+[Trades Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
 
 ## Concept
 
@@ -36,11 +38,10 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ### Wish List / To Do
 
-* Move to Google SS and daily trigger
+* Move to Google Apps Script and daily trigger
 * Select exchange & portfolio
 * Get trades for selected symbols or portfolio of issues not in sp500
 * Display start index
-* Add display date that will be saved << make more apparent
 
 
 ## Usage Notes
@@ -55,10 +56,16 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 ## Change Log & Developer Notes
 
 
+### 2017-04-11 ~ Theo
+
+* Stated process for obtaining tick data via Google Apps Script
+	* Looking to be faster and simpler than anticipated
+
 ### 2017-04-07 ~ Theo
 
 * Updated the select symbol bits
 * Better error checking in loading Google SS / Wikipedia data
+* Add display date that will be saved << make more apparent
 
 ### 2017-04-05 ~ Theo
 

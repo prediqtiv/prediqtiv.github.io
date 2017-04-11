@@ -23,13 +23,19 @@ The scripts are here:
 
 ## To Do
 
-* 2017-04-10 ~ Export to GitHub
-* 2017-04-09 ~ export to csv << started
+* 2017-04-11 ~ Delete any files with same name, then save to CSV
+	* Enables saving multiple times during the day
+* 2017-04-10 ~ Export directly from GAS to GitHub
 * 2017-04-09 ~ Set up separate project to create Trigger get get daily tweets
-* 2017-04-09 ~ Trigger to get 15 minute tweets
+* 2017-04-09 ~ Trigger to get 15 minute tweets / Or Save to five at end of every cycle
 
 
 ## Change Log
+
+### 2017-04-11 ~ Theo
+
+* 2017-04-09 ~ export to csv << works
+* Improved testing and error trapping
 
 
 ### 2017-04-10 ~ Theo
