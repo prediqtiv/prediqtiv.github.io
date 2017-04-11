@@ -33,3 +33,6 @@ Most efforts today were behind thw scene
 	* Added more signage to
 	* Turned off Light box
 * Updated predIQtiv home page script
+* Add Device Orientation Test utility
+
+
