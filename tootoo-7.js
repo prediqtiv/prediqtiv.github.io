@@ -55,7 +55,7 @@
 
 // trick to get TooToo to read the local file and view current edits
 
-		if ( TOO.path.slice( 0, 3 ) === '@@@' ) {
+		if ( TOO.path && TOO.path.slice( 0, 3 ) === '@@@' ) {
 
 			TOO.path = TOO.path.slice( 3 );
 			TOO.urlGHPages = '';
