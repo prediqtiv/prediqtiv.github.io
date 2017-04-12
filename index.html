@@ -69,7 +69,15 @@
 			 }
 		}
 
-		TOO.getFileSetContents( '', 'README.md' );
+		if ( !location.hash ) {
+
+			TOO.getFileSetContents( '', 'README.md' );
+
+		} else {
+
+			TOO.getFileSetContents( TOO.path + '/', TOO.file );
+
+		}
 
 	}
 

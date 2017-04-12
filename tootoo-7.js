@@ -48,11 +48,19 @@
 			}
 		}
 
-//	console.log( 'path', TOO.path );
-//	console.log( 'file', TOO.file );
 */
 
-		if ( TOO.rawgit ) {
+//	console.log( 'path', TOO.path );
+//	console.log( 'file', TOO.file );
+
+// trick to get TooToo to read the local file and view current edits
+
+		if ( TOO.path.slice( 0, 3 ) === '@@@' ) {
+
+			TOO.path = TOO.path.slice( 3 );
+			TOO.urlGHPages = '';
+
+		} else if ( TOO.rawgit ) {
 
 			TOO.urlGHPages = 'https://rawgit.com/' + TOO.user + '/' + TOO.repo + '/' + TOO.branch + '/' + TOO.folder + ( TOO.folder ? '/' : '' );
 

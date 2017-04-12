@@ -23,14 +23,22 @@ The scripts are here:
 
 ## To Do
 
+* 2017-04-12 ~ Move Log column over one - to avoid conflict with time column
+
+
+* 2017-04-12 ~ Verify that tweets for all symbols have been collected
 * 2017-04-11 ~ Delete any files with same name, then save to CSV
 	* Enables saving multiple times during the day
 * 2017-04-10 ~ Export directly from GAS to GitHub
-* 2017-04-09 ~ Set up separate project to create Trigger get get daily tweets
-* 2017-04-09 ~ Trigger to get 15 minute tweets / Or Save to five at end of every cycle
+* 2017-04-09 ~ Trigger to get tweets every 15 to 20 minutes  / Or Save to five at end of every cycle
 
 
 ## Change Log
+
+### 2017-04-12 ~ Theo
+
+* 2017-04-09 ~ Set up separate project to create Trigger get get daily tweets << underway and testing. No extra project required - fingers crossed
+
 
 ### 2017-04-11 ~ Theo
 
