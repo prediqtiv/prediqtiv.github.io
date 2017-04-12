@@ -8,7 +8,7 @@ Tweets Read Me
 ===
 
 
-predIQtive uses a Googgle Apps spreadsheet in order to obtain its Tweets.
+predIQtive uses a Google Apps spreadsheet in order to obtain its Tweets.
 
 This is because Google Apps:
 
