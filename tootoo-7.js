@@ -82,16 +82,19 @@
 		editButton = document.body.appendChild( document.createElement( 'div' ) );
 		editButton.id = 'editButton';
 		editButton.innerHTML = 'Edit';
+		editButton.title = 'Update this page using the GitHub source code editor';
 		TOO.editButton = editButton;
 
 		nextFile = document.body.appendChild( document.createElement( 'div' ) );
 		nextFile.id = 'nextFile';
 		nextFile.innerHTML = '&gt;';
+		nextFile.title = 'Next file';
 		TOO.nextFile = nextFile;
 
 		previousFile = container.appendChild( document.createElement( 'div' ) );
 		previousFile.id = 'previousFile';
 		previousFile.innerHTML = '&lt;';
+		previousFile.title = 'Previous file';
 		TOO.previousFile = previousFile;
 
 	}
@@ -439,11 +442,15 @@
 
 		if ( index <= 0 ) { indexPrevious = TOO.files.length - 1; }
 
-		if ( TOO.nextFile ) {
+		if ( TOO.nextFile || TOO.previousFile ) {
 
 			TOO.nextFile.innerHTML = '<a href=JavaScript:TOO.getFileSetContents("' + path + '","' + encodeURI( TOO.files[indexNext] ) + '"); > &gt; </a>';
 
 			TOO.previousFile.innerHTML = '<a href=JavaScript:TOO.getFileSetContents("' + path + '","' + encodeURI( TOO.files[indexPrevious] ) + '"); > &lt; </a>';
+
+		} else {
+
+
 
 		}
 

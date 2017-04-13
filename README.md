@@ -27,9 +27,16 @@ _Development version - may have issues_
 
 ## Change Log
 
+
+### 2017-04-12 ~ Theo
+
+* Updates tp Tweet API. See Read Me
+* Fixes to Home Page script (TooToo.js)
+	* Read local files
+
 ### 2017-04-11 ~ Theo
 
-
+* See blog post
 
 ### 2017-04-10 ~ Theo
 
