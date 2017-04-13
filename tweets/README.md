@@ -24,8 +24,6 @@ The scripts are here:
 ## To Do
 
 * 2017-04-12 ~ Move Log column over one - to avoid conflict with time column
-
-
 * 2017-04-12 ~ Verify that tweets for all symbols have been collected
 * 2017-04-11 ~ Delete any files with same name, then save to CSV
 	* Enables saving multiple times during the day
