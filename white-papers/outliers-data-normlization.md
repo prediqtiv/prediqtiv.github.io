@@ -1,6 +1,15 @@
 
+Markets, Outliers and Data Normalization
+===
 
-## Outliers
+## Definitions
+What are we talking about?
+
+### Outliers
+
+In this paper we use the term 'outlier' very loosely
+
+Here are some typical definitions of 'outliers' along with algorithms for identifying them
 
 * https://en.wikipedia.org/wiki/Outlier
 * http://gladwell.com/outliers/
@@ -17,21 +26,26 @@
 * http://scikit-learn.org/stable/modules/outlier_detection.html
 * https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-data/cc-8th-interpreting-scatter-plots/a/outliers-in-scatter-plots
 
-## Black Swan Events / Theory
+### Black Swan Events / Theory
+
+Another similar reference is a 'black swan' event.
 
 * https://en.wikipedia.org/wiki/Black_swan_theory
 * http://rationalwiki.org/wiki/Black_swan
 
+### Outlying outliers
+
 This white paper discusses ways of identifying items of interest from within a large group of items that are constantly in motion or changing.
 
-The item may be interesting for a number of reasons
+'Item of interest' is rather a tedious expression, so this paper will use the term 'outlier' instead - even though our use of the term is somewhat of an outlier to the general meaning of the term.
+
+The item in motion we want to look at may be interesting for a number of reasons
 
 * It may currently be outside for the main swarm for a just a short while
 * It may be in the swarm but moving in a direction than the 'main' direction
 * It could be going in the the main direction but at a different rate of speed
 * Within a swarm there may be sub-groups. For example a swarm of birds has males and females, young and old. There may be instance where the item of interest is in the middle of the swarm but outside the volume of the members of its cohort
 
-'Item of interest' is rather a tedious expression, so this paper will use the term 'outlier' instead - even though our use of the term is somewhat of an outlier to the general meaning of the term.
 
 ## Large Amounts Data
 
@@ -49,6 +63,7 @@ Now if we are talking of birds or fish, we know exactly what to do in order to v
 
 The question of this paper is can we do the same thing with stocks or weather or other large data sets that vary over time?
 
+
 ## Data Normalization
 
 * https://en.wikipedia.org/wiki/Normalization_(statistics)
@@ -58,6 +73,7 @@ The question of this paper is can we do the same thing with stocks or weather or
 Birds and fish tend to be roughly of the same size and move at similar rates. But stock and weather statistics may have significantly varying base lines. One stock might be worth $500 and the next worth $2. A price change of $1 means very different things to the two stocks.
 
 The logical maneuver to to normalize the data between 0 and 1.
+
 
 ## Normalizing the Data
 
@@ -73,7 +89,9 @@ The Y-axis is a bit trickier.  It must represent volume and volume varies siggni
 
 100 * current volume / average daily volume.
 
-Some
+
+
+To be continued...
 
 
 
