@@ -28,7 +28,6 @@
 
 				'<div id=mnuSettings ></div>' +
 
-
 				'<details>' +
 					'<summary><h3>About</h3></summary>' +
 

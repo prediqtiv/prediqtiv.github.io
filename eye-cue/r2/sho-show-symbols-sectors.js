@@ -150,6 +150,8 @@
 
 	SHO.resetSymbols = function() {
 
+		SHO.setMenuSymbolSelect();
+
 		for ( let i = 0; i < symbols.keys.length; i++ ) {
 
 			SHO.setOpaque( i );

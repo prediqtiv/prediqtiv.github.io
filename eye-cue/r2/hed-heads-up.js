@@ -118,6 +118,42 @@ HED.setHeadsUp = function( event ) {
 	idx = PLA.index >= sym.ticks.length ? sym.ticks.length - 1 : PLA.index;
 	tick = sym.ticks[ idx ];
 
+
+	txt = tick.length ===  2 ? HED.textRealtime( sym ) : HED.textReplay( sym );
+
+	headsUp.innerHTML = txt;
+	document.body.style.cursor = 'pointer';
+
+}
+
+
+
+HED.textRealtime = function( sym ) {
+
+	txt =
+		'<h2 style="margin:0;" >' + sym.symbol + '</h2>' +
+		'<div>' + sym.name + '</div>' +
+		'<div style="margin:0; background-color: #' + colors[ sym.sectorID ].toString( 16 )  + ';" >' + sym.sector + '</div>' +
+
+		'<img src="https://www.google.com/finance/chart?tlf=12&q=' + 'NASDAQ:' + sym.symbol +
+			'"  style="background: white;" /><br>' +
+		'<a href="https://www.google.com/finance?q=' + 'NASDAQ:' + sym.symbol + '" target="_blank">Google Finance: ' +
+			sym.symbol + '</a><br>' +
+		'chg: ' + tick[ 0 ].toFixed(1) + '%<br>' +
+		'vol: ' + tick[ 1 ].toLocaleString() + '<br>' +
+		'vol avg :' + sym.volumeAvg.toLocaleString() + '<br>' +
+		'vol/vol avg: ' + ( 100 * tick[ 1 ] / sym.volumeAvg ).toFixed(1) + '%<br>' +
+		'mkt cap: ' + sym.marketCap.toLocaleString() +
+
+	'';
+
+	return txt;
+
+}
+
+
+HED.textReplay = function( sym ) {
+
 	txt =
 
 		'<h2 style="margin:0;" >' + sym.symbol + '</h2>' +
@@ -134,13 +170,10 @@ HED.setHeadsUp = function( event ) {
 		'vol: ' + tick[ 5 ].toLocaleString() + '<br>' +
 		'vol avg :' + sym.volumeAvg.toLocaleString() + '<br>' +
 		'vol/vol avg: ' + ( 100 * tick[ 5 ] / sym.volumeAvg ).toFixed(1) + '%<br>' +
-		'mkt cap: ' + sym.marketCap.toLocaleString() + '<br>' +
-		'tweets: ' + sym.tweets +
+		'mkt cap: ' + sym.marketCap.toLocaleString() +
 
 	'';
 
-	headsUp.innerHTML = txt;
-	document.body.style.cursor = 'pointer';
+	return txt;
 
 }
-

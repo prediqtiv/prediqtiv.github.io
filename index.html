@@ -206,10 +206,10 @@
 
 		if ( location.hash ) {
 
-			path = location.hash.slice( 1 ).split( '/');
+			path = location.hash.slice( 1 ).split( '/' );
 
 			TOO.file = path.pop();
-			TOO.path = path.join();
+			TOO.path = path.join( '/' );
 
 //console.log( 'TOO.path', TOO.path );
 //console.log( 'TOO.file', TOO.file );
