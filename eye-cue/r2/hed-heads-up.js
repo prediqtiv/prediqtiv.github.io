@@ -115,7 +115,7 @@ HED.setHeadsUp = function( event ) {
 	headsUp.style.display = '';
 
 	sym = symbols[ intersected.name ];
-	idx = PLA.index >= sym.ticks.length ? sym.ticks.length - 1 : PLA.index;
+	idx = sym && PLA.index >= sym.ticks.length ? sym.ticks.length - 1 : PLA.index;
 	tick = sym.ticks[ idx ];
 
 
