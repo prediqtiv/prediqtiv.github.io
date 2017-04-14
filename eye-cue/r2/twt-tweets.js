@@ -32,7 +32,7 @@
 
 if ( lines === undefined ) { return; }
 
-				v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+//				v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 				points = [ v2( 0, -1 ) , v2( 0.5, -1 ), v2( 1, -0.8 ), v2( 0, 0 ) ];
 
 				material = new THREE.MeshNormalMaterial( { shading: THREE.FlatShading } );

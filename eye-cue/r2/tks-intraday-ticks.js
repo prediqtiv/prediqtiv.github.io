@@ -2,6 +2,30 @@
 	TKS = {};
 
 	let symbols;
+
+	var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
+
+	TKS.shapes = [
+
+		[ v2( 0, 0 ), v2( 5, 0 ), v2( 5, 5 ) ],
+		[ v2( 5, 0 ), v2( 5, 5 ), v2( 0, 5 ) ],
+		[ v2( 5, 5 ), v2( 0, 5 ), v2( 0, 0 ) ],
+		[ v2( 0, 5 ), v2( 0, 0 ), v2( 5, 0 ) ],
+
+		[ v2( 1, 0 ), v2( 4, 0 ), v2( 2.5, 5 ) ],
+		[ v2( 5, 1 ), v2( 5, 4 ), v2( 0, 2.5 ) ],
+		[ v2( 2.5, 0 ), v2( 5, 4 ), v2( 5, 1 ) ],
+		[ v2( 0, 1 ), v2( 0, 4 ), v2( 5, 2.5 ) ],
+
+		[ v2( 2, 0 ), v2( 5, 5 ), v2( 0, 2 ) ],
+		[ v2( 3, 0 ), v2( 5, 2 ), v2( 0, 5 ) ],
+		[ v2( 5, 3 ), v2( 3, 5 ), v2( 0, 0 ) ],
+		[ v2( 2, 5 ), v2( 0, 3 ), v2( 5, 0 ) ],
+
+		[ v2( 2.5, 0 ), v2( 5, 2.5 ), v2( 2.5, 5 ) ],
+
+	];
+
 	TKS.folder;
 
 	TKS.folder = '../../trades/';
@@ -163,7 +187,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 
 			function drawSymbols() {
 
-				let geometry, material, mesh;
+				let shape, geometry, material, mesh;
 				let edgesGeometry, edgesMaterial, edges;
 				let scale, obj, sp;
 
@@ -171,7 +195,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 
 				symbols.objects = new THREE.Object3D();
 
-				geometry = new THREE.BoxGeometry( 5, 1, 5 );
+//				geometry = new THREE.BoxGeometry( 5, 1, 5 );
 
 				for ( let i = 0; i < symbols.keys.length; i++) {
 
@@ -184,6 +208,13 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 						side: 2,
 						transparent: true
 					} );
+
+					shape = new THREE.Shape( TKS.shapes[ symbol.sectorID ] );
+					geometry = new THREE.ExtrudeGeometry( shape, { amount: 1, bevelEnabled: false, steps: 1 } );
+
+					geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
+					geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2 + 0.0000000002 * symbol.marketCap, 1 ) );
+					geometry.applyMatrix( new THREE.Matrix4().makeTranslation( -2.5, 0, 2.5 ) );
 
 					mesh = new THREE.Mesh( geometry, material );
 					mesh.name = mesh.userData.symbol = symbol.symbol;
@@ -198,9 +229,10 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 					mesh.userData.volume = 0;
 					mesh.userData.changePct = 0;
 
-					scale = 2 + 0.0000000002 * symbol.marketCap;
-					mesh.position.set( 0, 0.6 * scale, 0 );
-					mesh.scale.y = scale;
+
+//					mesh.position.set( -2,5, 0.0, -2.5 );
+//					scale = 2 + 0.0000000002 * symbol.marketCap;
+//					mesh.scale.y = scale;
 					mesh.castShadow = true;
 					mesh.receiveShadow = true;
 					obj.add( mesh );
@@ -211,7 +243,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 					edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
 					mesh.add( edges ); // add wireframe as a child of the parent mesh
 
-					sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00', mesh.position.x, ( 2 * mesh.position.y + 3 ), mesh.position.z);
+					sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00', mesh.position.x, ( 8 + 0.0000000002 * symbol.marketCap ), mesh.position.z);
 					sp.material.opacity = 0.5;
 					obj.add( sp );
 
