@@ -118,7 +118,6 @@ HED.setHeadsUp = function( event ) {
 	idx = sym && PLA.index >= sym.ticks.length ? sym.ticks.length - 1 : PLA.index;
 	tick = sym.ticks[ idx ];
 
-
 	txt = tick.length ===  2 ? HED.textRealtime( sym ) : HED.textReplay( sym );
 
 	headsUp.innerHTML = txt;
@@ -170,7 +169,8 @@ HED.textReplay = function( sym ) {
 		'vol: ' + tick[ 5 ].toLocaleString() + '<br>' +
 		'vol avg :' + sym.volumeAvg.toLocaleString() + '<br>' +
 		'vol/vol avg: ' + ( 100 * tick[ 5 ] / sym.volumeAvg ).toFixed(1) + '%<br>' +
-		'mkt cap: ' + sym.marketCap.toLocaleString() +
+		'mkt cap: ' + sym.marketCap.toLocaleString() + '<br>' +
+		'tweets: ' + sym.tweets +
 
 	'';
 
