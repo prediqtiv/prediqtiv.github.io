@@ -124,46 +124,6 @@
 	}
 
 
-//
-
-	function initSearch() {
-
-		inpSearch = document.body.appendChild( document.createElement( 'input' ) );
-		inpSearch.style.cssText = 'left: 10px; position: absolute; top: 20px; width: 100px;';
-		inpSearch.focus();
-		inpSearch.onclick = function() { this.select(); }
-		inpSearch.onkeyup = function() { setSearch(); }
-
-		selSymbols = document.body.appendChild( document.createElement( 'select' ) );
-		selSymbols.size = 25;
-		selSymbols.style.cssText = 'left: 10px; position: absolute; top: 50px; width: 100px;';
-		selSymbols.onchange = selSymbols.onfocus = function() { setSymData( selSymbols.value ); }
-
-	}
-
-
-	setSearch = function() {
-
-		let letters;
-
-		letters = inpSearch.value.toUpperCase();
-
-		selSymbols.innerHTML = '';
-
-		for ( let i = 0; i < symbols.keys.length; i++ ) {
-
-			if ( symbols.keys[ i ].indexOf( letters ) > -1 ) {
-
-				selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
-
-			}
-
-		}
-
-		selSymbols.selectedIndex = 0;
-
-	}
-
 
 //
 
@@ -543,6 +503,47 @@ console.log( symbol, txt );
 		tradesDate = symbol.tradeDays[ day ].date;
 
 	}
+
+//
+
+	function initSearch() {
+
+		inpSearch = document.body.appendChild( document.createElement( 'input' ) );
+		inpSearch.style.cssText = 'left: 10px; position: absolute; top: 20px; width: 100px;';
+		inpSearch.focus();
+		inpSearch.onclick = function() { this.select(); }
+		inpSearch.onkeyup = function() { setSearch(); }
+
+		selSymbols = document.body.appendChild( document.createElement( 'select' ) );
+		selSymbols.size = 25;
+		selSymbols.style.cssText = 'left: 10px; position: absolute; top: 50px; width: 100px;';
+		selSymbols.onchange = selSymbols.onfocus = function() { setSymData( selSymbols.value ); }
+
+	}
+
+
+	setSearch = function() {
+
+		let letters;
+
+		letters = inpSearch.value.toUpperCase();
+
+		selSymbols.innerHTML = '';
+
+		for ( let i = 0; i < symbols.keys.length; i++ ) {
+
+			if ( symbols.keys[ i ].indexOf( letters ) > -1 ) {
+
+				selSymbols.innerHTML += '<option>' + symbols.keys[ i ]  + '</option>';
+
+			}
+
+		}
+
+		selSymbols.selectedIndex = 0;
+
+	}
+
 
 
 	function validate() {

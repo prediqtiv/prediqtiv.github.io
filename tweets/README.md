@@ -23,8 +23,7 @@ The scripts are here:
 
 ## To Do
 
-* 2017-04-13 ~ Add symbols currently collected count to log
-* 2017-04-12 ~ Verify that tweets for all symbols have been collected
+* 2017-04-14 ~ Add if verifies then save
 * 2017-04-11 ~ Delete any files with same name, then save to CSV
 	* Enables saving multiple times during the day
 * 2017-04-10 ~ Export directly from GAS to GitHub
@@ -33,10 +32,15 @@ The scripts are here:
 
 ## Change Log
 
+### 2017-04-14 ~ Theo
+
+* 2017-04-13 ~ Add symbols currently collected count to log
+* 2017-04-12 ~ Verify that tweets for all symbols have been collected
+
+
 ### 2017-04-13 ~ Theo
 
 Debugging scripts that require twenty minutes or so to complete requires a lot of patience. ;-)
-
 
 * 2017-04-12 ~ Move Log column over one - to avoid conflict with time column << done
 * Fixes to the triggering logic
