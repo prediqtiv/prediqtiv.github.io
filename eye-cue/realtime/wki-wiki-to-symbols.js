@@ -96,6 +96,14 @@
 				transparent: true
 			} );
 
+					shape = new THREE.Shape( GND.shapes[ symbol.sectorID ] );
+					geometry = new THREE.ExtrudeGeometry( shape, { amount: 1, bevelEnabled: false, steps: 1 } );
+
+					geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
+					geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2 + 0.0000000002 * symbol.marketCap, 1 ) );
+					geometry.applyMatrix( new THREE.Matrix4().makeTranslation( -2.5, 0, 2.5 ) );
+
+
 			mesh = new THREE.Mesh( geometry, material );
 			mesh.name = mesh.userData.symbol = symbol.symbol;
 			mesh.userData.name = symbol.name;
@@ -109,9 +117,9 @@
 			mesh.userData.volume = 0;
 			mesh.userData.changePct = 0;
 
-			scale = 2 + 0.0000000002 * symbol.marketCap;
-			mesh.position.set( 0, 0.5 * scale, 0 );
-			mesh.scale.y = scale;
+//			scale = 2 + 0.0000000002 * symbol.marketCap;
+//			mesh.position.set( 0, 0.5 * scale, 0 );
+//			mesh.scale.y = scale;
 			mesh.castShadow = true;
 			mesh.receiveShadow = true;
 			obj.add( mesh );
@@ -122,7 +130,8 @@
 			edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
 			mesh.add( edges ); // add wireframe as a child of the parent mesh
 
-			sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00', mesh.position.x, ( 2 * mesh.position.y + 3 ), mesh.position.z);
+			sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00',
+			mesh.position.x, ( 8 + 0.0000000002 * symbol.marketCap ), mesh.position.z);
 			sp.material.opacity = 0.5;
 			obj.add( sp );
 

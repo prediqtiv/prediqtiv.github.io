@@ -1,9 +1,31 @@
 
 	let GND = {};
 
-	GND.init = function() {
+	let v = function ( x, y, z ){ return new THREE.Vector3( x, y, z ); }
+	let v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
-		function v( x, y, z ){ return new THREE.Vector3( x, y, z ); }
+	GND.shapes = [
+
+		[ v2( 0, 0 ), v2( 5, 0 ), v2( 5, 5 ) ],
+		[ v2( 5, 0 ), v2( 5, 5 ), v2( 0, 5 ) ],
+		[ v2( 5, 5 ), v2( 0, 5 ), v2( 0, 0 ) ],
+		[ v2( 0, 5 ), v2( 0, 0 ), v2( 5, 0 ) ],
+
+		[ v2( 1, 0 ), v2( 4, 0 ), v2( 2.5, 5 ) ],
+		[ v2( 5, 1 ), v2( 5, 4 ), v2( 0, 2.5 ) ],
+		[ v2( 2.5, 0 ), v2( 5, 4 ), v2( 5, 1 ) ],
+		[ v2( 0, 1 ), v2( 0, 4 ), v2( 5, 2.5 ) ],
+
+		[ v2( 2, 0 ), v2( 5, 5 ), v2( 0, 2 ) ],
+		[ v2( 3, 0 ), v2( 5, 2 ), v2( 0, 5 ) ],
+		[ v2( 5, 3 ), v2( 3, 5 ), v2( 0, 0 ) ],
+		[ v2( 2, 5 ), v2( 0, 3 ), v2( 5, 0 ) ],
+
+		[ v2( 2.5, 0 ), v2( 5, 2.5 ), v2( 2.5, 5 ) ],
+
+	];
+
+	GND.init = function() {
 
 		let geometry, material, mesh;
 		let edgesGeometry, edgesMaterial, edges;

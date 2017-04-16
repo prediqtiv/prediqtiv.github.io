@@ -3,28 +3,6 @@
 
 	let symbols;
 
-	var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
-
-	TKS.shapes = [
-
-		[ v2( 0, 0 ), v2( 5, 0 ), v2( 5, 5 ) ],
-		[ v2( 5, 0 ), v2( 5, 5 ), v2( 0, 5 ) ],
-		[ v2( 5, 5 ), v2( 0, 5 ), v2( 0, 0 ) ],
-		[ v2( 0, 5 ), v2( 0, 0 ), v2( 5, 0 ) ],
-
-		[ v2( 1, 0 ), v2( 4, 0 ), v2( 2.5, 5 ) ],
-		[ v2( 5, 1 ), v2( 5, 4 ), v2( 0, 2.5 ) ],
-		[ v2( 2.5, 0 ), v2( 5, 4 ), v2( 5, 1 ) ],
-		[ v2( 0, 1 ), v2( 0, 4 ), v2( 5, 2.5 ) ],
-
-		[ v2( 2, 0 ), v2( 5, 5 ), v2( 0, 2 ) ],
-		[ v2( 3, 0 ), v2( 5, 2 ), v2( 0, 5 ) ],
-		[ v2( 5, 3 ), v2( 3, 5 ), v2( 0, 0 ) ],
-		[ v2( 2, 5 ), v2( 0, 3 ), v2( 5, 0 ) ],
-
-		[ v2( 2.5, 0 ), v2( 5, 2.5 ), v2( 2.5, 5 ) ],
-
-	];
 
 	TKS.folder;
 
@@ -209,7 +187,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 						transparent: true
 					} );
 
-					shape = new THREE.Shape( TKS.shapes[ symbol.sectorID ] );
+					shape = new THREE.Shape( GND.shapes[ symbol.sectorID ] );
 					geometry = new THREE.ExtrudeGeometry( shape, { amount: 1, bevelEnabled: false, steps: 1 } );
 
 					geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
@@ -243,7 +221,8 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 					edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
 					mesh.add( edges ); // add wireframe as a child of the parent mesh
 
-					sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00', mesh.position.x, ( 8 + 0.0000000002 * symbol.marketCap ), mesh.position.z);
+					sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00',
+					 mesh.position.x, ( 8 + 0.0000000002 * symbol.marketCap ), mesh.position.z);
 					sp.material.opacity = 0.5;
 					obj.add( sp );
 

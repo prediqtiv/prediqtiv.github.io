@@ -64,7 +64,6 @@ if ( lines === undefined ) { return; }
 	function drawLatheObject() {
 
 		var points;
-		var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 
 		points = [ v2( 0, 0 ) , v2( 1, -0.8 ), v2( 0.5, -1 ), v2( 0, -1 ) ];
 
