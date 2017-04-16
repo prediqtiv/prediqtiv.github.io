@@ -415,11 +415,19 @@
 // edit, next and previous buttons
 	TOO.setButtons = function( path, file ) {
 
+console.log( 'path', path );
+console.log( 'TOO.folder', TOO.folder );
+
 		if ( TOO.editButton ) {
 
 			folder = TOO.folder ? TOO.folder + '/' : '';
 
-			TOO.editButton.innerHTML = '<a href="https://github.com/' + TOO.user + '/' + TOO.repo + '/blob/' + TOO.branch + '/' + path + folder + file + '" target="_blank"> Edit </a>';
+//			TOO.editButton.innerHTML = '<a href="https://github.com/' +
+//				TOO.user + '/' + TOO.repo + '/blob/' + TOO.branch + '/' + path + folder + file + '" target="_blank"> Edit </a>';
+			TOO.editButton.innerHTML = '<a href="https://github.com/' +
+				TOO.user + '/' + TOO.repo + '/blob/' + TOO.branch + '/' + folder + path + file + '" target="_blank"> Edit </a>';
+
+
 		}
 
 		index = TOO.files.indexOf( file );
@@ -444,9 +452,11 @@
 
 		if ( TOO.nextFile || TOO.previousFile ) {
 
-			TOO.nextFile.innerHTML = '<a href=JavaScript:TOO.getFileSetContents("' + path + '","' + encodeURI( TOO.files[indexNext] ) + '"); > &gt; </a>';
+			TOO.nextFile.innerHTML = '<a href=JavaScript:TOO.getFileSetContents("' + path + '","' +
+				encodeURI( TOO.files[indexNext] ) + '"); > &gt; </a>';
 
-			TOO.previousFile.innerHTML = '<a href=JavaScript:TOO.getFileSetContents("' + path + '","' + encodeURI( TOO.files[indexPrevious] ) + '"); > &lt; </a>';
+			TOO.previousFile.innerHTML = '<a href=JavaScript:TOO.getFileSetContents("' + path + '","' +
+				encodeURI( TOO.files[indexPrevious] ) + '"); > &lt; </a>';
 
 		} else {
 

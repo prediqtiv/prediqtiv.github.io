@@ -41,12 +41,15 @@
 				[ '', 'license.md', 'Copyright and license' ],
 			[ 'header', 'eyeCue'],
 				[ 'eye-cue/', 'README.md', 'eyeCue Read Me' ],
+				[ 'eye-cue/replay/', 'README.md', '<ul><li>eyeCue Replay Read Me</li></ul>' ],
+				[ 'eye-cue/realtime/', 'README.md', '<ul><li>eyeCue Realtime Read Me</li></ul>' ],
 			[ 'header', 'Trades'],
 				[ 'trades-get/', 'README.md', 'Trades Get Read Me' ],
 			[ 'header', 'Tweets'],
 				[ 'tweets/', 'README.md', 'Tweets Read Me' ],
 			[ 'header', 'White Papers'],
 				[ 'white-papers/', 'README.md', 'White Papers Read Me' ],
+				[ 'white-papers/', 'outliers-data-normlization.md', '<ul><li>Markets, Outliers and Data Normalization</li></ul>' ],
 			[ 'header', 'Device Parameters Test '],
 				[ 'device-parameters-test/', 'README.md', 'Device Parameters Test Read Me' ],
 
@@ -54,6 +57,7 @@
 		];
 
 		let count = 0;
+
 		for ( let i = 0; i < TOO.fileTitles.length; i++ ) {
 
 			if ( TOO.fileTitles[ i ][ 0 ] === 'header') {
@@ -68,7 +72,7 @@
 				' </a>' +
 				'</div>';
 
-				TOO.files.push( TOO.fileTitles[ i ][ 1 ] );
+				TOO.files.push( TOO.fileTitles[ i ][ 0 ] + TOO.fileTitles[ i ][ 1 ] );
 
 			 }
 		}
@@ -107,7 +111,7 @@
 
 			'#bars { color: blue; cursor: pointer; font-size: 24pt; text-decoration: none; }' +
 
-			'#container {  height: 100%; left: 0; position: absolute; transition: left 1s; width: 100%; }' +
+			'#container {  height: 100%; left: 0;overflow-x: hidden; position: absolute; transition: left 1s; width: 100%; }' +
 
 // let each type of contents decide its best width and placement
 			'#contents { border: 0px #ccc solid; height: 100%; left: 325px; position: absolute; width: ' + ( window.innerWidth - 325 ) + 'px; }' +
@@ -119,8 +123,9 @@
 			'#hamburger { background-color: #eee; left: 325px; position: absolute; top: 20px;  z-index: 1 }' +
 			'#hamburger h2 { margin: 0;}' +
 
-			'#menu { background-color: #eee; border: 1px #ccc solid; box-sizing:border-box; height: 100%; overflow-y: auto; padding: 0 10px; position: fixed; width: 325px; }' +
+			'#menu { background-color: #eee; border: 1px #ccc solid; box-sizing: border-box; height: 100%; overflow-x: hidden; overflow-y: auto; padding: 0 10px; position: fixed; width: 325px; }' +
 			'#menu h2, #menu h4 {margin: 0; }' +
+			'#menu ul { margin:0; padding-left:20px; }' +
 			'#menuBreadcrumbs h2, #menuBreadcrumbs h3 { font-size: 14pt; margin: 0; }' +
 
 			'#nextFile { color: #888; font-size: 36pt; opacity: 0.5; padding: 8px; position: fixed; right: 20px; top: ' + (0.5 * window.innerHeight ) + 'px; }' +

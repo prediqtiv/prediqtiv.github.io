@@ -159,6 +159,10 @@ _One day this list will be as long as your arm_
 
 ## Change Log
 
+### 2017-04-15 ~ Theo
+
+* Big fix to to the next and previous buttons when contents menus are displayed
+* Update menu and readme's throughout
 
 ### 2017-04-12 ~ Theo
 

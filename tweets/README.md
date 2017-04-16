@@ -20,17 +20,31 @@ The scripts are here:
 
 [Twitter API Scripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/edit#gid=0 )
 
+## Wishlist
+
+* 2017-04-15 ~ Use Twitter API code here to do search and other jighevel queries in Twitter
+	* https://mashe.hawksey.info/2016/08/keeping-your-twitter-archive-fresh-and-freely-hosted-on-github-pages/
+	* https://script.google.com/d/1E3MlTiAgsjVHdSExaYoOCd0-WEXwKAJGpB8Pjd8ReALs2JxN0aGVtST7/edit?usp=drive_web
 
 ## To Do
 
-* 2017-04-14 ~ Add if verifies then save
+
+* 2017-04-15 ~ Show NY/remote time for next time script will run
+* 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
+	* 2017-04-15 ~ Verify tweets collected in separate column of results
+	* 2017-04-15 ~ pushing missing tweets to array
 * 2017-04-11 ~ Delete any files with same name, then save to CSV
 	* Enables saving multiple times during the day
 * 2017-04-10 ~ Export directly from GAS to GitHub
 * 2017-04-09 ~ Trigger to get tweets every 15 to 20 minutes  / Or Save to five at end of every cycle
 
 
+
 ## Change Log
+
+### 2017-04-15 ~ Theo
+
+* 2017-04-14 ~ Add if verifies then save << added // needs more checking to see if working
 
 ### 2017-04-14 ~ Theo
 

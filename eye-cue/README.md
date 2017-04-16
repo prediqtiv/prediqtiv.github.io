@@ -28,6 +28,13 @@ See also top page
 * Add sounds
 * Add sun movement
 
+### Wish List
+
+* Snail slime for one symbol only
+* Cover stock option puts and calls
+* Show movement as candles
+
+
 ### Issues / Problems
 
 * 2017-03-26 ~ ****Colors, opacity, emissivity, lights, shading, shapes and sizes all need big looking at****
@@ -35,6 +42,8 @@ See also top page
 
 
 ## Change Log
+
+
 
 
 ### 2017-04-14 ~ Theo
@@ -45,4 +54,4 @@ See also top page
 
 * update readme
 
-_see jaanga/sp500 for prior updates and changes_
+_see [jaanga/sp500]( https://jaanga.github.io/sp500/#README.md ) for prior updates and changes_
