@@ -51,6 +51,12 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ## Change Log & Developer Notes
 
+### 2017-04-18 ~ Theo
+
+* Getting tick data via Google Apps Script and saving directly to GitHub - quite amazing
+	* But hitting 1MB files size limit
+	* Need to figure out how to upload 6MB files (difficult) or upload 506 or so little files (easier?)
+	* Uploading multiple files: exceeded maximum execution time;
 
 ### 2017-04-11 ~ Theo
 
