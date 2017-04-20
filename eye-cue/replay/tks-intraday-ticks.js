@@ -57,6 +57,7 @@
 	}
 
 
+
 	TKS.requestFileTicks = function( fname ) {
 console.log( 'fname', fname );
 		let xhr, text, len, lines, line;
@@ -161,6 +162,9 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 				PLA.replay();
 
 			}
+
+
+
 
 
 			function drawSymbols() {
