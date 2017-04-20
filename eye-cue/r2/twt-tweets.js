@@ -5,6 +5,8 @@
 
 	TWT.init = function() {
 
+		TWT.requestTweets();
+
 	}
 
 

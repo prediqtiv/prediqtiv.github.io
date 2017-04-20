@@ -58,7 +58,7 @@
 
 
 	TKS.requestFileTicks = function( fname ) {
-
+console.log( 'fname', fname );
 		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
 
@@ -157,7 +157,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 				drawSymbols();
 				getVertices();
 
-				TWT.requestTweets();
+				TWT.init();
 				PLA.replay();
 
 			}

@@ -158,7 +158,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 				drawSymbols();
 				getVertices();
 
-//				TWT.requestTweets();
+//				TWT.init();
 				PLA.replay();
 
 			}
