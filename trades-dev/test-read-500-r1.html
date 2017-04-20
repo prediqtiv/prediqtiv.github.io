@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang=en >
+<head>
+<title></title>
+<meta charset=utf-8 />
+</head>
+<body>
+<script>
+
+	init();
+
+	function init() {
+
+		document.body.style.cssText = ' font: bold 12pt monospace; ';
+
+		var info = document.body.appendChild( document.createElement( 'div' ) );
+		info.innerHTML =
+
+			'<a href="" ><h1>' + location.pathname.split( '/' ).pop() + '</h1></a>' +
+			'<div id=log ></div>' +
+
+		'';
+
+		var fileName;
+
+		fileName = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/2017-04-19/';
+
+		requestFile( fileName, callbackSymbols );
+
+	}
+
+
+	function callbackSymbols( xhr ) {
+
+		symbols = xhr.target.response;
+		symbols = JSON.parse( symbols );
+
+		for ( var i = 0; i < symbols.length; i++ ) {
+
+			requestFile( symbols[ i ].download_url, callbackSymbol );
+
+		}
+
+	}
+
+
+	function callbackSymbol( xhr ){
+
+		symbol = xhr.target.response;
+//		symbol = JSON.parse( symbol );
+
+console.log( 'name', symbol.slice( 0, symbol.indexOf( ',' ) ) );
+
+	}
+
+
+	function requestFile( fileName, callback ) {
+
+//		var fileName, text, lines;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', fileName, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+		xhr.onload = callback;
+		xhr.send( null );
+
+
+	}
+
+</script>
+</body>
+</html>
