@@ -46,10 +46,12 @@
 
 	function callbackSymbol( xhr ){
 
-		symbol = xhr.target.response;
+		let response;
+
+		response = xhr.target.response;
 //		symbol = JSON.parse( symbol );
 
-console.log( 'name', symbol.slice( 0, symbol.indexOf( ',' ) ) );
+console.log( 'name', response.slice( 0, response.indexOf( ',' ) ) );
 
 	}
 

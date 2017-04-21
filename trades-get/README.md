@@ -51,6 +51,10 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ## Change Log & Developer Notes
 
+### 2017-04-20 ~ Theo
+
+* More fixes to GAS app
+
 ### 2017-04-18 ~ Theo
 
 * Getting tick data via Google Apps Script and saving directly to GitHub - quite amazing

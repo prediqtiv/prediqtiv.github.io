@@ -6,7 +6,7 @@
 
 	TKS.folder;
 
-	TKS.folder = '../../trades/';
+	TKS.folder = '../../../trades-dev/';
 
 	TKS.init = function() {
 
@@ -16,40 +16,9 @@
 
 //				let fileName, text, files, files2;
 
-				fileName = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades';
+				folderUrl = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev';
 
-				xhr = new XMLHttpRequest();
-				xhr.open( 'GET', fileName, true );
-				xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-				xhr.onload = callback;
-				xhr.send( null );
-
-				function callback( xhr ) {
-
-					text = xhr.target.response;
-					files = JSON.parse( text );
-
-					files2 = [];
-
-					for ( let i = 0; i < files.length; i++ ) {
-
-						file = files[ i ].name;
-
-						if ( file.endsWith( '.csv' ) ) { files2.push( file ); }
-
-					}
-
-					for ( i = 0; i < files2.length; i++ ) {
-
-						selFiles[ files2.length - i - 1 ] = new Option( files2[ i ] );
-
-					}
-
-					selFiles.selectedIndex = 0;
-
-					TKS.requestFileTicks( selFiles.value );
-
-				}
+				requestFile( folderUrl, callbackFolders );
 
 //			}
 
@@ -57,8 +26,130 @@
 	}
 
 
-	TKS.requestFileTicks = function( fname ) {
-console.log( 'fname', fname );
+	function callbackFolders( xhr ) {
+
+		response = xhr.target.response;
+		response = JSON.parse( response );
+
+		folders = [];
+		for ( let i = 0; i < response.length; i++ ) {
+
+			folder = response[ i ];
+
+			if ( folder.type === 'dir' ) { folders.push( folder ); }
+
+		}
+
+		for ( i = 0; i < folders.length; i++ ) {
+
+			selFiles[ folders.length - i - 1 ] = new Option( folders[ i ].name );
+
+		}
+
+		selFiles.selectedIndex = 0;
+
+		fs = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/';
+
+		requestFile( fs + selFiles.value, callbackFiles );
+
+	}
+
+
+	function callbackFiles( xhr ) {
+
+		let response, syms;
+
+		response = xhr.target.response;
+		syms = JSON.parse( response );
+
+		for ( let i = 0; i < syms.length; i++ ) {
+
+			symbol = syms[ i ];
+
+			requestFile( TKS.folder + selFiles.value + '/' + symbol.name, callbackFile );
+
+		}
+
+	}
+
+
+
+	function callbackFile( xhr ) {
+
+		let response;
+
+		response = xhr.target.response;
+
+console.log( '', response.slice( 0, response.indexOf( ',' ) ) );
+
+	}
+
+
+	function test(){
+
+		requestFile( TKS.folder + selFiles.value + '/XOM.txt', callback );
+
+		function callback( xhr ) {
+
+console.log( 'xxx', xhr.target.response );
+
+		}
+
+	}
+
+
+	function requestFile( url, callback ) {
+
+		var xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+		xhr.onprogress = function( xhr ) { outDate.innerHTML = '<span style=color:red; >Loaded ' + xhr.loaded + ' out of ' + xhr.total + '</span>'; };
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	TKS.requestFileTicks = function( folder ) {
+
 		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
 
@@ -157,7 +248,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 				drawSymbols();
 				getVertices();
 
-				TWT.init();
+//				TWT.init();
 				PLA.replay();
 
 			}
