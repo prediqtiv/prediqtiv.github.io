@@ -6,9 +6,32 @@
 
 	TKS.folder;
 
-	TKS.folder = '../../../trades-dev/';
+//	TKS.folder = '../../../trades-dev/';
+	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
+
 
 	TKS.init = function() {
+
+		let xhr, text, len, lines, line;
+		let info, symbol, tick, vol;
+
+		if ( symbols ) {
+
+			scene.remove( symbols.objects, symbols.lines );
+
+		}
+
+		symbols = {};
+		symbols.keys = [];
+		symbols.meshes = [];
+		symbols.lines = undefined;
+		symbols.touchables = [];
+		symbols.date = new Date();
+//		symbols.fileName = fname;
+		PLA.index = 0;
+		PLA.playing = false;
+		mnuControls.innerHTML = 'Pause';
+
 
 //		requestTradesFileNames();
 
@@ -57,7 +80,7 @@
 
 	function callbackFiles( xhr ) {
 
-		let response, syms;
+//		let response, syms;
 
 		response = xhr.target.response;
 		syms = JSON.parse( response );
@@ -70,6 +93,15 @@
 
 		}
 
+
+
+//		symbols.openTime = parseInt( symbols[ 'GOOG' ].ticks[ 0 ][ 1 ].slice( 1, 11 ) + '000', 0 );
+
+//				symbols.date.setTime( symbols.openTime );
+
+//				outDate.innerHTML ='Replaying day: ' + symbols.date.toLocaleDateString();
+
+
 	}
 
 
@@ -78,11 +110,80 @@
 
 		let response;
 
+		last = 'ZTS';
+
 		response = xhr.target.response;
 
-console.log( '', response.slice( 0, response.indexOf( ',' ) ) );
+		lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+
+		if ( lines.length === 0 ) {
+
+console.log( 'err ', response );
+			return;
+		}
+
+//console.log( '', lines[0][ 0 ] );
+
+		info = lines[ 0 ];
+		ticks = [];
+		previousVolume = 0;
+		vol = 0;
+
+		symbols.keys.push( info[ 0 ] );
+
+if ( isNaN( parseInt( info[ 3 ] ), 10 ) ){ console.log( 'id', info ); info[ 3 ] = 12;  }
+if ( isNaN( parseInt( info[ 5 ] ), 10 ) ){ console.log( 'cap', info ); info[ 5 ] = 100000000000; }
+if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ] = 2000000; }
+
+		symbol = symbols[ info[ 0 ] ] = {
+
+			symbol: info[ 0 ],
+			name: info[ 1 ],
+			sector: info[ 2 ],
+			sectorID: parseInt( info[ 3 ], 10 ),
+			industry: info[ 4 ],
+			marketCap: parseInt( info[ 5 ], 10 ),
+			volumeAvg: parseInt( info[ 6 ], 10 ),
+
+		}
+
+//		if ( symbol.sector === 'Utilities' ) { symbol.sectorID = 11; } // to make up for wiki errors
+
+		for ( let i = 1; i < lines.length; i++ ) {
+
+			tick = lines[ i ];
+
+			minute = i === 1 ? 0 : parseInt( tick[ 0 ], 10 );
+
+			vol += parseInt( tick[ 5 ], 10 );
+
+			ticks.push(
+
+				[ minute, parseFloat( tick[ 1 ] ), parseFloat( tick[ 2 ] ),
+				parseFloat( tick[ 3 ] ), parseFloat( tick[ 4 ] ),
+				vol ]
+
+			);
+
+		}
+
+		symbol.ticks = ticks;
+		symbol.open = parseFloat( ticks[ 0 ][ 1 ] );
+
+		if ( symbol.symbol === last ) {
+
+			SHO.setMenuSymbolSelect();
+				drawSymbols();
+				getVertices();
+
+//				TWT.init();
+				PLA.replay();
+
+		}
+
 
 	}
+
 
 
 	function test(){
@@ -253,6 +354,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 
 			}
 
+	}
 
 			function drawSymbols() {
 
@@ -390,4 +492,3 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 			}
 
 
-	}

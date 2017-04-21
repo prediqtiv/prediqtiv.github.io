@@ -52,7 +52,7 @@
 			selSymbols[ i ] = new Option( symbols.keys[ i ] );
 
 		}
-
+console.log( 'sho', symbols  );
 		selSymbols.selectedIndex = Math.floor( Math.random() * symbols.keys.length );
 
 		selSymbols.onchange = selSymbols.onfocus = function() {
