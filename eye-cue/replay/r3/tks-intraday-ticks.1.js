@@ -110,7 +110,7 @@
 
 		let response;
 
-		last = 'ZTS';
+		last = syms[ syms.length - 1 ].name.slice( -8, -4 );
 
 		response = xhr.target.response;
 
