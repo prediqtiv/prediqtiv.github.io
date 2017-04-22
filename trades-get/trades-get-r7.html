@@ -479,7 +479,7 @@ console.log( symbol, txt );
 				symbol.name.replace( /,/g, '' ) + ',' +
 				symbol.sector + ',' +
 				symbol.sectorID + ',' +
-				symbol.industry + ',' +
+				symbol.industry.replace( /,/g, '' ) + ',' +
 				symbol.marketCap + ',' +
 				symbol.volumeAvg + '\n' +
 				symbol.tradeDays[ day ].trades + '\n###\n' +
