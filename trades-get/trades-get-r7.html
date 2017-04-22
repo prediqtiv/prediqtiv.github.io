@@ -61,7 +61,7 @@
 		contents.innerHTML =
 
 			'<h1>' +
-				'<a href="" >' + location.pathname.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) + '.1 </a>' +
+				'<a href="" >' + location.pathname.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) + '.2 </a>' +
 				'<a href=https://prediqtiv.github.io/#trades-get/README.md > &#x24D8; </a>' +
 			'</h1>' +
 
@@ -482,7 +482,7 @@ console.log( symbol, txt );
 				symbol.industry.replace( /,/g, '' ) + ',' +
 				symbol.marketCap + ',' +
 				symbol.volumeAvg + '\n' +
-				symbol.tradeDays[ day ].trades + '\n###\n' +
+				symbol.tradeDays[ day ].trades + '###\n' +
 			'';
 
 		}

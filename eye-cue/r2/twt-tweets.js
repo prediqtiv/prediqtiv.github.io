@@ -12,7 +12,7 @@
 
 	TWT.requestTweets = function() {
 
-//		let fileName, text, lines, v2, material, geometry, mesh;
+		let fileName, text, lines, material, geometry, mesh;
 
 
 		fileName = symbols.fileName;
@@ -39,7 +39,7 @@ if ( lines === undefined ) { return; }
 
 				material = new THREE.MeshNormalMaterial( { shading: THREE.FlatShading } );
 
-				for ( var i = 0; i < symbols.keys.length; i++ ) {
+				for ( let i = 0; i < symbols.keys.length; i++ ) {
 
 					symbol = symbols[ symbols.keys[ i ] ];
 					symbol.tweets = parseInt( lines[ i ][ 1 ] );
@@ -65,7 +65,7 @@ if ( lines === undefined ) { return; }
 
 	function drawLatheObject() {
 
-		var points;
+		let points;
 
 		points = [ v2( 0, 0 ) , v2( 1, -0.8 ), v2( 0.5, -1 ), v2( 0, -1 ) ];
 

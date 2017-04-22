@@ -14,7 +14,7 @@
 
 //			function requestTradesFileNames() {
 
-//				let fileName, text, files, files2;
+				let fileName, text, files, files2;
 
 				fileName = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades';
 
@@ -53,13 +53,12 @@
 
 //			}
 
-
 	}
 
 
 	TKS.requestFileTicks = function( fname ) {
 console.log( 'fname', fname );
-		let xhr, text, len, lines, line;
+//		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
 
 		if ( symbols ) {
@@ -92,7 +91,7 @@ console.log( 'fname', fname );
 
 				lines = text.split( '###\n' ).map( function( line ) { return line.split( '\n' ); } );
 
-				symbols.openTime = parseInt( lines[ 0 ][ 1 ].slice( 1, 11 ) + '000', 0 );
+				symbols.openTime = parseInt( lines[ 1 ][ 1 ].slice( 1, 11 ) + '000', 0 );
 
 				symbols.date.setTime( symbols.openTime );
 
@@ -100,7 +99,7 @@ console.log( 'fname', fname );
 
 				len = lines.length - 1;
 
-				for ( let i = 0; i < len; i++ ) {
+				for ( let i = 1; i < len; i++ ) {
 
 					symbolData = lines[ i ];
 					info = symbolData[ 0 ].split( ',' );
@@ -112,7 +111,7 @@ console.log( 'fname', fname );
 
 if ( isNaN( parseInt( info[ 3 ] ), 10 ) ){ info[ 3 ] = 12; console.log( 'id', info ); }
 if ( isNaN( parseInt( info[ 5 ] ), 10 ) ){ info[ 5 ] = 100000000000;console.log( 'cap', info ); }
-if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol', info ); }
+if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 6 ] = 2000000;console.log( 'vol', info ); }
 
 					symbol = symbols[ info[ 0 ] ] = {
 
@@ -150,7 +149,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 
 				}
 
-	// update to create an event
+// update to create an event
 
 				SHO.setMenuSymbolSelect();
 
