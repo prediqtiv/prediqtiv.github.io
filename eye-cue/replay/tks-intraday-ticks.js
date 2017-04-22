@@ -57,7 +57,7 @@
 
 
 	TKS.requestFileTicks = function( fname ) {
-console.log( 'fname', fname );
+//console.log( 'fname', fname );
 //		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
 
