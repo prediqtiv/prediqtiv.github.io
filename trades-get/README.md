@@ -34,6 +34,9 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ### Wish List / To Do
 
+* 2017-04-24 ~ filesToGitHub: show how many files uploaded each run
+* 2017-04-24 ~ Add daily set time trigger
+* 2017-04-23 ~ try out add multiple files
 * Move to Google Apps Script and daily trigger
 * Select exchange & portfolio
 * Get trades for selected symbols or portfolio of issues not in sp500
@@ -50,6 +53,19 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 
 ## Change Log & Developer Notes
+
+
+### 2017-04-24 ~ Theo
+
+Full, successful run accomplished! Data seems to run fine in eyeCue Replay R3
+
+[*] 2017-04-23 ~ fix delete minute triggers
+[*] 2017-04-23 ~ Add daily trigger
+
+### 2017-04-23 ~ Theo
+
+* GAS app getting very close to being operational
+
 
 ### 2017-04-20 ~ Theo
 
