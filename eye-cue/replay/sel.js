@@ -11,7 +11,7 @@
 				'<summary><h3>Trading Days</h3></summary>' +
 
 				'<p>' +
-					'<select id=selFiles onchange=TKS.requestFileTicks(this.value); size=10 style=width:100%; ></select>' +
+					'<select id=selFiles onchange=TKS.requestFileTicks(this.value+".csv"); size=10 style=width:100%; ></select>' +
 				'</p>' +
 
 				'<p><output id=outDate ><output> </p>' +

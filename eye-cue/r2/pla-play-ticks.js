@@ -62,7 +62,7 @@
 				selFiles.selectedIndex++;
 				selFiles.selectedIndex = selFiles.selectedIndex > selFiles.length ? 0 : selFiles.selectedIndex;
 
-				TKS.requestFileTicks( selFiles.value );
+				TKS.requestFileTicks( selFiles.value + '.csv' );
 
 			} else {
 
