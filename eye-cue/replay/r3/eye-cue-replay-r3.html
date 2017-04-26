@@ -4,9 +4,9 @@
 <meta charset=utf-8 >
 <title>predIQtiv eyeCue Replay R3</title>
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
-<meta name=description content='Select and follow entire days of one minute intraday trades - and tweets - for hundreds of symbols' >
+<meta name=description content='SP500 ~ Select and follow entire days of one minute intraday trades - and tweets - for hundreds of symbols' >
 <meta name=keywords content='predIQtiv,WebGL,Three.js,JavaScript,GitHub,FOSS,3D,STEM' >
-<meta name=date content='2017-04-14' >
+<meta name=date content='2017-04-26' >
 </head>
 <body>
 <script src=https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js ></script>
@@ -23,14 +23,12 @@
 <script src=../../r2/gnd-ground.js ></script>
 <script src=../../r2/hed-heads-up.js ></script>
 
-<script src=tks-intraday-ticks.1.js ></script>
+<script src=tks-intraday-ticks.js ></script>
 <script src=../../r2/twt-tweets.js ></script>
 <script src=pla-play-ticks.js ></script>
 
 <script>
 // Copyright 2017 predIQtiv authors ~ MIT license
-
-//	TWT.folder = '../../../tweets/';
 
 	let revNumber = 0;
 
@@ -46,6 +44,7 @@
 	THR.animate();
 
 	function init(){
+
 // DOM
 		CSS.init();
 		HTM.init();
@@ -53,14 +52,13 @@
 		SHO.init();
 		SET.init();
 
-//Three.hs
+//Three.js
 		THR.init();
 		GND.init();
 		HED.init();
 
 // Assets / data
 		TKS.init();
-//		TWT.init();
 
 		onWindowResize();
 

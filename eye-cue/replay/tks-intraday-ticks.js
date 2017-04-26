@@ -35,7 +35,7 @@
 
 						file = files[ i ].name;
 
-						if ( file.endsWith( '.csv' ) ) { files2.push( file ); }
+						if ( file.endsWith( '.csv' ) ) { files2.push( file.slice( 0, -4 ) ); }
 
 					}
 
@@ -47,7 +47,7 @@
 
 					selFiles.selectedIndex = 0;
 
-					TKS.requestFileTicks( selFiles.value );
+					TKS.requestFileTicks( selFiles.value + '.csv' );
 
 				}
 

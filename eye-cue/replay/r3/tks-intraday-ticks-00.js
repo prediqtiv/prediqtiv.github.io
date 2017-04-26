@@ -2,243 +2,61 @@
 	TKS = {};
 
 	let symbols;
-	let syms = [];
-	let count;
 
 	TKS.folder;
-//	TKS.folder = '../../../trades-dev/';
-	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
 
-	TKS.folderUrl = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/';
+	TKS.folder = '../../../trades/';
 
 	TKS.init = function() {
 
-		TKS.requestFile( TKS.folderUrl, TKS.callbackFolders );
+//		requestTradesFileNames();
+
+//			function requestTradesFileNames() {
+
+//				let fileName, text, files, files2;
+
+				fileName = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades';
+
+				xhr = new XMLHttpRequest();
+				xhr.open( 'GET', fileName, true );
+				xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+				xhr.onload = callback;
+				xhr.send( null );
+
+				function callback( xhr ) {
+
+					text = xhr.target.response;
+					files = JSON.parse( text );
+
+					files2 = [];
+
+					for ( let i = 0; i < files.length; i++ ) {
+
+						file = files[ i ].name;
+
+						if ( file.endsWith( '.csv' ) ) { files2.push( file ); }
+
+					}
+
+					for ( i = 0; i < files2.length; i++ ) {
+
+						selFiles[ files2.length - i - 1 ] = new Option( files2[ i ] );
+
+					}
+
+					selFiles.selectedIndex = 0;
+
+					TKS.requestFileTicks( selFiles.value );
+
+				}
+
+//			}
+
 
 	}
 
 
-	TKS.callbackFolders = function( xhr ) {
-
-		let response, items, folders, folder;
-
-		response = xhr.target.response;
-		items = JSON.parse( response );
-		folders = [];
-
-		for ( let i = 0; i < items.length; i++ ) {
-
-			folder = items[ i ];
-
-			if ( folder.type === 'dir' ) {
-
-				selFiles.innerHTML = '<option>' + folder.name + '</option>' + selFiles.innerHTML;
-
-			}
-
-			selFiles.selectedIndex = 0;
-
-			TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackFiles );
-
-		}
-
-	}
-
-
-	TKS.callbackFiles = function( xhr ) {
-
-//		let response, syms;
-
-		if ( symbols ) {
-
-			scene.remove( symbols.objects, symbols.lines );
-
-		}
-
-		count = 0;
-		response = xhr.target.response;
-		syms = JSON.parse( response );
-
-
-		symbols = {};
-		symbols.keys = [];
-		symbols.meshes = [];
-		symbols.lines = undefined;
-		symbols.touchables = [];
-		symbols.date = new Date();
-//		symbols.fileName = fname;
-		PLA.index = 0;
-		PLA.playing = false;
-		mnuControls.innerHTML = 'Pause';
-
-		for ( let i = 0; i < syms.length; i++ ) {
-
-			symbol = syms[ i ];
-
-			TKS.requestFile( TKS.folder + selFiles.value + '/' + symbol.name, callbackFile );
-
-		}
-
-		date = selFiles.value.split( '-' );
-
-		open = new Date( date[ 0 ], date[ 1 ], date[ 2 ], 6, 30 );
-
-		symbols.openTime = open.getTime();
-
-//	symbols.openTime = parseInt( symbols[ 'GOOG' ].ticks[ 0 ][ 1 ].slice( 1, 11 ) + '000', 0 );
-
-		symbols.date.setTime( symbols.openTime );
-
-		outDate.innerHTML ='Replaying day: ' + symbols.date.toLocaleDateString();
-
-	}
-
-
-
-	function callbackFile( xhr ) {
-
-		let response;
-
-		last = syms[ syms.length - 1 ].name.slice( -8, -4 );
-
-		response = xhr.target.response;
-
-		lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
-
-		if ( lines.length === 0 ) {
-
-console.log( 'err ', response );
-			return;
-		}
-
-//console.log( '', lines[0][ 0 ] );
-
-		info = lines[ 0 ];
-		ticks = [];
-		previousVolume = 0;
-		vol = 0;
-
-		symbols.keys.push( info[ 0 ] );
-
-if ( isNaN( parseInt( info[ 3 ] ), 10 ) ){ console.log( 'id', info ); info[ 3 ] = 12;  }
-if ( isNaN( parseInt( info[ 5 ] ), 10 ) ){ console.log( 'cap', info ); info[ 5 ] = 100000000000; }
-if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ] = 2000000; }
-
-		symbol = symbols[ info[ 0 ] ] = {
-
-			symbol: info[ 0 ],
-			name: info[ 1 ],
-			sector: info[ 2 ],
-			sectorID: parseInt( info[ 3 ], 10 ),
-			industry: info[ 4 ],
-			marketCap: parseInt( info[ 5 ], 10 ),
-			volumeAvg: parseInt( info[ 6 ], 10 ),
-
-		}
-
-//		if ( symbol.sector === 'Utilities' ) { symbol.sectorID = 11; } // to make up for wiki errors
-
-		for ( let i = 1; i < lines.length; i++ ) {
-
-			tick = lines[ i ];
-
-			minute = i === 1 ? 0 : parseInt( tick[ 0 ], 10 );
-
-			vol += parseInt( tick[ 5 ], 10 );
-
-			ticks.push(
-
-				[ minute, parseFloat( tick[ 1 ] ), parseFloat( tick[ 2 ] ),
-				parseFloat( tick[ 3 ] ), parseFloat( tick[ 4 ] ),
-				vol ]
-
-			);
-
-		}
-
-		symbol.ticks = ticks;
-		symbol.open = parseFloat( ticks[ 0 ][ 1 ] );
-
-		if ( symbol.symbol === last ) {
-
-			SHO.setMenuSymbolSelect();
-				drawSymbols();
-				getVertices();
-
-				TWT.init();
-				PLA.replay();
-
-		}
-
-	}
-
-
-
-	function test(){
-
-		TKS.requestFile( TKS.folder + selFiles.value + '/XOM.txt', callback );
-
-		function callback( xhr ) {
-
-console.log( 'xxx', xhr.target.response );
-
-		}
-
-	}
-
-
-
-	TKS.requestFile = function( url, callback ) {
-
-		var xhr;
-
-		xhr = new XMLHttpRequest();
-		xhr.crossOrigin = 'anonymous';
-		xhr.open( 'GET', url, true );
-		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-		xhr.onprogress = function( xhr ) { outDate.innerHTML = '<span style=color:red; >Loaded ' + count++ + ' out of ' + syms.length + '</span>'; };
-		xhr.onload = callback;
-		xhr.send( null );
-
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-	TKS.requestFileTicks = function( folder ) {
+	TKS.requestFileTicks = function( fname ) {
 
 		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
@@ -343,9 +161,6 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 
 			}
 
-	}
-
-*/
 
 			function drawSymbols() {
 
@@ -483,3 +298,4 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 			}
 
 
+	}
