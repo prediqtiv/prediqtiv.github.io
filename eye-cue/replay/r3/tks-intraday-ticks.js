@@ -47,7 +47,7 @@
 
 	TKS.callbackFiles = function( xhr ) {
 
-//		let response, syms;
+		let response, syms;
 
 		if ( symbols ) {
 
@@ -165,7 +165,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 				drawSymbols();
 				getVertices();
 
-				TWT.init();
+//				TWT.init();
 				PLA.replay();
 
 		}
