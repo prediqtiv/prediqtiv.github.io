@@ -8,7 +8,7 @@
 
 ### Full Screen Demo: [eyeCue Realtime ]( https://prediqtiv.github.io/eye-cue/realtime/ )
 
-### Full Screen Demo: [eyeCue Realtime Dev ]( https://prediqtiv.github.io/eye-cue/replay/realtime/dev/ )
+### Full Screen Demo: [eyeCue Realtime Dev ]( https://prediqtiv.github.io/eye-cue/realtime/dev/ )
 
 ## Web Page
 
