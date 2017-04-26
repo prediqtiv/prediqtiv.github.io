@@ -21,7 +21,6 @@
 				'<div class=popUp id=popHelp style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>' +
 				'<p><small><i>' + document.head.querySelector("[name=description]").content + '</i></small></p>' +
 
-
 				'<div id=mnuSelect ></div>' +
 
 				'<div id=mnuShow ></div>' +
@@ -29,6 +28,7 @@
 				'<div id=mnuSettings ></div>' +
 
 				'<details>' +
+
 					'<summary><h3>About</h3></summary>' +
 
 					'<p>' +

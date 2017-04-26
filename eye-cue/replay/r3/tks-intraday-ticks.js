@@ -6,8 +6,8 @@
 	let count;
 
 	TKS.folder;
-//	TKS.folder = '../../../trades-dev/';
-	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
+	TKS.folder = '../../../trades-dev/';
+//	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
 
 	TKS.folderUrl = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/';
 
@@ -47,7 +47,7 @@
 
 	TKS.callbackFiles = function( xhr ) {
 
-		let response, syms;
+		let response;
 
 		if ( symbols ) {
 
@@ -74,7 +74,7 @@
 		for ( let i = 0; i < syms.length; i++ ) {
 
 			symbol = syms[ i ];
-
+console.log( 'symbol.name', symbol.name );
 			TKS.requestFile( TKS.folder + selFiles.value + '/' + symbol.name, callbackFile );
 
 		}
@@ -101,9 +101,15 @@
 
 		last = syms[ syms.length - 1 ].name.slice( -8, -4 );
 
+//console.log( 'last', last );
+
+return;
+
 		response = xhr.target.response;
 
 		lines = response.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+
+
 
 		if ( lines.length === 0 ) {
 
@@ -120,9 +126,9 @@ console.log( 'err ', response );
 
 		symbols.keys.push( info[ 0 ] );
 
-if ( isNaN( parseInt( info[ 3 ] ), 10 ) ){ console.log( 'id', info ); info[ 3 ] = 12;  }
-if ( isNaN( parseInt( info[ 5 ] ), 10 ) ){ console.log( 'cap', info ); info[ 5 ] = 100000000000; }
-if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ] = 2000000; }
+//if ( isNaN( parseInt( info[ 3 ] ), 10 ) ){ console.log( 'id', info ); info[ 3 ] = 12;  }
+//if ( isNaN( parseInt( info[ 5 ] ), 10 ) ){ console.log( 'cap', info ); info[ 5 ] = 100000000000; }
+//if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ] = 2000000; }
 
 		symbol = symbols[ info[ 0 ] ] = {
 
@@ -161,12 +167,12 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 
 		if ( symbol.symbol === last ) {
 
-			SHO.setMenuSymbolSelect();
-				drawSymbols();
-				getVertices();
+//			SHO.setMenuSymbolSelect();
+			drawSymbols();
+			getVertices();
 
-//				TWT.init();
-				PLA.replay();
+//			TWT.init();
+//			PLA.replay();
 
 		}
 
@@ -238,7 +244,7 @@ console.log( 'xxx', xhr.target.response );
 
 
 
-	TKS.requestFileTicks = function( folder ) {
+	TKS.requestFileTicksbbbbb = function( folder ) {
 
 		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
