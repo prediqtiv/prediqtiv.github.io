@@ -52,8 +52,12 @@ if ( lines === undefined ) { return; }
 					mesh.name = symbol.symbol;
 					mesh.position.set( 0, -5, 0 );
 
-					symbols.meshes[ i ].add( mesh );
-					symbols.touchables.push( mesh );
+					if ( symbols.meshes[ i ] ) {
+
+						symbols.meshes[ i ].add( mesh );
+						symbols.touchables.push( mesh );
+
+					}
 
 				}
 

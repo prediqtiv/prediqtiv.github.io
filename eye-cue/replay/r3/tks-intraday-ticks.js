@@ -6,8 +6,8 @@
 	let count;
 
 	TKS.folder;
-	TKS.folder = '../../../trades-dev/';
-//	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
+//	TKS.folder = '../../../trades-dev/';
+	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
 
 	TKS.folderUrl = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/';
 
@@ -47,7 +47,7 @@
 
 	TKS.callbackAllFiles = function( xhr ) {
 
-		let response;
+		let response, syms, sym;
 
 		if ( symbols ) {
 
@@ -77,9 +77,9 @@
 
 		for ( let i = 0; i < syms.length; i++ ) {
 
-			symbol = syms[ i ];
+			sym = syms[ i ];
 
-			TKS.requestFile( TKS.folder + selFiles.value + '/' + symbol.name, TKS.callbackFile );
+			TKS.requestFile( TKS.folder + selFiles.value + '/' + sym.name, TKS.callbackFile );
 
 		}
 
@@ -185,7 +185,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 		xhr = new XMLHttpRequest();
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', url, true );
-		xhr.onerror = function( xhr ) { console.log( 'utl', url  ); console.log( 'error', xhr  ); };
+		xhr.onerror = function( xhr ) { console.log( 'url', url  ); console.log( 'error', xhr  ); };
 		xhr.onprogress = function( xhr ) { outDate.innerHTML = '<span style=color:red; >Loaded ' + count++ + ' out of ' + syms.length + '</span>'; };
 		xhr.onload = callback;
 		xhr.send( null );

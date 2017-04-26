@@ -38,6 +38,8 @@
 
 			if ( !symbol.ticks[ PLA.index ] || !vertex ) { continue; }
 
+			if ( !symbols.meshes[ i ] ) { continue; }
+
 			symbols.meshes[ i ].position.copy( vertex );
 
 		}
