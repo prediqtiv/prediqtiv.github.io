@@ -25,14 +25,15 @@
 
 <script src=tks-intraday-ticks.1.js ></script>
 <script src=../../r2/twt-tweets.js ></script>
-<script src=../../r2/pla-play-ticks.js ></script>
+<script src=pla-play-ticks.js ></script>
 
 <script>
 // Copyright 2017 predIQtiv authors ~ MIT license
 
-	TWT.folder = '../../../tweets/';
+//	TWT.folder = '../../../tweets/';
 
 	let revNumber = 0;
+
 	let colors = [0x575757,0xAD2323,0x2A4BD7,0x1D6914,0x814A19,0x8126C0,0x81C57A,0x9DAFFF,0x29D0D0,0xFF9233,0xE9DEBB,0xFFCDF3,0xFFEE33,0xA0A0A0,0x000000,0xFFFFFF];
 	let sectors = [
 		'Consumer Discretionary','Consumer Staples','Energy','Financials','Health Care','Industrials',
@@ -41,6 +42,7 @@
 
 
 	init();
+
 	THR.animate();
 
 	function init(){
@@ -56,8 +58,9 @@
 		GND.init();
 		HED.init();
 
-// Assets / dara
+// Assets / data
 		TKS.init();
+//		TWT.init();
 
 		onWindowResize();
 

@@ -1,7 +1,8 @@
 
 	TWT = {};
 
-	TWT.folder = '../../tweets/';
+//	TWT.folder = '../../tweets/';
+	TWT.folder = 'https://prediqtiv.github.io/tweets/';
 
 	TWT.init = function() {
 
@@ -14,8 +15,8 @@
 
 		let fileName, text, lines, material, geometry, mesh;
 
-
-		fileName = symbols.fileName;
+//		fileName = symbols.fileName;
+		fileName = selFiles.value + '.csv';
 
 		xhr = new XMLHttpRequest();
 		xhr.open( 'GET', TWT.folder + fileName, true );

@@ -34,9 +34,13 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ### Wish List / To Do
 
+Soon
+* 2017-04-25 ~ Add getMoreTicks function
+* 2017-04-25 ~ Catch errors on getTick - especially over six minutes termination error - and start new trigger
 * 2017-04-24 ~ filesToGitHub: show how many files uploaded each run
-* 2017-04-24 ~ Add daily set time trigger
 * 2017-04-23 ~ try out add multiple files
+
+More
 * Move to Google Apps Script and daily trigger
 * Select exchange & portfolio
 * Get trades for selected symbols or portfolio of issues not in sp500
@@ -54,6 +58,13 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ## Change Log & Developer Notes
 
+
+### 2017-04-25 ~ Theo
+
+* Rejig the UI a lot
+* Add more error-trapping
+[*] 2017-04-24 ~ Add daily set time trigger
+	* May be working
 
 ### 2017-04-24 ~ Theo
 

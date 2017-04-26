@@ -3,7 +3,6 @@
 
 	let symbols;
 
-
 	TKS.folder;
 
 	TKS.folder = '../../../trades/';

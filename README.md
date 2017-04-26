@@ -2,14 +2,17 @@
 ![logo]( images/predIQtiv-logo2.png )
 
 
-### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/ )
+### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
 
-### Full Screen Demo: [eyeCue Replay Dev ]( https://prediqtiv.github.io/eye-cue/dev/ )
+### Full Screen Demo: [eyeCue Replay Dev ]( https://prediqtiv.github.io/eye-cue/replay/dev/ )
 
+### Full Screen Demo: [eyeCue Realtime ]( https://prediqtiv.github.io/eye-cue/realtime/ )
+
+### Full Screen Demo: [eyeCue Realtime Dev ]( https://prediqtiv.github.io/eye-cue/replay/realtime/dev/ )
 
 ## Web Page
 
-<iframe src="https://prediqtiv.github.io/eye-cue/dev/index.html" width=100% height=600px ></iframe>
+<iframe src="https://prediqtiv.github.io/eye-cue/replay/dev/index.html" width=100% height=600px ></iframe>
 
 _Development version - may have issues_
 
@@ -158,6 +161,13 @@ _One day this list will be as long as your arm_
 
 
 ## Change Log
+
+
+### 2017-04-25 ~ Theo
+
+* update readme
+* See sp500-trades-get - Google Apps Script
+* See eyeCue Replay R3
 
 ### 2017-04-15 ~ Theo
 

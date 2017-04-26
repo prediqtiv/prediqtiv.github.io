@@ -2,35 +2,19 @@
 	TKS = {};
 
 	let symbols;
-
+	let syms = [];
+	let count;
 
 	TKS.folder;
-
 //	TKS.folder = '../../../trades-dev/';
 	TKS.folder = 'https://prediqtiv.github.io/trades-dev/';
 
+	TKS.folderUrl = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/';
 
 	TKS.init = function() {
 
 		let xhr, text, len, lines, line;
 		let info, symbol, tick, vol;
-
-		if ( symbols ) {
-
-			scene.remove( symbols.objects, symbols.lines );
-
-		}
-
-		symbols = {};
-		symbols.keys = [];
-		symbols.meshes = [];
-		symbols.lines = undefined;
-		symbols.touchables = [];
-		symbols.date = new Date();
-//		symbols.fileName = fname;
-		PLA.index = 0;
-		PLA.playing = false;
-		mnuControls.innerHTML = 'Pause';
 
 
 //		requestTradesFileNames();
@@ -39,25 +23,26 @@
 
 //				let fileName, text, files, files2;
 
-				folderUrl = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev';
 
-				requestFile( folderUrl, callbackFolders );
+				TKS.requestFile( TKS.folderUrl, TKS.callbackFolders );
 
 //			}
-
 
 	}
 
 
-	function callbackFolders( xhr ) {
+	 TKS.callbackFolders = function( xhr ) {
+
+		let response, items, folders;
 
 		response = xhr.target.response;
-		response = JSON.parse( response );
+		items = JSON.parse( response );
 
 		folders = [];
-		for ( let i = 0; i < response.length; i++ ) {
 
-			folder = response[ i ];
+		for ( let i = 0; i < items.length; i++ ) {
+
+			folder = items[ i ];
 
 			if ( folder.type === 'dir' ) { folders.push( folder ); }
 
@@ -71,35 +56,57 @@
 
 		selFiles.selectedIndex = 0;
 
-		fs = 'https://api.github.com/repos/prediqtiv/prediqtiv.github.io/contents/trades-dev/';
+		TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackFiles );
 
-		requestFile( fs + selFiles.value, callbackFiles );
 
 	}
 
 
-	function callbackFiles( xhr ) {
+	TKS.callbackFiles = function( xhr ) {
 
 //		let response, syms;
 
+		if ( symbols ) {
+
+			scene.remove( symbols.objects, symbols.lines );
+
+		}
+
+		count = 0;
 		response = xhr.target.response;
 		syms = JSON.parse( response );
+
+
+		symbols = {};
+		symbols.keys = [];
+		symbols.meshes = [];
+		symbols.lines = undefined;
+		symbols.touchables = [];
+		symbols.date = new Date();
+//		symbols.fileName = fname;
+		PLA.index = 0;
+		PLA.playing = false;
+		mnuControls.innerHTML = 'Pause';
 
 		for ( let i = 0; i < syms.length; i++ ) {
 
 			symbol = syms[ i ];
 
-			requestFile( TKS.folder + selFiles.value + '/' + symbol.name, callbackFile );
+			TKS.requestFile( TKS.folder + selFiles.value + '/' + symbol.name, callbackFile );
 
 		}
 
+		date = selFiles.value.split( '-' );
 
+		open = new Date( date[ 0 ], date[ 1 ], date[ 2 ], 6, 30 );
 
-//		symbols.openTime = parseInt( symbols[ 'GOOG' ].ticks[ 0 ][ 1 ].slice( 1, 11 ) + '000', 0 );
+		symbols.openTime = open.getTime();
 
-//				symbols.date.setTime( symbols.openTime );
+//	symbols.openTime = parseInt( symbols[ 'GOOG' ].ticks[ 0 ][ 1 ].slice( 1, 11 ) + '000', 0 );
 
-//				outDate.innerHTML ='Replaying day: ' + symbols.date.toLocaleDateString();
+		symbols.date.setTime( symbols.openTime );
+
+		outDate.innerHTML ='Replaying day: ' + symbols.date.toLocaleDateString();
 
 
 	}
@@ -176,11 +183,10 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 				drawSymbols();
 				getVertices();
 
-//				TWT.init();
+				TWT.init();
 				PLA.replay();
 
 		}
-
 
 	}
 
@@ -188,7 +194,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 
 	function test(){
 
-		requestFile( TKS.folder + selFiles.value + '/XOM.txt', callback );
+		TKS.requestFile( TKS.folder + selFiles.value + '/XOM.txt', callback );
 
 		function callback( xhr ) {
 
@@ -199,7 +205,8 @@ console.log( 'xxx', xhr.target.response );
 	}
 
 
-	function requestFile( url, callback ) {
+
+	TKS.requestFile = function( url, callback ) {
 
 		var xhr;
 
@@ -207,7 +214,7 @@ console.log( 'xxx', xhr.target.response );
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', url, true );
 		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-		xhr.onprogress = function( xhr ) { outDate.innerHTML = '<span style=color:red; >Loaded ' + xhr.loaded + ' out of ' + xhr.total + '</span>'; };
+		xhr.onprogress = function( xhr ) { outDate.innerHTML = '<span style=color:red; >Loaded ' + count++ + ' out of ' + syms.length + '</span>'; };
 		xhr.onload = callback;
 		xhr.send( null );
 
@@ -245,7 +252,7 @@ console.log( 'xxx', xhr.target.response );
 
 
 
-
+/*
 
 
 
@@ -355,6 +362,8 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol
 			}
 
 	}
+
+*/
 
 			function drawSymbols() {
 
