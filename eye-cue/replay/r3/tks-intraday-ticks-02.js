@@ -40,12 +40,12 @@
 
 		selFiles.selectedIndex = 0;
 
-		TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackAllFiles );
+		TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackFiles );
 
 	}
 
 
-	TKS.callbackAllFiles = function( xhr ) {
+	TKS.callbackFiles = function( xhr ) {
 
 		let response;
 
@@ -59,18 +59,14 @@
 		response = xhr.target.response;
 		syms = JSON.parse( response );
 
+
 		symbols = {};
 		symbols.keys = [];
 		symbols.meshes = [];
 		symbols.lines = undefined;
-		symbols.date = new Date();
-		symbols.objects = new THREE.Object3D();
 		symbols.touchables = [];
-
-		scene.add( symbols.objects );
-
-		HED.touchables = symbols.touchables;
-
+		symbols.date = new Date();
+//		symbols.fileName = fname;
 		PLA.index = 0;
 		PLA.playing = false;
 		mnuControls.innerHTML = 'Pause';
@@ -79,7 +75,7 @@
 
 			symbol = syms[ i ];
 
-			TKS.requestFile( TKS.folder + selFiles.value + '/' + symbol.name, TKS.callbackFile );
+			TKS.requestFile( TKS.folder + selFiles.value + '/' + symbol.name, callbackFile );
 
 		}
 
@@ -97,7 +93,7 @@
 
 
 
-	TKS.callbackFile = function( xhr ) {
+	function callbackFile( xhr ) {
 
 		let response;
 
@@ -139,6 +135,8 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 
 		}
 
+//		if ( symbol.sector === 'Utilities' ) { symbol.sectorID = 11; } // to make up for wiki errors
+
 		for ( let i = 1; i < lines.length; i++ ) {
 
 			tick = lines[ i ];
@@ -160,22 +158,35 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 		symbol.ticks = ticks;
 		symbol.open = parseFloat( ticks[ 0 ][ 1 ] );
 
-		TKS.drawSymbol( symbol );
-
 		if ( symbol.symbol === last ) {
 
 			SHO.setMenuSymbolSelect();
-
+			drawSymbols();
 			getVertices();
 
 			TWT.init();
 			PLA.replay();
 
-			outDate.innerHTML += '<br>Replaying day: ' +  symbols.date.toLocaleDateString();
+			outDate.innerHTML += 'Replaying day: ' + b +  symbols.date.toLocaleDateString();
 
 		}
 
 	}
+
+
+
+	function test(){
+
+		TKS.requestFile( TKS.folder + selFiles.value + '/XOM.txt', callback );
+
+		function callback( xhr ) {
+
+console.log( 'xxx', xhr.target.response );
+
+		}
+
+	}
+
 
 
 	TKS.requestFile = function( url, callback ) {
@@ -194,73 +205,148 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 
 
 
-	TKS.drawSymbol = function( symbol ) {
-
-		let shape, geometry, material, mesh;
-		let edgesGeometry, edgesMaterial, edges;
-		let scale, obj, sp;
-
-		obj = new THREE.Object3D();
-//			symbol = symbols[ symbols.keys[ i ] ];
-
-		material = new THREE.MeshPhongMaterial( {
-			color: colors[ symbol.sectorID ], // 0xffffff * Math.random(),
-			opacity: 0.85,
-			side: 2,
-			transparent: true
-		} );
-
-		shape = new THREE.Shape( GND.shapes[ symbol.sectorID ] );
-		geometry = new THREE.ExtrudeGeometry( shape, { amount: 1, bevelEnabled: false, steps: 1 } );
-
-		geometry.applyMatrix( new THREE.Matrix4().makeRotationX( -0.5 * Math.PI ) );
-		geometry.applyMatrix( new THREE.Matrix4().makeScale( 1, 2 + 0.0000000002 * symbol.marketCap, 1 ) );
-		geometry.applyMatrix( new THREE.Matrix4().makeTranslation( -2.5, 0, 2.5 ) );
-
-		mesh = new THREE.Mesh( geometry, material );
-		mesh.name = mesh.userData.symbol = symbol.symbol;
-		mesh.userData.name = symbol.name;
-		mesh.userData.sector = symbol.sector;
-		mesh.userData.sectorID = symbol.sectorID;
-
-//subindustry
-//clic
-		mesh.userData.volumeAvg = symbol.volumeAvg;
-		mesh.userData.marketCap = symbol.marketCap;
-		mesh.userData.volume = 0;
-		mesh.userData.changePct = 0;
 
 
-//					mesh.position.set( -2,5, 0.0, -2.5 );
-//					scale = 2 + 0.0000000002 * symbol.marketCap;
-//					mesh.scale.y = scale;
-		mesh.castShadow = true;
-		mesh.receiveShadow = true;
-		obj.add( mesh );
 
-		edgesGeometry = new THREE.EdgesGeometry( mesh.geometry ); // or WireframeGeometry
-		edgesMaterial = new THREE.LineBasicMaterial( { transparent: true } );
-		edgesMaterial.color.setRGB( 0.3, 0.3, 0.3 );
-		edges = new THREE.LineSegments( edgesGeometry, edgesMaterial );
-		mesh.add( edges ); // add wireframe as a child of the parent mesh
 
-		sp = THR.drawSprite( mesh.userData.symbol, (0.05 ), '#ffff00',
-			mesh.position.x, ( 8 + 0.0000000002 * symbol.marketCap ), mesh.position.z);
-		sp.material.opacity = 0.5;
-		obj.add( sp );
 
-		symbols.meshes.push( obj );
-		symbols.touchables.push( mesh );
-		symbols.objects.add( obj );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+	TKS.requestFileTicksbbbbb = function( folder ) {
+
+		let xhr, text, len, lines, line;
+		let info, symbol, tick, vol;
+
+		if ( symbols ) {
+
+			scene.remove( symbols.objects, symbols.lines );
+
+		}
+
+		symbols = {};
+		symbols.keys = [];
+		symbols.meshes = [];
+		symbols.lines = undefined;
+		symbols.touchables = [];
+		symbols.date = new Date();
+		symbols.fileName = fname;
+		PLA.index = 0;
+		PLA.playing = false;
+		mnuControls.innerHTML = 'Pause';
+
+		xhr = new XMLHttpRequest();
+		xhr.open( 'GET', TKS.folder + fname, true );
+		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
+		xhr.onprogress = function( xhr ) { outDate.innerHTML = '<span style=color:red; >Loaded ' + xhr.loaded + ' out of ' + xhr.total + '</span>'; };
+		xhr.onload = callback;
+		xhr.send( null );
+
+			function callback( xhr ) {
+
+				text = xhr.target.response;
+
+				lines = text.split( '###\n' ).map( function( line ) { return line.split( '\n' ); } );
+
+				symbols.openTime = parseInt( lines[ 0 ][ 1 ].slice( 1, 11 ) + '000', 0 );
+
+				symbols.date.setTime( symbols.openTime );
+
+				outDate.innerHTML ='Replaying day: ' + symbols.date.toLocaleDateString();
+
+				len = lines.length - 1;
+
+				for ( let i = 0; i < len; i++ ) {
+
+					symbolData = lines[ i ];
+					info = symbolData[ 0 ].split( ',' );
+					ticks = [];
+					previousVolume = 0;
+					vol = 0;
+
+					symbols.keys.push( info[ 0 ] );
+
+if ( isNaN( parseInt( info[ 3 ] ), 10 ) ){ info[ 3 ] = 12; console.log( 'id', info ); }
+if ( isNaN( parseInt( info[ 5 ] ), 10 ) ){ info[ 5 ] = 100000000000;console.log( 'cap', info ); }
+if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ info[ 5 ] = 2000000;console.log( 'vol', info ); }
+
+					symbol = symbols[ info[ 0 ] ] = {
+
+						symbol: info[ 0 ],
+						name: info[ 1 ],
+						sector: info[ 2 ],
+						sectorID: parseInt( info[ 3 ], 10 ),
+						industry: info[ 4 ],
+						marketCap: parseInt( info[ 5 ], 10 ),
+						volumeAvg: parseInt( info[ 6 ], 10 ),
+
+					}
+
+					if ( symbol.sector === 'Utilities' ) { symbol.sectorID = 11; } // to make up for wiki errors
+
+					for ( let j = 1; j < symbolData.length - 1; j++ ) {
+
+						tick = symbolData[ j ].split( ',' );
+
+						minute = j === 1 ? 0 : parseInt( tick[ 0 ], 10 );
+
+						vol += parseInt( tick[ 5 ], 10 );
+						ticks.push(
+
+							[ minute, parseFloat( tick[ 1 ] ), parseFloat( tick[ 2 ] ),
+							parseFloat( tick[ 3 ] ), parseFloat( tick[ 4 ] ),
+							vol ]
+
+						);
+
+					}
+
+					symbol.ticks = ticks;
+					symbol.open = parseFloat( ticks[ 0 ][ 1 ] );
+
+				}
+
+	// update to create an event
+
+				SHO.setMenuSymbolSelect();
+
+				drawSymbols();
+				getVertices();
+
+//				TWT.init();
+				PLA.replay();
+
+			}
 
 	}
 
-
-
-
-
-
+*/
 
 			function drawSymbols() {
 
@@ -268,7 +354,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 				let edgesGeometry, edgesMaterial, edges;
 				let scale, obj, sp;
 
-//				scene.remove( symbols.objects );
+				scene.remove( symbols.objects );
 
 				symbols.objects = new THREE.Object3D();
 
@@ -299,8 +385,8 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 					mesh.userData.sector = symbol.sector;
 					mesh.userData.sectorID = symbol.sectorID;
 
-//subindustry
-//clic
+		//subindustry
+		//clic
 					mesh.userData.volumeAvg = symbol.volumeAvg;
 					mesh.userData.marketCap = symbol.marketCap;
 					mesh.userData.volume = 0;
@@ -333,7 +419,7 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 
 				scene.add( symbols.objects );
 
-				HED.touchables = symbols.touchables;
+				hed.touchables = symbols.touchables;
 
 			}
 
@@ -396,17 +482,5 @@ if ( isNaN( parseInt( info[ 6 ] ), 10 ) ){ console.log( 'vol', info ); info[ 6 ]
 				symbols.lines.add( line );
 
 			}
-
-	function test(){
-
-		TKS.requestFile( TKS.folder + selFiles.value + '/XOM.txt', callback );
-
-		function callback( xhr ) {
-
-console.log( 'xxx', xhr.target.response );
-
-		}
-
-	}
 
 

@@ -63,7 +63,7 @@
 				selFiles.selectedIndex++;
 				selFiles.selectedIndex = selFiles.selectedIndex > selFiles.length ? 0 : selFiles.selectedIndex;
 
-				TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackFiles );
+				TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackAllFiles );
 
 			} else {
 
