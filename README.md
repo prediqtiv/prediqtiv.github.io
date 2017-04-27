@@ -1,5 +1,5 @@
 
-![logo]( https://prediqtiv.github.io/images/predIQtiv-logo2.png )
+![]( https://prediqtiv.github.io/images/predIQtiv-logo2.png )
 
 
 ### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
