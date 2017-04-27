@@ -1,5 +1,5 @@
 
-![]( ./images/predIQtiv-logo2.png )
+
 
 
 ### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
@@ -16,6 +16,7 @@
 
 _Development version - may have issues_
 
+![]( ./images/predIQtiv-logo2.png )
 
 ## Concept
 
