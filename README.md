@@ -1,5 +1,6 @@
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://prediqtiv.github.io/#readme.md "View file as a web page." ) </span>
 
-
+![]( images/predIQtiv-logo2.png )
 
 
 ### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
@@ -16,11 +17,10 @@
 
 _Development version - may have issues_
 
-![]( images/predIQtiv-logo2.png )
 
 ## Concept
 
-_It's all very beta - including this documentation_
+_“If at first the idea is not absurd, then there is no hope for it.”_ — Albert Einstein
 
 ### Issues / Problems
 
@@ -30,6 +30,7 @@ It is quite difficult to note which are the outliers and which are in the middle
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
 
+* Derive real-time company intelligence from public sources to help users make better-informed investing and business decisions.
 * View hundreds of market symbols in a non-reductionist manner
 * Be able to get a picture of how the market is flowing
 
@@ -46,28 +47,70 @@ It is quite difficult to note which are the outliers and which are in the middle
 
 ## Data Gathering
 
-Currently there is is a single app
+Currently there are several apps hosted on different types of servers
 
-### [Trades Get]( https://jaanga.github.io/sp500/trades-get/ )
+
+### GitHub Hosting
+
+* GitHub provides hosting for static files such as HTML files, style sheets, images and JavaScript files at no charge
+* Once accessed, files load and run on the client computer
+* Files are available with low latency and thus load quite fast
+* There is no easy way to run files on a schedule
+
+### Hosted on GitHub: [Trades Get]( https://jaanga.github.io/sp500/trades-get/ )
 
 * Request and obtain intraday trades for hundreds of stock market symbols for a number of days
-   * Save data to local drive
+* Saves data to local drive - data must then be commited by a human to GitHub
+* Must be loaded and run by a human every day
+* The app appears to be quite stable and seems to run without issue whenever it's called
+* See the SP500 Trades Get [Read Me]( https://prediqtiv.github.io/#trades-get/README.md ) ffor much more detail
+
+
+### Hosted on Google Apps Script (GAS)
+
+* Wikipedia [Google Apps Script]( https://en.wikipedia.org/wiki/Google_Apps_Script ) - a scripting language for light-weight application development in the Google Apps platform
+* Google: [Google Apps Script]( https://developers.google.com/apps-script/ ) - Create add-ons for Google Sheets, Docs, or Forms, automate your workflow, integrate with external APIs, and more.
+
+Why Gas?
+* It's available at no charge
+* Code runs on a server
+* Code forking and sharing is built-in
+* Triggers can be set to run at designated events or times - down to ine minute intervals - with no human intervention
+
+
+### Hosted on Google Apps Script: [SP500-trades-get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME )
+
+* Runs on a GAS server
+* Loads the Wikipedia page with the list of SP500 components
+* Uses the GAS spreadsheet GoogleFinance functions to gather the market capitalization anf the average daily volume for each symbol
+* Uses an undocumented Google service to gather one minute intraday day for each og the symbols
+* Uses the GitHuB API - and invoking [OAuth]( https://en.wikipedia.org/wiki/OAuth ) for authorization - to send files from the Google servers to the GitHub servers
+
+### Hosted on Google Apps Script: [twitter-api-sripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY )
+
+* Runs on a GAS server
+* Uses the Twitter API - with OAuth - to gather the current 'cashtags' for each of the 500 symbols
+* Uses the GitHuB API - and invoking [OAuth]( https://en.wikipedia.org/wiki/OAuth ) for authorization - to send the Twitter data from the Google servers to the GitHub servers
+* See [Read Me]( https://prediqtiv.github.io/#tweets/README.md ) for more detail
 
 ### Upcoming
 
-* Get official Twitter name for each symbol - using Twitter API
-* Save trades data directly to GitHub?
-* Gather trades data via Google Scripts Chron job?
+* Both GAS scripts need work on improving  the reliability of completion as well as better recovery from error
+* Get official Twitter name for each symbol - using the Twitter search API
+
 
 
 ## Data Visualization 3D
 
 There are two scripts of note here
 
-* SP500 Realtime
-	* SP500 near realtime ~ updates about once a minute
-* SP500 Replay
-	* SP500 replay ~ select and follow entire days of one minute intraday trading
+### eyeCue SP500 Realtime
+
+* SP500 near realtime ~ updates about once a minute
+
+### eyeCue SP500 Replay
+
+* SP500 replay ~ select and follow entire days of one minute intraday trading
 
 
 ### Usage Notes
@@ -164,11 +207,17 @@ _One day this list will be as long as your arm_
 ## Change Log
 
 
+### 2017-04-27 ~ Theo
+
+* Progress on everything - including this read me
+
 ### 2017-04-25 ~ Theo
 
 * update readme
 * See sp500-trades-get - Google Apps Script
 * See eyeCue Replay R3
+* Save trades data directly to GitHub? << yup
+* Gather trades data via Google Scripts Chron job? << yup
 
 ### 2017-04-15 ~ Theo
 
