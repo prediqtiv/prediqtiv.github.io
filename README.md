@@ -16,7 +16,7 @@
 
 _Development version - may have issues_
 
-![]( ./images/predIQtiv-logo2.png )
+![]( images/predIQtiv-logo2.png )
 
 ## Concept
 
