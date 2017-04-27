@@ -47,7 +47,7 @@
 
 	TKS.callbackAllFiles = function( xhr ) {
 
-		let response, syms, sym;
+		let response, sym;
 
 		if ( symbols ) {
 
