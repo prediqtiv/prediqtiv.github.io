@@ -1,6 +1,6 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://prediqtiv.github.io/#readme.md "View file as a web page." ) </span>
 
-![]( images/predIQtiv-logo2.png )
+<img src=https://prediqtiv.github.io/images/predIQtiv-logo2.png >
 
 
 ### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
