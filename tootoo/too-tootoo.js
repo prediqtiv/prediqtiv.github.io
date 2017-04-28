@@ -16,15 +16,16 @@
 
 		if ( location.hash.includes( '@@@' ) ) {
 
-			TOO.urlGHPages = '';
+			TOO.urlGHPages = './';
+			location.hash = location.hash.replace( '@@@', '' );
 
 		} else if ( user.rawgit ) {
 
-			urlGHPages = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/';
+			TOO.urlGHPages = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/';
 
 		} else {
 
-			urlGHPages = 'https://' + user.user + '.github.io/' + user.repo + '/';
+			TOO.urlGHPages = 'https://' + user.user + '.github.io/' + user.repo + '/';
 
 		}
 
@@ -157,7 +158,7 @@
 
 				menuItems.innerHTML +=
 				'<div id=file' + count++ + ' style=width:100%; >' +
-					'<a href=JavaScript:TOO.getFileSetContents("' + TOO.tableOfContents[ i ][ 0 ] + '/' + TOO.tableOfContents[ i ][ 1 ] + '"); > ' +
+					'<a href=JavaScript:TOO.getFileSetContents("' + TOO.tableOfContents[ i ][ 0 ] + TOO.tableOfContents[ i ][ 1 ] + '"); > ' +
 						TOO.tableOfContents[ i ][ 2 ] +
 					' </a>' +
 				'</div>';
@@ -167,13 +168,13 @@
 			 }
 		}
 
-		if ( !location.hash ) {
+		if ( location.hash.length > 1 ) {
 
-			TOO.getFileSetContents( 'README.md' );
+			TOO.getFileSetContents( location.hash.slice( 1 )  );
 
 		} else {
-
-			TOO.getFileSetContents( path + '/' + file );
+// user.defaultFile
+			TOO.getFileSetContents( 'README.md' );
 
 		}
 
@@ -237,7 +238,7 @@
 
 		}
 
-		url = urlGHPages + path;
+		url = TOO.urlGHPages + path;
 
 		u = url.toLowerCase();
 
@@ -301,9 +302,12 @@
 
 			contents.innerHTML =
 
-			'<div style="border: 0px red solid; margin: 0 auto; width: 800px; position: relative;" >' +
+			'<div style="margin: 0 auto; width: 800px; position: relative;" >' +
 				text +
 			'</div>';
+
+			contents.scrollTop = 0;
+
 		}
 
 	}
