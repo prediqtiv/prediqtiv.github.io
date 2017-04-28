@@ -18,6 +18,13 @@ The scripts are here:
 
 [Twitter API Scripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/edit#gid=0 )
 
+## Coding Considerations
+
+The Twitter API has a rate limit of 450 calls every 15 minutes.
+
+Our app captures 28 cashtags per minute until complete in order to comply with the limits
+
+
 ## Wishlist
 
 * 2017-04-15 ~ Use Twitter API code here to do search and other jighevel queries in Twitter
@@ -26,7 +33,7 @@ The scripts are here:
 
 ## To Do
 
-* 2017-04-27 ~ Add time taken output
+* 2017-04-28 ~ Add most recently captured symbol to init log data
 * 2017-04-27 ~ Improve UI for init() / getTwitterUserTweetCount
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
 	* 2017-04-15 ~ Verify tweets collected in separate column of results
@@ -39,6 +46,9 @@ The scripts are here:
 
 ## Change Log
 
+* More fixes to UI
+* Add text where data will appear eventually - helps with design phase
+* 2017-04-27 ~ Add time taken output
 
 ### 2017-04-27 ~ Theo
 

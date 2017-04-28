@@ -48,7 +48,11 @@ More
 
 ## Usage Notes
 
+Cannot send 500 files all at once.
 
+Triggers can be set for every 30, 15m 10, 5 or 1 minutes
+
+Current solution: sending 25 symbols once a minute. Takes over a thousand seconds, but has had very few failures. Speed-ups will be explored.
 
 ## Copyright and License
 
@@ -58,11 +62,15 @@ More
 ## Change Log & Developer Notes
 
 
+### 2017-04-28 ~ Theo
+
+* Add UI items
+* Add elapsed time to filesToGitHub
+
 ### 2017-04-27 ~ Theo
 
 Looks like things can run smoothly now - but still needs recovery from error
 - especially if goes over six minute limit
-
 
 * Code and UI cleanup
 
