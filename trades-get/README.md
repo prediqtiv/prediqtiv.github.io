@@ -41,10 +41,9 @@ Soon
 * 2017-04-23 ~ try out add multiple files
 
 More
-* Move to Google Apps Script and daily trigger
 * Select exchange & portfolio
 * Get trades for selected symbols or portfolio of issues not in sp500
-* Display start index
+* Display start index << ??
 
 
 ## Usage Notes
@@ -57,6 +56,15 @@ More
 
 
 ## Change Log & Developer Notes
+
+
+### 2017-04-27 ~ Theo
+
+Looks like things can run smoothly now - but still needs recovery from error
+- especially if goes over six minute limit
+
+
+* Code and UI cleanup
 
 
 ### 2017-04-25 ~ Theo
@@ -93,6 +101,7 @@ Full, successful run accomplished! Data seems to run fine in eyeCue Replay R3
 
 * Stated process for obtaining tick data via Google Apps Script
 	* Looking to be faster and simpler than anticipated
+* Move to Google Apps Script and daily trigger << started
 
 ### 2017-04-07 ~ Theo
 

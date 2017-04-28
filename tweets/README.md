@@ -28,7 +28,8 @@ The scripts are here:
 
 ## To Do
 
-* 2017-04-15 ~ Show NY/remote time for next time script will run
+* 2017-04-27 ~ Add time taken output
+* 2017-04-27 ~ Improve UI for init() / getTwitterUserTweetCount
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
 	* 2017-04-15 ~ Verify tweets collected in separate column of results
 	* 2017-04-15 ~ pushing missing tweets to array
@@ -40,6 +41,17 @@ The scripts are here:
 
 ## Change Log
 
+
+### 2017-04-27 ~ Theo
+
+
+* Add dayTim function
+* Update Trigger UI a lot
+
+Done
+[] 2017-04-15 ~ Show NY/remote time for next time script will run
+
+### 2017-04-25 ~ Theo
 
 * 2017-04-10 ~ Export directly from GAS to GitHub
 

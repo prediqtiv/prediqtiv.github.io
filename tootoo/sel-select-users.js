@@ -170,7 +170,7 @@
 
 				'<details open>' +
 
-					'<summary><h3>Select User/ Repo/ Branch </h3></summary>' +
+					'<summary><h3>Select User/ Repo/ Branch/ </h3></summary>' +
 
 						'<select id=selUser onchange=TOO.initUser(users[this.value]); title="Select user" size=15 style=width:100%;  >' +
 

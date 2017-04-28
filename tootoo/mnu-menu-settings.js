@@ -56,21 +56,6 @@
 
 	};
 
-	MNU.cssColorsLight = function() {
-
-		document.body.style.backgroundColor = '#fff';
-		document.body.style.color = '#000';
-		MNU.menu.style.backgroundColor = '#eee';
-
-	};
-
-	MNU.cssColorsSepia = function() {
-
-		document.body.style.backgroundColor = '#f3eacb';
-		document.body.style.color = '#704214';
-		MNU.menu.style.backgroundColor = '#704214';
-
-	};
 
 	MNU.cssFontOpenSans = function() {
 
@@ -100,6 +85,7 @@
 
 	MNU.cssFontMonospace = function() {
 
+//		document.body.style.fontFamily = '"Lucida Console", Monaco, monospace';
 		document.body.style.fontFamily = 'monospace';
 
 	};
