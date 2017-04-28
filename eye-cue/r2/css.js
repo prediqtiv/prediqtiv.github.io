@@ -1,5 +1,5 @@
 
-// having css here allows for inserting JavaScript
+// having CSS here allows for inserting  and hacking with JavaScript
 
 	let CSS = {};
 
@@ -7,7 +7,7 @@
 
 		document.head.innerHTML +=
 
-			'<style>' +
+		'<style>' +
 
 			'body { font: 12pt monospace; margin: 0; overflow: hidden; }' +
 

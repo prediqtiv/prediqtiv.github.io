@@ -168,7 +168,7 @@
 		tch = symbols.touchables[ i ];
 
 		tch.material.opacity = 0.1;
-		tch.children[0].material.opacity = 0;
+		tch.children[ 0 ].material.opacity = 0;
 		tch.castShadow = false;
 		tch.receiveShadow = false;
 		symbols.meshes[ i ].children[ 1 ].visible = false;

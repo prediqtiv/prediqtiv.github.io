@@ -27,6 +27,8 @@
 
 				'<div id=mnuSettings ></div>' +
 
+// into separate JavaScript?
+
 				'<details>' +
 
 					'<summary><h3>About</h3></summary>' +

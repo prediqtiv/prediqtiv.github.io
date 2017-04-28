@@ -1,14 +1,14 @@
 
 [SP500 Trades Get Read Me]( https://jaanga.github.io/sp500/#trades-get/README.md )
 ===
-_request and obtain intraday trades for hundreds of stock market symbols for a number of days_
+_Request and obtain intraday trades for hundreds of stock market symbols for a number of days_
 
-In process of moving to self-running process. Preliminary version on Google Apps Script
+In process of moving to self-running process. Preliminary version on Google Apps Script (GAS):
 
-[Trades Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
+[GAS SP500 Trades Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
 
 
-### Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html )
+### Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) << to be deprecated
 
 
 ## Web Page
@@ -32,9 +32,22 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 <!--  a descriptive picture of a desired future state -->
 
 
+## Developer Notes
+
+Issue:files hosted on GitHub Pages cannot be set to rub at fixed time
+
+Solution: Run files using Google Apps Script which allows for triggers to run scipts at fixed times and intervals
+
+Issue: Using GAS, cannot send 500 files to GitHub all at once.
+
+Solution: Triggers can be set for every 30, 15, 10, 5 or 1 minutes
+
+Current timings: sending 25 symbols once a minute. Takes over a thousand seconds, but has had very few failures. Speed-ups will be explored.
+
 ### Wish List / To Do
 
 Soon
+* 2017-04-28 ~ Not run on weekends
 * 2017-04-25 ~ Add getMoreTicks function
 * 2017-04-25 ~ Catch errors on getTick - especially over six minutes termination error - and start new trigger
 * 2017-04-24 ~ filesToGitHub: show how many files uploaded each run
@@ -46,13 +59,7 @@ More
 * Display start index << ??
 
 
-## Usage Notes
 
-Cannot send 500 files all at once.
-
-Triggers can be set for every 30, 15m 10, 5 or 1 minutes
-
-Current solution: sending 25 symbols once a minute. Takes over a thousand seconds, but has had very few failures. Speed-ups will be explored.
 
 ## Copyright and License
 
