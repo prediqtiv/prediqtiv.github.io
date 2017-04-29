@@ -15,7 +15,7 @@
 				'<h2>' +
 					'<a href=https://prediqtiv.github.io/ title="invest smarter" ><img src=https://prediqtiv.github.io/images/predIQtiv.png height=48px ></a>' + b +
 					'<a href="" title="Click here to refresh this page" >' + document.title.slice( 10 ) + '</a>' +
-					' <a href=../../index.html#README.md onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
+					' <a href=' + helpFile + ' onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>' +
 				'</h2>' +
 
 				'<div class=popUp id=popHelp style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>' +

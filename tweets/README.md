@@ -6,17 +6,22 @@ Tweets Read Me
 ===
 
 
-predIQtive uses a Google Apps spreadsheet in order to obtain its Tweets.
+predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its Tweets.
 
-This is because Google Apps:
+This is because GAS:
 
 * Is free
 * Enables running scripts on a schedule without human intervention - similar to Chron on Linux
 * Enables fetching remote password protected files in a manner similar to Curl
 
-The scripts are here:
+The Twitter cashtag gathering script is here:
 
-[Twitter API Scripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/edit#gid=0 )
+## Full Page Demo: [Twitter API Scripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/edit#gid=0 )
+
+## Embedded Web Page: Twitter API Scripts
+
+<iframe src="https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/pubhtml?gid=1328191743&amp;single=true&amp;widget=true&amp;headers=false" width=100% height=600px ></iframe>
+
 
 ## Coding Considerations
 
@@ -33,19 +38,30 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ## To Do
 
-* 2017-04-28 ~ Add most recently captured symbol to init log data
-* 2017-04-27 ~ Improve UI for init() / getTwitterUserTweetCount
+* 2017-04-29 ~ Add Twitter/token data??
+* 2017-04-29 ~ Cleanup elapsed time display
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
 	* 2017-04-15 ~ Verify tweets collected in separate column of results
 	* 2017-04-15 ~ pushing missing tweets to array
-* 2017-04-11 ~ Delete any files with same name, then save to CSV
-	* Enables saving multiple times during the day
 * 2017-04-09 ~ Trigger to get tweets every 15 to 20 minutes  / Or Save to five at end of every cycle
 
 
 
 ## Change Log
 
+
+### 2017-04-29 ~ Theo
+
+* More fixes to UI
+* Add text where data will appear eventually + bolding - helps with design phase
+* 2017-04-28 ~ Add most recently captured symbol to init log data
+* 2017-04-27 ~ Improve UI for init() / getTwitterUserTweetCount << mostly done
+
+Not an issue with sending/committing to GitHub
+* 2017-04-11 ~ Delete any files with same name, then save to CSV
+	* Enables saving multiple times during the day
+
+### 2017-04-28 ~ Theo
 * More fixes to UI
 * Add text where data will appear eventually - helps with design phase
 * 2017-04-27 ~ Add time taken output

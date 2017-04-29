@@ -3,17 +3,17 @@
 ===
 _Request and obtain intraday trades for hundreds of stock market symbols for a number of days_
 
-In process of moving to self-running process. Preliminary version on Google Apps Script (GAS):
+predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data.
 
-[GAS SP500 Trades Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
+## [GAS SP500 Trades Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
 
 
 ### Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) << to be deprecated
 
 
-## Web Page
+## Embedded Web Page: SP500 Trades Get
 
-<iframe src="https://prediqtiv.github.io/trades-get/index.html" width=100% height=600px ><img src="trades-get-r4.png" ></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
 
 ## Concept
@@ -47,7 +47,8 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
-* 2017-04-28 ~ Not run on weekends
+
+* 2017-04-29 ~ Add verify function
 * 2017-04-25 ~ Add getMoreTicks function
 * 2017-04-25 ~ Catch errors on getTick - especially over six minutes termination error - and start new trigger
 * 2017-04-24 ~ filesToGitHub: show how many files uploaded each run
@@ -69,10 +70,18 @@ More
 ## Change Log & Developer Notes
 
 
+### 2017-04-29 ~ Theo
+
+* More testing, cleanup and fixes
+* 2017-04-28 ~ Not run on weekends < testing
+
+
 ### 2017-04-28 ~ Theo
 
 * Add UI items
 * Add elapsed time to filesToGitHub
+
+
 
 ### 2017-04-27 ~ Theo
 
