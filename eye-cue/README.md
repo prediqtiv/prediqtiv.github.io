@@ -25,12 +25,15 @@ See also top page
 
 ### To Do / Upcoming
 
+* 2017-04-29 ~ Move buffer geometry
+* 2017-04-29 ~ Add SPY, DJI and Nasdaq underground ribbons
 * Add sounds
 * Add sun movement
 
 ### Wish List
 
-* Snail slime for one symbol only
+* 2017-04-29 ~ Add voice-overs
+* Snail slime for selected individual symbols only
 * Cover stock option puts and calls
 * Show movement as candles
 

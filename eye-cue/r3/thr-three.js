@@ -178,7 +178,7 @@
 
 	THR.animate = function() {
 
-		controls.update();
+//		controls.update();
 		stats.update();
 		renderer.render( scene, camera );
 		requestAnimationFrame( THR.animate );

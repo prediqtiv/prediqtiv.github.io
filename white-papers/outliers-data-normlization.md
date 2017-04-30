@@ -72,26 +72,52 @@ The question of this paper is can we do the same thing with stocks or weather or
 
 Birds and fish tend to be roughly of the same size and move at similar rates. But stock and weather statistics may have significantly varying base lines. One stock might be worth $500 and the next worth $2. A price change of $1 means very different things to the two stocks.
 
-The logical maneuver to to normalize the data between 0 and 1.
+The logical maneuver to to normalize all the data so that values are constrained to being between 0 and 1.
 
 
 ## Normalizing the Data
 
 We would like to create a 3D animation - with each frame representing a moment in time. We need to decide what each axis represents.
 
-The easiest to deal with the X-axis is the gain or loss each trade.  An easy way to normalize the data is to turn the change into a change persent/
+The easiest to deal with the X-axis is the gain or loss each trade.  An easy way to normalize the data is to turn the change into a change percent relating to the difference between the current price and yesterday's close or this morning's opening.
 
-100 x ( current price - open price ) / open price.
+    100 x ( current price - open price ) / open price.
 
-For the vertical or Z-axis we can use a static number: the market capitalization of a symbol.
+For the vertical or Z-axis we can use a static number: the market capitalization of a symbol or the number of tweets.
 
-The Y-axis is a bit trickier.  It must represent volume and volume varies siggnifcantly between symbols. Fortunately, the avergae daily volume is a readily obtainable statistic. Therefor we can
+A point to consider is that items that float in Z may be very hard to gauge. It's a good idea to the symbol start on the XY plave and finish at the Z.
 
-100 * current volume / average daily volume.
+The Y-axis is a bit trickier.  It must represent volume and volume varies significantly between symbols. Fortunately, the average daily volume is a readily obtainable statistic. Therefore we can create values that show the current volume as a percentage of the average daily volume.
+
+    100 * current volume / average daily volume.
+
+
+With this setup, the values of all the symbols start at 0,0 at opening and move across the ground during course the trading session.
+As symbols gain or lose value the shift between the green and red areas. As the volume increases the symbol progress towards the 100%  daily average volume bar. Some symbols wil be below average and some symbols may be many times the average.
+
+For the most part the volume movement is tracked in a linear manner. Some symbols will trade at many time their normal volume. When this happens the symbol may go way out of the normal screen area and be very hard to find or track.
+
+The current fix-it is to have the symbol change course and move in the vertical direction and to track using a logrhythmic scale. This makes for a somewhat bizarre movement but most people seem to get it without thinking about it too much.
+
+## Maximizing effective use of the viewing area
+
+You are leaving the world of paper. Everything can move and twist, morph and colorize - all with the full six degrees of freedom.
+
+One of the things you want to do is use every available axis - both positive and negative. The first thoughts about adding the count of cashtags for each symbol related to placing a symbol - such as a 3D bird - just above the placard that hovers over each symbol. The bird would be larger or small depending on the count. Needless to say this made for a very messy and not easy to read 'middle of the pack' space. Adding the tweets as negative Y-axis elements provides a happy, quite readable fix-it.
+
+Further revisions of the app will do things such as enabling 'candles' for each symbol so you will be able to view open, high, low and close for each tick of each symbol.
+
+Making effective use of the above the table and below the table spaces will be a fun thing to explore in upcoming revisions. And even more beguiling: could a mirror-like use be found for the negative Y-axs?
 
 
 
-To be continued...
+
+
+
+
+
+
+
 
 
 
