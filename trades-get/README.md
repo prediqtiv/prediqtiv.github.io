@@ -47,6 +47,8 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
+* 2017-04-30 ~ Confirm trigger for every day of week
+* 2017-04-30 ~ Push next run to next day when time is after the designated hour
 * 2017-04-30 ~ Add headers to spreadsheet
 * 2017-04-29 ~ Add way of getting several previous days - repair after an error
 * 2017-04-29 ~ Add verify function
