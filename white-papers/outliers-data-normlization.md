@@ -2,6 +2,9 @@
 Markets, Outliers and Data Normalization
 ===
 
+_“If at first the idea is not absurd, then there is no hope for it.”_ — Albert Einstein
+
+
 ## Definitions
 What are we talking about?
 
