@@ -11,12 +11,10 @@ For most everybody else cash/economics/wherewithal is a serious matter and must 
 
 But does it have to be that way?
 
-Or can we fork and apply the tools we learn about at maker faires/hackathons/demonstrations
-to investigate the nature of wealth/capital/assets and it movements, morphings and manipulations?
+Or can we fork and apply the tools we learn about at maker faires/ hackathons/ demonstrations
+to investigate the nature of wealth/ capital/ assets and their movements, morphings and manipulations?
 
-And more importantly can we take what we learned preparing static, paper-oriented 2D graphics
-remove the various biases from our eyes and brains,
-and devise whole new ways of visualizing data that works for virtual reality, augmented reality and open source reality?
+And more importantly can we take what we learned preparing static, paper-oriented 2D graphics, remove the various biases from our eyes and brains, and devise whole new ways of visualizing data that works for virtual reality, augmented reality and open source reality?
 
 Can we make money/data/numbers fun again?
 
