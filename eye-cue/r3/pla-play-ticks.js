@@ -64,13 +64,16 @@
 
 				selFiles.selectedIndex++;
 				selFiles.selectedIndex = selFiles.selectedIndex > selFiles.length ? 0 : selFiles.selectedIndex;
+				selFiles.selectedIndex = selFiles.selectedIndex < 0 ? 0 : selFiles.selectedIndex;
 
 				TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackAllFiles );
 
+				headsUp.style.display = 'none';
+
 			} else {
 
-					inpIndex.value = PLA.index = 0;
-					t = setTimeout( PLA.updatePosition, 50 );
+				inpIndex.value = PLA.index = 0;
+				t = setTimeout( PLA.updatePosition, 50 );
 
 			}
 

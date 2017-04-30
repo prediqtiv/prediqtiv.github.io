@@ -26,6 +26,16 @@ SP500 replay ~ select and follow entire days of one minute intraday trading.
 
 ## Change Log
 
+### 2017-04-29 ~ Theo ~ R3.1
+
+* New folders and files created after yesterday's cleanup
+* Archive faulty data files
+
+Mostly fixed
+* 2017-04-28 ~ SHO line 171 issues when selecting individual symbols
+* 2017-04-28 ~ replay jumps to wrong day/ skips a day  << maybe not
+
+
 ### 2017-04-28 ~ Theo
 
 * Code cleanup

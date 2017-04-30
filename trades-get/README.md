@@ -47,7 +47,7 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
-
+* 2017-04-29 ~ Add way of getting several previous days - repair after an error
 * 2017-04-29 ~ Add verify function
 * 2017-04-25 ~ Add getMoreTicks function
 * 2017-04-25 ~ Catch errors on getTick - especially over six minutes termination error - and start new trigger
