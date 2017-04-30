@@ -16,9 +16,9 @@ This is because GAS:
 
 The Twitter cashtag gathering script is here:
 
-## Full Page Demo: [Twitter API Scripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/edit#gid=0 )
+## Full Page Demo: [SP500 Twitter Cashtags Get]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/edit#gid=0 )
 
-## Embedded Web Page: Twitter API Scripts
+## Embedded Web Page: SP500 Twitter Cashtags Get
 
 <iframe src="https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/pubhtml?gid=1328191743&amp;single=true&amp;widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
@@ -32,12 +32,14 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ## Wishlist
 
-* 2017-04-15 ~ Use Twitter API code here to do search and other jighevel queries in Twitter
+* 2017-04-15 ~ Use Twitter API code here to do search and other high level queries in Twitter
 	* https://mashe.hawksey.info/2016/08/keeping-your-twitter-archive-fresh-and-freely-hosted-on-github-pages/
 	* https://script.google.com/d/1E3MlTiAgsjVHdSExaYoOCd0-WEXwKAJGpB8Pjd8ReALs2JxN0aGVtST7/edit?usp=drive_web
 
 ## To Do
 
+* 2017-04-30 ~ shutdown faster
+* 2017-04-30 ~ Delete all test triggers after a test
 * 2017-04-29 ~ Add Twitter/token data??
 * 2017-04-29 ~ Cleanup elapsed time display
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones

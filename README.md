@@ -12,7 +12,7 @@
 
 ### Full Screen Demo: [eyeCue Realtime Dev ]( https://prediqtiv.github.io/eye-cue/realtime/dev/ )
 
-## Web Page
+## eyeCue Replay Dev as a web page embedded in an Iframe tag
 
 <iframe src="https://prediqtiv.github.io/eye-cue/replay/dev/index.html" width=100% height=600px ></iframe>
 
@@ -87,7 +87,7 @@ Why Gas?
 * Uses an undocumented Google service to gather one minute intraday day for each og the symbols
 * Uses the GitHuB API - and invoking [OAuth]( https://en.wikipedia.org/wiki/OAuth ) for authorization - to send files from the Google servers to the GitHub servers
 
-### Hosted on Google Apps Script: [twitter-api-sripts]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY )
+### Hosted on Google Apps Script: [SP500 Twitter Cashtags Get]( https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY )
 
 * Runs on a GAS server
 * Uses the Twitter API - with OAuth - to gather the current 'cashtags' for each of the 500 symbols

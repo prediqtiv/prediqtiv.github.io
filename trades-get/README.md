@@ -5,13 +5,13 @@ _Request and obtain intraday trades for hundreds of stock market symbols for a n
 
 predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data.
 
-## [GAS SP500 Trades Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
+## Full Screen Demo: GAS [SP500 Ticks Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
 
 
 ### Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) << to be deprecated
 
 
-## Embedded Web Page: SP500 Trades Get
+## Embedded Web Page: SP500 Ticks Get
 
 <iframe src="https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
@@ -47,6 +47,7 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
+* 2017-04-30 ~ Add headers to spreadsheet
 * 2017-04-29 ~ Add way of getting several previous days - repair after an error
 * 2017-04-29 ~ Add verify function
 * 2017-04-25 ~ Add getMoreTicks function
@@ -68,6 +69,11 @@ More
 
 
 ## Change Log & Developer Notes
+
+### 2017-04-30 ~ Theo
+
+* Fix several delete triggers errors
+* Improve UI
 
 
 ### 2017-04-29 ~ Theo
