@@ -40,9 +40,10 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ## To Do
 
-* 2017-05-01 ~ Don't erase previous tweet count run until just before new count
-* 2017-05-01 ~ Add back testing capability - for faster test runs
-* 2017-04-30 ~ shutdown faster
+
+* 2017-05-02 ~ Separate Trigger item rows to make more readable / see also ticks get
+* 2017-05-02 ~ Cleanup  and streamline start, end, count settings
+* 2017-05-01 ~ Add back testing capability - for faster test runs - or delete
 * 2017-04-29 ~ Add Twitter/token data??
 * 2017-04-29 ~ Cleanup elapsed time display
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
@@ -51,8 +52,16 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 * 2017-04-09 ~ Trigger to get tweets every 15 to 20 minutes  / Or Save to five at end of every cycle
 
 
-
 ## Change Log
+
+****Manage versions before making changes!!****
+
+### 2017-05-02 ~ Theo
+
+* More UI enhancements: verify
+* When testing: save data to test folder
+* 2017-04-30 ~ shutdown faster
+* 2017-05-01 ~ Don't erase previous tweet count run until just before new count << not really an issue. only erases on first run
 
 ### 2017-05-01 ~ Theo
 
