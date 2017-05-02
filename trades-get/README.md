@@ -47,6 +47,7 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
+* 2017-05-01 ~ Don't erase previous tweet count run until just before new count
 * 2017-04-30 ~ Confirm trigger for every day of week
 * 2017-04-30 ~ Push next run to next day when time is after the designated hour
 * 2017-04-30 ~ Add headers to spreadsheet
@@ -71,6 +72,10 @@ More
 
 
 ## Change Log & Developer Notes
+
+
+### 2017-05-01 ~ Theoo
+
 
 ### 2017-04-30 ~ Theo
 

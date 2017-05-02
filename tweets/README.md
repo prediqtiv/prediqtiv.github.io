@@ -23,6 +23,8 @@ The Twitter cashtag gathering script is here:
 <iframe src="https://docs.google.com/spreadsheets/d/1ySMstriI4Fb93CXp8_dF1FKK9dJXvuzMmjyHzpRN5KY/pubhtml?gid=1328191743&amp;single=true&amp;widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
 
+prediqtiv.github.io/tweets/2017-05-01.csv
+
 ## Coding Considerations
 
 The Twitter API has a rate limit of 450 calls every 15 minutes.
@@ -38,8 +40,9 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ## To Do
 
+* 2017-05-01 ~ Don't erase previous tweet count run until just before new count
+* 2017-05-01 ~ Add back testing capability - for faster test runs
 * 2017-04-30 ~ shutdown faster
-* 2017-04-30 ~ Delete all test triggers after a test
 * 2017-04-29 ~ Add Twitter/token data??
 * 2017-04-29 ~ Cleanup elapsed time display
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
@@ -50,6 +53,11 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 
 ## Change Log
+
+### 2017-05-01 ~ Theo
+
+* More fixes to UI
+* 2017-04-30 ~ Delete all test triggers after a test
 
 
 ### 2017-04-29 ~ Theo
