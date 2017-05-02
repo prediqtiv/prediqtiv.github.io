@@ -1,4 +1,4 @@
-symbols,tweets
+run start,tweets
 MMM,1
 ABT,0
 ABBV,1
@@ -21,7 +21,7 @@ ARE,0
 AGN,0
 LNT,0
 ALXN,0
-ALLE,12
+ALLE,0
 ADS,0
 ALL,1
 GOOGL,19
@@ -46,7 +46,7 @@ ANTM,1
 AON,5
 APA,0
 AIV,0
-AAPL,22
+AAPL,19
 AMAT,0
 ADM,0
 ARNC,0
@@ -109,7 +109,7 @@ CI,0
 XEC,0
 CINF,0
 CTAS,0
-CSCO,5
+CSCO,1
 C,2
 CFG,0
 CTXS,0
@@ -208,7 +208,7 @@ GPS,0
 GRMN,0
 IT,2
 GD,0
-GE,2
+GE,3
 GGP,0
 GIS,0
 GM,1
