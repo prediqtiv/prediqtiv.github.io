@@ -1,6 +1,6 @@
 
 
-Tradse Dev Read Me
+Trades Dev Read Me
 ===
 
 ## Errors

@@ -13,16 +13,17 @@
 
 	TWT.requestTweets = function() {
 
-//		let fileName, text, lines, material, geometry, mesh;
+		let fileName, text, lines, material, geometry, mesh;
 
+//		fileName = symbols.fileName;
 		fileName = selFiles.value + '.csv';
 
 		xhr = new XMLHttpRequest();
 		xhr.open( 'GET', TWT.folder + fileName, true );
 		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-//		xhr.onprogress = function( xhr ) {
-//			//outDate.innerHTML += '<span style=color:red; > Tweets: ' + xhr.loaded + ' out of ' + xhr.total + '</span>';
-//		};
+		xhr.onprogress = function( xhr ) {
+			//outDate.innerHTML += '<span style=color:red; > Tweets: ' + xhr.loaded + ' out of ' + xhr.total + '</span>';
+		};
 		xhr.onload = callback;
 		xhr.send( null );
 
@@ -42,7 +43,7 @@ if ( lines === undefined ) { return; }
 				for ( let i = 0; i < symbols.keys.length; i++ ) {
 
 					symbol = symbols[ symbols.keys[ i ] ];
-					symbol.tweets = parseInt( lines[ i ][ 1 ], 10 );
+					symbol.tweets = parseInt( lines[ i ][ 1 ] );
 
 					geometry = new THREE.LatheGeometry( points, 7 );
 					geometry.applyMatrix( new THREE.Matrix4().makeScale( 5, 1 + symbol.tweets, 5 ) );
