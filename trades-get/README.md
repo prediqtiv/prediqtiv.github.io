@@ -47,10 +47,10 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
-* 2017-05-01 ~ Don't erase previous tweet count run until just before new count
-* 2017-04-30 ~ Confirm trigger for every day of week
-* 2017-04-30 ~ Push next run to next day when time is after the designated hour
-* 2017-04-30 ~ Add headers to spreadsheet
+
+
+* 2017-05-03 ~ Add top row to triggers indicating test run
+* 2017-05-03 ~ Delete test run triggers
 * 2017-04-29 ~ Add way of getting several previous days - repair after an error
 * 2017-04-29 ~ Add verify function
 * 2017-04-25 ~ Add getMoreTicks function
@@ -64,8 +64,6 @@ More
 * Display start index << ??
 
 
-
-
 ## Copyright and License
 
 * [Copyright and License]( https://prediqtiv.github.io/#license.md )
@@ -73,9 +71,21 @@ More
 
 ## Change Log & Developer Notes
 
+****Manage versions before making changes!!****
 
-### 2017-05-01 ~ Theoo
 
+### 2017-05-03 ~ Theo
+
+* Get running again - weekdays only
+* Work on UI and row ordering and display
+* 2017-05-01 ~ Don't erase previous tweet count run until just before new count << not really an issue. only erases on first run
+* 2017-04-30 ~ Add headers to spreadsheet
+* 2017-04-30 ~ Confirm trigger for every day of week
+* 2017-04-30 ~ Push next run to next day when time is after the designated hour
+
+### 2017-05-01 ~ Theo
+
+* Generally mess things up and leave in un-runnable condition
 
 ### 2017-04-30 ~ Theo
 

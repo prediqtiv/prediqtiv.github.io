@@ -56,6 +56,11 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ****Manage versions before making changes!!****
 
+### 2017-05-03 ~ Theo
+
+* Reordered trigger rows
+* Minor cleanup
+
 ### 2017-05-02 ~ Theo
 
 * More UI enhancements: verify
