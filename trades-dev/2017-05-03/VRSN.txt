@@ -1,4 +1,4 @@
-VRSN,Verisign Inc.,Information Technology,7,Internet Software & Services,9295084349,774289
+VRSN,Verisign Inc.,Information Technology,7,Internet Software & Services,9296111764,774289
 a1493818200,90.81,90.81,90.81,90.81,4784
 1,90.35,90.35,90.35,90.35,100
 2,90.555,90.555,90.555,90.555,100
