@@ -1,4 +1,4 @@
-INTC,Intel Corp.,Information Technology,7,Semiconductors,177208657109,22667087
+INTC,Intel Corp.,Information Technology,7,Semiconductors,177304075642,22667087
 a1493818200,36.68,36.72,36.62,36.72,275041
 1,36.81,36.87,36.68,36.69,332554
 2,36.79,36.81,36.74,36.81,226095
