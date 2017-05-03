@@ -60,6 +60,7 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 * Reordered trigger rows
 * Minor cleanup
+* Adding sorting tweets to alphabetical order
 
 ### 2017-05-02 ~ Theo
 

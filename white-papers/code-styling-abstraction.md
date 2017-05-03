@@ -32,14 +32,34 @@ Can we make money/data/numbers fun again?
 * See and feel $$$/many things/numbers in unimaginable ways
 * Offer alternatives to current directions
 
+## Coding Notes
+
+The current scripts are designed to run inside an [iframe]( https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe ).
+The scripts are included in iframes in the project read me files are are therefore being tested continuously.
+
+The style of the code follows the style of its principal dependency. The code has a single dependency: the FOSS [Three.js]( https://threejs.org ) library hosted on GitHub and maintained by [Mr.doob]( https://mrdoob.com ). The style is described in the Three.js Wiki: [Mr.doob's Code Style™]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 )
+
+The intention is to keep the code as simple and readable as possible and thus easing the feasibility of embedding in larger more complex projects.
+
+There are, however, a few personal quirks in the code:
+
+* CSS is added via JavaScript rather than inside a `style` tag
+* HTML is added via JavaScript rather than being inside a `body` tag
+* Quotation are omitted unless absolutely required
+
+These quirks can and may be removed upon request.
+
+
 ## See also
 
 * http://jaanga.github.io/documents/jaanga-practice-notes/#code-mission-vision-r1.md
 * http://jaanga.github.io/terrain3/index.html#coding-style.md
 * http://va3c.github.io/viewer/va3c-viewer-html5/
 	* https://github.com/va3c/viewer/tree/gh-pages/va3c-viewer-html5
-
-Bibliography
-
 * http://ladybug.tools/ladybug-web/ladybug-web-via-github-api-r2.html#coding-style.md
+
+References
+
+Sebastian Markbage's quote
 * http://2014.jsconf.eu/speakers/sebastian-markbage-minimal-api-surface-area-learning-patterns-instead-of-frameworks.html
+

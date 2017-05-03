@@ -26,6 +26,11 @@ SP500 replay ~ select and follow entire days of one minute intraday trading.
 
 ## Change Log
 
+
+### 2017-05-03 ~ Theo
+
+* investigating tweets and symbols being misaligned
+
 ### 2017-04-29 ~ Theo ~ R3.1
 
 * New folders and files created after yesterday's cleanup

@@ -48,6 +48,9 @@
 
 		let response, sym, date, open;
 
+		PLA.index = 0;
+		PLA.playing = false;
+
 		if ( symbols ) {
 
 			scene.remove( symbols.objects, symbols.lines );
@@ -70,8 +73,7 @@
 
 		HED.touchables = symbols.touchables;
 
-		PLA.index = 0;
-		PLA.playing = false;
+
 
 		mnuControls.innerHTML = 'Pause';
 

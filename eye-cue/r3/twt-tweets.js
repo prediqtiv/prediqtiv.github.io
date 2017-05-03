@@ -13,7 +13,7 @@
 
 	TWT.requestTweets = function() {
 
-//		let fileName, text, lines, material, geometry, mesh;
+		let fileName, text, lines, material, geometry, mesh;
 
 		fileName = selFiles.value + '.csv';
 
@@ -31,6 +31,13 @@
 				text = xhr.target.response;
 
 				lines = text.split( '\n' ).map( function( line ) { return line.split( ',' ); } );
+
+				lines = text.split( '\n' );
+
+				lines = lines.sort();
+//console.log( '', lines );
+				lines = lines.map( function( line ) { return line.split( ',' ); } );
+
 
 if ( lines === undefined ) { return; }
 
