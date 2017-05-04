@@ -73,8 +73,10 @@
 			} else {
 
 				inpIndex.value = PLA.index = 0;
-				t = setTimeout( PLA.updatePosition, 50 );
+//				t = setTimeout( PLA.updatePosition, 50 );
+				TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackAllFiles );
 
+				headsUp.style.display = 'none';
 			}
 
 		}
