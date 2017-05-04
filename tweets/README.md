@@ -41,8 +41,7 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 ## To Do
 
 
-* 2017-05-02 ~ Separate Trigger item rows to make more readable / see also ticks get
-* 2017-05-02 ~ Cleanup  and streamline start, end, count settings
+
 * 2017-05-01 ~ Add back testing capability - for faster test runs - or delete
 * 2017-04-29 ~ Add Twitter/token data??
 * 2017-04-29 ~ Cleanup elapsed time display
@@ -55,6 +54,14 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 ## Change Log
 
 ****Manage versions before making changes!!****
+
+
+### 2017-05-04 ~ Theo
+
+* Work on verifying & sorting
+* 2017-05-02 ~ Separate Trigger item rows to make more readable / see also ticks get
+* 2017-05-02 ~ Cleanup  and streamline start, end, count settings
+
 
 ### 2017-05-03 ~ Theo
 
