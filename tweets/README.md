@@ -58,6 +58,8 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ### 2017-05-04 ~ Theo
 
+All taking longer than it should. Making sure that the right cell has the right value at the right time is not as easy as I thought.
+
 * Work on verifying & sorting
 * 2017-05-02 ~ Separate Trigger item rows to make more readable / see also ticks get
 * 2017-05-02 ~ Cleanup  and streamline start, end, count settings
