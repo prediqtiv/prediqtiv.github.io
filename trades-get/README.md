@@ -49,6 +49,8 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 Soon
 
 
+* 2017-05-04 ~ Verify number of symbols' data that has arrived at GitHub
+* 2017-05-04 ~ If any files not sent to GitHub, send only missing files
 * 2017-05-03 ~ Add top row to triggers indicating test run
 * 2017-05-03 ~ Delete test run triggers
 * 2017-04-29 ~ Add way of getting several previous days - repair after an error

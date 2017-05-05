@@ -24,6 +24,7 @@
 
 
 // See SEL.init, SET.init
+
 	 PLA.updatePosition = function() {
 
 		let symbol, vertex, t;
@@ -66,17 +67,27 @@
 				selFiles.selectedIndex = selFiles.selectedIndex > selFiles.length ? 0 : selFiles.selectedIndex;
 				selFiles.selectedIndex = selFiles.selectedIndex < 0 ? 0 : selFiles.selectedIndex;
 
+				SEL.selectDay();
+
+/*
 				TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackAllFiles );
 
 				headsUp.style.display = 'none';
+*/
 
 			} else {
 
+				SEL.selectDay();
+
+/*
 				inpIndex.value = PLA.index = 0;
 //				t = setTimeout( PLA.updatePosition, 50 );
+
 				TKS.requestFile( TKS.folderUrl + selFiles.value, TKS.callbackAllFiles );
 
 				headsUp.style.display = 'none';
+*/
+
 			}
 
 		}
