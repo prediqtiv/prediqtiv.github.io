@@ -48,6 +48,11 @@ See also top page
 
 
 
+### 2017-05-04 ~ Theo
+
+* sel-select-ticks.js: added SEL.selectDay(). Should do a better job of garbage collecting between runs
+	* Added to to meu and PLA
+
 
 ### 2017-04-14 ~ Theo
 

@@ -19,8 +19,8 @@
 _Development version - may have issues_
 
 ## Issues
-* 2017-05-03 ~ No data for Tuesday, 2017-05-03
-* 2017-05-01 ~ eyeCue Replay Heads-Up display reports Twitter cashtag count incorrectly
+* 2017-05-03 ~ No eyeCue data for Tuesday, 2017-05-02
+* 2017-05-01 ~ eyeCue Replay Heads-Up display reports Twitter cashtag count incorrectly << 2017-05-04 ~ Things are improving
 
 ## Concept
 
