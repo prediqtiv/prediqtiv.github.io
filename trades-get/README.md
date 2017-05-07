@@ -47,14 +47,12 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
-
-
-* 2017-05-04 ~ Verify number of symbols' data that has arrived at GitHub
+* 2017-05-05 ~ if testing delete all triggers
+* 2017-05-05 ~ getTicks: simplify so runs faster / keeps under 360 second limit
+* 2017-05-05 ~ verify receipt while uploading
+* 2017-05-04 ~ Verify number of symbols' data that have arrived at GitHub at any time
 * 2017-05-04 ~ If any files not sent to GitHub, send only missing files
-* 2017-05-03 ~ Add top row to triggers indicating test run
-* 2017-05-03 ~ Delete test run triggers
 * 2017-04-29 ~ Add way of getting several previous days - repair after an error
-* 2017-04-29 ~ Add verify function
 * 2017-04-25 ~ Add getMoreTicks function
 * 2017-04-25 ~ Catch errors on getTick - especially over six minutes termination error - and start new trigger
 * 2017-04-24 ~ filesToGitHub: show how many files uploaded each run
@@ -75,6 +73,12 @@ More
 
 ****Manage versions before making changes!!****
 
+
+### 2017-05-05 ~ Theo
+
+* 2017-04-29 ~ Add verify function
+* 2017-05-03 ~ Add top row to triggers indicating test run
+* 2017-05-03 ~ Delete test run triggers
 
 ### 2017-05-03 ~ Theo
 

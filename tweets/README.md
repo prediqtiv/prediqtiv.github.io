@@ -40,9 +40,9 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 ## To Do
 
-
-
-* 2017-05-01 ~ Add back testing capability - for faster test runs - or delete
+* 2017-05-05 ~ Figure out good times to run ~ before open & after close??
+* 2017-05-05 ~ Move init stuff from twitter api to onOpen << needed for better test runs
+* 2017-05-05 ~ add verification feedback
 * 2017-04-29 ~ Add Twitter/token data??
 * 2017-04-29 ~ Cleanup elapsed time display
 * 2017-04-15 ~ If not all tweets gathered, run again to gather just the missing ones
@@ -56,6 +56,11 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 ****Manage versions before making changes!!****
 
 
+### 2017-05-05 ~ Theo
+
+* Still cleaning up and streamlining < When will it end?
+* 2017-05-05 ~ Tweets middle column to new date
+
 ### 2017-05-04 ~ Theo
 
 All taking longer than it should. Making sure that the right cell has the right value at the right time is not as easy as I thought.
@@ -63,7 +68,7 @@ All taking longer than it should. Making sure that the right cell has the right 
 * Work on verifying & sorting
 * 2017-05-02 ~ Separate Trigger item rows to make more readable / see also ticks get
 * 2017-05-02 ~ Cleanup  and streamline start, end, count settings
-
+* 2017-05-01 ~ Add back testing capability - for faster test runs - or delete << deleted
 
 ### 2017-05-03 ~ Theo
 
