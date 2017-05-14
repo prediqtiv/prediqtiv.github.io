@@ -212,6 +212,9 @@ _One day this list will be as long as your arm_
 
 _Most changes are noted in Read Me files in folders containing the associated scripts._
 
+### 2017-05-14 ~
+
+* Add urls get
 
 ### 2017-05-08 ~ Theo
 
