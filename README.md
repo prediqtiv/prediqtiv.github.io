@@ -210,6 +210,13 @@ _One day this list will be as long as your arm_
 
 ## Change Log
 
+_Most changes are noted in Read Me files in folders containing the associated scripts._
+
+
+### 2017-05-08 ~ Theo
+
+* Blog post:  [2017-05-08 ~ predIQtiv has a new home page script ]( https://github.com/prediqtiv/prediqtiv.github.io/issues/5 )
+
 
 ### 2017-04-27 ~ Theo
 

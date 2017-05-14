@@ -34,7 +34,7 @@ Request and obtain stock market intraday data for hundreds of symbols sourced vi
 
 ## Developer Notes
 
-Issue:files hosted on GitHub Pages cannot be set to rub at fixed time
+Issue:files hosted on GitHub Pages cannot be set to run at fixed time
 
 Solution: Run files using Google Apps Script which allows for triggers to run scipts at fixed times and intervals
 
@@ -44,9 +44,15 @@ Solution: Triggers can be set for every 30, 15, 10, 5 or 1 minutes
 
 Current timings: sending 25 symbols once a minute. Takes over a thousand seconds, but has had very few failures. Speed-ups will be explored.
 
+
+### Issues
+
+* 2017-05-11 ~ Creates a commit entry for the uploading of each symbol. Very distracting
+
 ### Wish List / To Do
 
 Soon
+
 * 2017-05-05 ~ if testing delete all triggers
 * 2017-05-05 ~ getTicks: simplify so runs faster / keeps under 360 second limit
 * 2017-05-05 ~ verify receipt while uploading
@@ -71,7 +77,30 @@ More
 
 ## Change Log & Developer Notes
 
+****Remember to leave the app running with a trigger!!***
+
 ****Manage versions before making changes!!****
+
+
+## 2017-05-12 ~ Theo
+
+* Started GAS SP500 ticks get2 - so far, tighter and cleaner
+
+### 2017-05-11 ~ Theo
+
+* More verification and greater understanding of the ongoing issues
+* Still needs more work - may even need more triggers in order to complete
+
+### 2017-05-10 ~ Theo
+
+* Verification of entries being added to GitHub beginning to work
+* Full upload to GitHub completed
+
+### 2017-05-09 ~ Theo
+
+Trying to catch the errors when saving to GitHub is: Not easy
+Using one minute triggers means is take many minutes to complete a run
+Makes debugging extremely tedious. Often you forget what you are meant to be doing
 
 
 ### 2017-05-05 ~ Theo
