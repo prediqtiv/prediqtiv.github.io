@@ -6,7 +6,7 @@ URLs Get Read Me
 
 ## Full screen demo: [sp500 urls get]( https://docs.google.com/spreadsheets/d/1O2eqMtFCmtm_Lt_OGJNYzsSbw7AEHYawZGk7ryQdsxs/edit#gid=376133839 )
 
-predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data. [sp500 urls get]( https://docs.google.
+predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data. [sp500 urls get]( https://docs.google ).
 
 ## Concept / Issue to be resolved
 
