@@ -9,7 +9,7 @@
 <meta name=date content='2017-05-07' >
 <!--
 
-TooToo Read Me
+TooToo3 Read Me
 ===
 
 TooToo is a JavaScript app that helps you browse through GitHub repositories and read or access data in files really quickly and easily.
@@ -19,7 +19,7 @@ It's part of the Pushme-Pullyou / https://pushme-pullyou.github.io/ collection o
 See TooToo Read Me / https://pushme-pullyou.github.io/tootoo3/
 
 
-Copyright &copy; 2017 Pushme Pullyou authors. MIT License
+Copyright © 2017 Pushme Pullyou authors. MIT License
 
 -->
 <style>
@@ -101,6 +101,10 @@ a { color: blue; }
 
 			TOO.urlGHPages = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/' ;
 
+		} else if ( user.repo === user.user + '.github.io' ) {
+
+			TOO.urlGHPages = 'https://' + user.user + '.github.io/' + user.folder + '/';
+
 		} else {
 
 			TOO.urlGHPages = 'https://' + user.user + '.github.io/' + user.repo + '/';
@@ -115,7 +119,6 @@ a { color: blue; }
 		TOO.setMenu( user.folder );
 
 	}
-
 
 
 
@@ -228,7 +231,7 @@ a { color: blue; }
 		readMe = index > -1 ? TOO.files[ index ] : '';
 		index = TOO.files.indexOf( 'README.md');
 		readMe = index > -1 ? TOO.files[ index ] : readMe;
-
+console.log( 'readMe',  readMe);
 		menuTitle.innerHTML = 'Table of Contents';
 		breadcrumbs.innerHTML = '';
 
@@ -375,9 +378,11 @@ a { color: blue; }
 // ../dev/menu3.js inserted
 
 
-	MNU = {};
+	let MNU = {};
 
 	MNU.init = function() {
+
+		let txt;
 
 		if ( MNU.tableOfContents ) {
 
@@ -450,7 +455,7 @@ a { color: blue; }
 
 		'';
 
-	}
+	};
 
 
 	MNU.cssColors = function( back, color, mnu ) {
@@ -835,12 +840,13 @@ a { color: blue; }
 * [Trades Get Read Me]( #trades-get/README.md )
 ### Tweets
 * [Tweets Read Me]( #tweets/README.md )
+### Company URLs
+* [URL Get Read Me]( #url-get/README.md )
 ### White Papers
 * [White Papers Read Me]( #white-papers/README.md )
     * [Markets, Outliers and Data Normalization]( #white-papers/outliers-data-normlization.md )
     * [Code, Styling and Abstraction]( #white-papers/code-styling-abstraction.md )
-### Device Parameters Test
-* [Device Parameters Test Read Me]( #device-parameters-test/README.md )
+### [Blog Posts]( https://github.com/prediqtiv/prediqtiv.github.io/labels/blog%20post )
 `;
 
 
