@@ -14,7 +14,7 @@ predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps
 ### Deprecated: Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) <<
 * Client-side HTML, CSS & JavaScript in single file
 * Fast, nice simple script
-* But no FOSS way of getting it to run on a schedule unattended
+* But no [FOSS]( https://en.wikipedia.org/wiki/Free_and_open-source_software ) way of getting it to run on a schedule unattended
 
 
 ## Concept
