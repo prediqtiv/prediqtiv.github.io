@@ -7,36 +7,37 @@ predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps
 
 ## Full Screen Demo: GAS [SP500 Ticks Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
 
-
-### Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) << to be deprecated
-
-
 ## Embedded Web Page: SP500 Ticks Get
 
 <iframe src="https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
+### Deprecated: Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) <<
+* Client-side HTML, CSS & JavaScript in single file
+* Fast, nice simple script
+* But no FOSS way of getting it to run on a schedule unattended
+
 
 ## Concept
 
-Request and obtain stock market intraday data for hundreds of symbols sourced via Wikipedia, Google and Yahoo
-
-### Issues / Problems
-
+Request and obtain stock market intraday data for any number of ticker symbols sourced via Wikipedia, Google and Yahoo
 
 
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
 
+* Create simple effective ways of scraping public data with unattended scheduling
+* Use open [RESTful]( https://en.wikipedia.org/wiki/Representational_state_transfer ) Web services
 
 ### Vision
 <!--  a descriptive picture of a desired future state -->
 
+Identify outliers or 'Black Swans' as they are occurring
 
 ## Developer Notes
 
 Issue:files hosted on GitHub Pages cannot be set to run at fixed time
 
-Solution: Run files using Google Apps Script which allows for triggers to run scipts at fixed times and intervals
+Solution: write and run files using Google Apps Script which allows for triggers to run scripts at fixed times and intervals
 
 Issue: Using GAS, cannot send 500 files to GitHub all at once.
 
@@ -47,12 +48,40 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 
 ### Issues
 
-* 2017-05-11 ~ Creates a commit entry for the uploading of each symbol. Very distracting
+
 
 ### Wish List / To Do
 
 Soon
+* 2017-05-14 ~ Add triggers to load full sp500
 
+More
+* Select exchange & portfolio
+* Get trades for selected symbols or portfolio of issues not in sp500
+
+
+
+## Copyright and License
+
+* [Copyright and License]( https://prediqtiv.github.io/#license.md )
+
+
+## Change Log & Developer Notes
+
+****Remember to leave the app running with a trigger!!****
+
+****Manage versions before making changes!!****
+
+
+### 2017-05-14 ~ Theo
+
+* GAS SP500 ticks get2 - mostly up and running
+* Gathers tick data SP500 using triggers because runs over the six minute limit
+* Verify function available, but looks like not essential to run it every run
+* Send to GitHub sends batches of 256, can pick up where left off
+
+All of these are responded to in one way or another given the new release, so deprecated
+* 2017-05-11 ~ Creates a commit entry for the uploading of each symbol. Very distracting
 * 2017-05-05 ~ if testing delete all triggers
 * 2017-05-05 ~ getTicks: simplify so runs faster / keeps under 360 second limit
 * 2017-05-05 ~ verify receipt while uploading
@@ -63,26 +92,9 @@ Soon
 * 2017-04-25 ~ Catch errors on getTick - especially over six minutes termination error - and start new trigger
 * 2017-04-24 ~ filesToGitHub: show how many files uploaded each run
 * 2017-04-23 ~ try out add multiple files
-
-More
-* Select exchange & portfolio
-* Get trades for selected symbols or portfolio of issues not in sp500
 * Display start index << ??
 
-
-## Copyright and License
-
-* [Copyright and License]( https://prediqtiv.github.io/#license.md )
-
-
-## Change Log & Developer Notes
-
-****Remember to leave the app running with a trigger!!***
-
-****Manage versions before making changes!!****
-
-
-## 2017-05-12 ~ Theo
+### 2017-05-12 ~ Theo
 
 * Started GAS SP500 ticks get2 - so far, tighter and cleaner
 
