@@ -1,4 +1,4 @@
-ADP,Automatic Data Processing,Information Technology,,Internet Software & Services,,
+ADP,Automatic Data Processing,Information Technology,7,Internet Software & Services,44371758593,1946976
 a1494855000,97.01,97.01,97.01,97.01,22301
 1,96.81,97.05,96.7601,97.01,3880
 2,96.89,96.98,96.86,96.86,2398

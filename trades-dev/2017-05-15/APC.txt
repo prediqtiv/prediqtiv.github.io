@@ -1,4 +1,4 @@
-APC,Anadarko Petroleum Corp,Energy,,Oil & Gas Exploration & Production,,
+APC,Anadarko Petroleum Corp,Energy,3,Oil & Gas Exploration & Production,29121158570,5431792
 a1494855000,52.74,52.74,52.64,52.64,38422
 1,52.72,52.74,52.65,52.74,10527
 2,52.57,52.75,52.55,52.7147,11120

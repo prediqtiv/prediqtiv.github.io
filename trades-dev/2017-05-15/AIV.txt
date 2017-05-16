@@ -1,4 +1,4 @@
-AIV,Apartment Investment & Management,Real Estate,,Residential REITs,,
+AIV,Apartment Investment & Management,Real Estate,9,Residential REITs,6766078630,1483204
 a1494855060,43.22,43.23,43.21,43.23,4141
 1,43.23,43.28,43.23,43.27,300
 2,43.24,43.24,43.23,43.24,300

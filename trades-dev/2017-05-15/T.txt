@@ -1,4 +1,4 @@
-T,AT&T Inc,Telecommunication Services,,Integrated Telecommunication Services,,
+T,AT&T Inc,Telecommunication Services,10,Integrated Telecommunication Services,237559900395,21985326
 a1494855000,38.52,38.52,38.52,38.52,900
 1,38.49,38.52,38.41,38.52,349553
 2,38.56,38.57,38.48,38.48,31243

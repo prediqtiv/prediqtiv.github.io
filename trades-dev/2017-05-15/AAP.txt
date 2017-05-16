@@ -1,4 +1,4 @@
-AAP,Advance Auto Parts,Consumer Discretionary,,Automotive Retail,,
+AAP,Advance Auto Parts,Consumer Discretionary,1,Automotive Retail,10697865609,912958
 a1494855060,145.1971,145.1971,144.49,144.66,5213
 2,144.975,145.37,144.94,144.96,7000
 3,145.255,145.57,145.255,145.28,1200

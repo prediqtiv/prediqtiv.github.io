@@ -1,4 +1,4 @@
-AIG,American International Group Inc.,Financials,,Property & Casualty Insurance,,
+AIG,American International Group Inc.,Financials,4,Property & Casualty Insurance,56490253332,6642190
 a1494855000,61.25,61.25,61.25,61.25,300
 1,61.42,61.43,61.25,61.26,56533
 2,61.46,61.53,61.39,61.39,17069

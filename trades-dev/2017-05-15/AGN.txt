@@ -1,4 +1,4 @@
-AGN,Allergan Plc,Health Care,,Pharmaceuticals,,
+AGN,Allergan Plc,Health Care,5,Pharmaceuticals,77544979200,2136322
 a1494855000,230.76,230.76,230.11,230.13,33323
 1,230.51,231.18,230.15,230.825,11027
 2,230.28,230.83,230,230.5,3600

@@ -1,4 +1,4 @@
-ABC,AmerisourceBergen Corp,Health Care,,Health Care Distributors,,
+ABC,AmerisourceBergen Corp,Health Care,5,Health Care Distributors,19610280581,1770070
 a1494855000,88.49,88.49,88.49,88.49,100
 1,88.52,88.65,88.47,88.59,16162
 2,88.79,88.79,88.71,88.71,600

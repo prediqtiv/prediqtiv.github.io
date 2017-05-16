@@ -1,4 +1,4 @@
-ARE,Alexandria Real Estate Equities Inc,Real Estate,,Office REITs,,
+ARE,Alexandria Real Estate Equities Inc,Real Estate,9,Office REITs,10622368614,640774
 a1494855060,116.0099,116.0099,115.86,115.86,2291
 5,115.87,115.97,115.87,115.89,700
 7,115.82,115.97,115.82,115.97,900

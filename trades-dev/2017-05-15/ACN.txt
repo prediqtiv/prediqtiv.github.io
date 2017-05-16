@@ -1,4 +1,4 @@
-ACN,Accenture plc,Information Technology,,IT Consulting & Other Services,,
+ACN,Accenture plc,Information Technology,7,IT Consulting & Other Services,79215662213,2075361
 a1494855060,120.92,120.96,120.7601,120.96,46531
 1,121.25,121.25,120.93,120.93,7969
 2,121.42,121.42,121.2,121.3,5179

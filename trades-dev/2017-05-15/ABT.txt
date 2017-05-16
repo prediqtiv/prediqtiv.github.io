@@ -1,4 +1,4 @@
-ABT,Abbott Laboratories,Health Care,,Health Care Equipment,,
+ABT,Abbott Laboratories,Health Care,5,Health Care Equipment,76595622706,6679673
 a1494855060,43.93,43.96,43.9,43.92,91227
 1,44.04,44.04,43.91,43.91,9281
 2,43.93,44.01,43.9,44.01,6422

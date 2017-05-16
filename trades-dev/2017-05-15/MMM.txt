@@ -1,4 +1,4 @@
-MMM,3M Company,Industrials,,Industrial Conglomerates,,
+MMM,3M Company,Industrials,6,Industrial Conglomerates,117924493073,1854682
 a1494855060,196.67,196.67,196.67,196.67,100
 1,196.47,196.5,196.23,196.5,33576
 2,196.67,196.68,196.57,196.57,1000

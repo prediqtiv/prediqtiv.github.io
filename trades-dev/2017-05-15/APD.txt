@@ -1,4 +1,4 @@
-APD,Air Products & Chemicals Inc,Materials,,Industrial Gases,,
+APD,Air Products & Chemicals Inc,Materials,8,Industrial Gases,31633582071,1370875
 a1494855060,144.456,144.51,144.12,144.51,7928
 1,144.855,144.855,144.5,144.5,753
 2,144.71,144.97,144.71,144.85,900

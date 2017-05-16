@@ -1,4 +1,4 @@
-AES,AES Corp,Utilities,,Independent Power Producers & Energy Traders,,
+AES,AES Corp,Utilities,11,Independent Power Producers & Energy Traders,7433790662,6451424
 a1494855060,11.35,11.4,11.34,11.34,59626
 1,11.36,11.37,11.35,11.36,3330
 2,11.34,11.365,11.34,11.36,8200

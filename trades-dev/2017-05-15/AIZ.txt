@@ -1,4 +1,4 @@
-AIZ,Assurant Inc,Financials,,Multi-line Insurance,,
+AIZ,Assurant Inc,Financials,4,Multi-line Insurance,5629473349,388920
 a1494855060,102.3,102.3,101.4096,102.3,5660
 1,102.28,102.47,102.275,102.44,1737
 5,102.46,102.46,102.3,102.3,1000

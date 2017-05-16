@@ -1,4 +1,4 @@
-AMD,Advanced Micro Devices Inc,Information Technology,,Semiconductors,,
+AMD,Advanced Micro Devices Inc,Information Technology,7,Semiconductors,10977312590,63838190
 a1494855000,11.4,11.42,11.39,11.41,495261
 1,11.3401,11.41,11.34,11.4,275992
 2,11.31,11.37,11.3,11.34,320111

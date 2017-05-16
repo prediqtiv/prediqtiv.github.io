@@ -1,4 +1,4 @@
-ANTM,Anthem Inc.,Health Care,,Managed Health Care,,
+ANTM,Anthem Inc.,Health Care,5,Managed Health Care,47968586313,1375657
 a1494855000,180.72,180.72,180.72,180.72,100
 1,180.66,181.14,179.6,180,41286
 2,181.1,181.1,180.79,180.79,1920

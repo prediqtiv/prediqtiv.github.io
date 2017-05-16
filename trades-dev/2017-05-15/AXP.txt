@@ -1,4 +1,4 @@
-AXP,American Express Co,Financials,,Consumer Finance,,
+AXP,American Express Co,Financials,4,Consumer Finance,69623378835,3825907
 a1494855060,77.55,77.56,77.48,77.48,28471
 1,77.7,77.7,77.615,77.615,3896
 2,77.74,77.77,77.71,77.77,3568

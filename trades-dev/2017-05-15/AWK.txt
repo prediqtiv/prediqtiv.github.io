@@ -1,4 +1,4 @@
-AWK,American Water Works Company Inc,Utilities,,Water Utilities,,
+AWK,American Water Works Company Inc,Utilities,11,Water Utilities,13737831980,967600
 a1494855060,76.4,76.43,76.22,76.22,18392
 3,76.13,76.2,76.13,76.2,300
 5,76.41,76.41,76.28,76.29,2223

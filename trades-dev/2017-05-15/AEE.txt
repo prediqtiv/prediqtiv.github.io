@@ -1,4 +1,4 @@
-AEE,Ameren Corp,Utilities,,Multi-Utilities,,
+AEE,Ameren Corp,Utilities,11,Multi-Utilities,13504166622,1515063
 a1494855060,54.81,54.86,54.81,54.86,10085
 1,54.83,54.83,54.82,54.82,1257
 2,54.85,54.85,54.85,54.85,100

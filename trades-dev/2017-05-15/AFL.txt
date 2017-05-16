@@ -1,4 +1,4 @@
-AFL,AFLAC Inc,Financials,,Life & Health Insurance,,
+AFL,AFLAC Inc,Financials,4,Life & Health Insurance,29049820689,1992555
 a1494855000,73.61,73.61,73.61,73.61,100
 1,73.76,73.76,73.56,73.65,23911
 2,73.77,73.89,73.77,73.85,976

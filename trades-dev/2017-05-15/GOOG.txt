@@ -1,4 +1,4 @@
-GOOG,Alphabet Inc Class C,Information Technology,,Internet Software & Services,,
+GOOG,Alphabet Inc Class C,Information Technology,7,Internet Software & Services,657309672776,1370946
 a1494855000,932.95,932.95,932.95,932.95,23796
 1,932.22,932.98,932.21,932.68,6100
 2,930.168,932.24,930.168,932.24,1680

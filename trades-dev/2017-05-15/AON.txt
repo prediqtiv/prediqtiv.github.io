@@ -1,4 +1,4 @@
-AON,Aon plc,Financials,,Insurance Brokers,,
+AON,Aon plc,Financials,4,Insurance Brokers,32585649400,1089335
 a1494855060,124.07,124.19,124.06,124.19,13677
 1,124.18,124.24,124.1,124.1,1200
 2,124.18,124.33,124.18,124.18,2181

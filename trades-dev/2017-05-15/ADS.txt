@@ -1,4 +1,4 @@
-ADS,Alliance Data Systems,Information Technology,,Data Processing & Outsourced Services,,
+ADS,Alliance Data Systems,Information Technology,7,Data Processing & Outsourced Services,13218019457,728833
 a1494855060,240.66,242.9,240.66,242.9,5555
 1,240.23,240.33,240.23,240.33,500
 2,240.96,240.96,240.01,240.5,9813

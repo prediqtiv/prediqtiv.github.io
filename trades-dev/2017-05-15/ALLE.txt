@@ -1,4 +1,4 @@
-ALLE,Allegion,Industrials,,Building Products,,
+ALLE,Allegion,Industrials,6,Building Products,7306631990,736612
 a1494855000,76.7,76.7,76.7,76.7,4049
 1,76.76,76.76,76.76,76.76,200
 2,76.71,76.71,76.71,76.71,100

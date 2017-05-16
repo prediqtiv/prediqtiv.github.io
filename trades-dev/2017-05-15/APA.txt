@@ -1,4 +1,4 @@
-APA,Apache Corporation,Energy,,Oil & Gas Exploration & Production,,
+APA,Apache Corporation,Energy,3,Oil & Gas Exploration & Production,19535173639,3775411
 a1494855060,52.56,52.57,52.41,52.48,64774
 1,52.56,52.67,52.5,52.57,11559
 2,52.571,52.62,52.4801,52.58,4215

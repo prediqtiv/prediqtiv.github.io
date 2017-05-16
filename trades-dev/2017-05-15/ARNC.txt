@@ -1,4 +1,4 @@
-ARNC,Arconic Inc,Industrials,,Aerospace & Defense,,
+ARNC,Arconic Inc,Industrials,6,Aerospace & Defense,12610290826,3795527
 a1494855000,27.77,27.77,27.77,27.77,33540
 1,27.88,27.88,27.77,27.77,25824
 2,27.8932,27.9,27.87,27.895,2619

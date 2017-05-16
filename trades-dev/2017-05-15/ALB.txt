@@ -1,4 +1,4 @@
-ALB,Albemarle Corp,Materials,,Specialty Chemicals,,
+ALB,Albemarle Corp,Materials,8,Specialty Chemicals,12369454190,894816
 a1494855000,111.09,111.09,111.09,111.09,11853
 1,110.81,111.1647,110.72,111.01,900
 2,111.031,111.031,110.978,110.99,1600

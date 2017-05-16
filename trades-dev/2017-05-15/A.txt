@@ -1,4 +1,4 @@
-A,Agilent Technologies Inc,Health Care,,Health Care Equipment,,
+A,Agilent Technologies Inc,Health Care,5,Health Care Equipment,18251713122,1726030
 a1494855060,56.01,56.13,56.01,56.07,12797
 1,56.04,56.16,56.04,56.12,1350
 2,56.22,56.22,56.13,56.13,2418

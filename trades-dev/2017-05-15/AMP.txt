@@ -1,4 +1,4 @@
-AMP,Ameriprise Financial,Financials,,Asset Management & Custody Banks,,
+AMP,Ameriprise Financial,Financials,4,Asset Management & Custody Banks,19406847764,983848
 a1494855060,126.86,126.86,126.54,126.74,6598
 1,126.74,126.75,126.74,126.75,1100
 2,126.95,126.95,126.82,126.82,387

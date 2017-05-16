@@ -1,4 +1,4 @@
-AJG,Arthur J. Gallagher & Co.,Financials,,Insurance Brokers,,
+AJG,Arthur J. Gallagher & Co.,Financials,4,Insurance Brokers,9835493434,943804
 a1494855060,54.57,54.7,54.5,54.67,8850
 1,54.645,54.73,54.6,54.65,9493
 2,54.62,54.62,54.62,54.62,100

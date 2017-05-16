@@ -1,4 +1,4 @@
-APH,Amphenol Corp,Information Technology,,Electronic Components,,
+APH,Amphenol Corp,Information Technology,7,Electronic Components,22432710329,1037534
 a1494855060,72.98,72.98,72.98,72.98,10685
 1,72.865,72.865,72.865,72.865,100
 2,72.92,72.96,72.9,72.96,1300

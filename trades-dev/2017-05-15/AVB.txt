@@ -1,4 +1,4 @@
-AVB,AvalonBay Communities Inc.,Real Estate,,Residential REITs,,
+AVB,AvalonBay Communities Inc.,Real Estate,9,Residential REITs,26528032227,606105
 a1494855060,191.21,191.79,191.2,191.79,3083
 1,192.14,192.26,191.365,191.365,1200
 2,191.85,191.92,191.7,191.92,1100

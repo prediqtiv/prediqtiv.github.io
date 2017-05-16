@@ -1,4 +1,4 @@
-AVY,Avery Dennison Corp,Materials,,Paper Packaging,,
+AVY,Avery Dennison Corp,Materials,8,Paper Packaging,7432489778,683328
 a1494855060,83.43,83.43,83.35,83.39,3435
 3,83.383,83.53,83.38,83.39,900
 4,83.38,83.46,83.38,83.46,362

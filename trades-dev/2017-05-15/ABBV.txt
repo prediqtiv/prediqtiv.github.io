@@ -1,4 +1,4 @@
-ABBV,AbbVie Inc.,Health Care,,Pharmaceuticals,,
+ABBV,AbbVie Inc.,Health Care,5,Pharmaceuticals,107342985200,5291629
 a1494855060,66.05,66.11,66.04,66.07,137480
 1,66.0945,66.11,66.05,66.11,14138
 2,66.1,66.14,66.0875,66.1,10647

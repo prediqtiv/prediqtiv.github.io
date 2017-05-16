@@ -1,4 +1,4 @@
-ADSK,Autodesk Inc,Information Technology,,Application Software,,
+ADSK,Autodesk Inc,Information Technology,7,Application Software,21286744718,1798677
 a1494855000,95.73,95.73,95.73,95.73,16630
 1,95.6901,95.89,95.69,95.89,1669
 2,95.95,95.95,95.95,95.95,200

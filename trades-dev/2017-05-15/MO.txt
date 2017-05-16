@@ -1,4 +1,4 @@
-MO,Altria Group Inc,Consumer Staples,,Tobacco,,
+MO,Altria Group Inc,Consumer Staples,2,Tobacco,136838694479,5610877
 a1494855000,70.36,70.38,70.33,70.38,1350
 1,70.34,70.37,70.25,70.28,10787
 2,70.25,70.34,70.22,70.309,10580

@@ -1,4 +1,4 @@
-BK,The Bank of New York Mellon Corp.,Financials,,Asset Management & Custody Banks,,
+BK,The Bank of New York Mellon Corp.,Financials,4,Asset Management & Custody Banks,48811150458,4578310
 a1494855000,46.84,46.84,46.84,46.84,48020
 1,46.95,46.95,46.84,46.89,7707
 2,46.96,47.02,46.92,46.93,8084
