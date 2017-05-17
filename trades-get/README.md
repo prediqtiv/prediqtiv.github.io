@@ -53,7 +53,10 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
-* 2017-05-14 ~ Add triggers to load full sp500
+* 2017-05-16 ~ Add getNamedRange to getSingleTick
+* 2017-05-16 ~ Start connecting display output to named ranges
+* 2017-05-16 ~ Add getNamedRange to getSha
+
 
 More
 * Select exchange & portfolio
@@ -72,6 +75,19 @@ More
 
 ****Manage versions before making changes!!****
 
+
+### 2017-05-16 ~ Theo
+
+Continued failure on one always-same symbol. Why?
+
+* 2017-05-16 ~ Add try/catch to getSha
+* start adding named ranges
+* Now runs all the way to last symbol
+
+### 2017-05-15 ~ Theo
+
+* More fixes / getting there
+* 2017-05-14 ~ Add triggers to load full sp500
 
 ### 2017-05-14 ~ Theo
 
