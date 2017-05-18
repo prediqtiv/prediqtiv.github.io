@@ -33,6 +33,15 @@ Request and obtain stock market intraday data for any number of ticker symbols s
 
 Identify outliers or 'Black Swans' as they are occurring
 
+
+## Features
+
+* Gathers six data items for 390 minutes for 500 symbols or 1,181,700 data points from a data source plus 11 other useful data items for the 500 symbols and commits this to GitHub as 500 CSV files.
+* Handles errors, delays and transmissions issues moderately well
+* Run time is between twenty to thirty minutes with various speed-ups available
+* Keeps within most modest GitHub API registered developer usage limits. IE, incurs no usage charges.
+* All open source plain vanilla entry-level JavaScript
+
 ## Developer Notes
 
 Issue: JavaScript files hosted on GitHub Pages cannot be set to run at fixed time
@@ -64,6 +73,7 @@ Soon
 * 2017-05-18 ~ Fix remaining glitches in messages
 
 More
+* Reduce run time down to a few minutes and run multiple times during the day
 * Select exchange & portfolio
 * Get trades for selected symbols or portfolio of issues not in sp500
 
@@ -83,7 +93,7 @@ More
 
 ### 2017-05-18 ~ Theo
 
-* Successful hand-off run around 11:00 am
+* Successful hands-off run around 11:00 am
 
 ### 2017-05-17 ~ Theo
 
