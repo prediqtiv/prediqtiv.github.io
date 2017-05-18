@@ -5,16 +5,16 @@ _Request and obtain intraday trades for hundreds of stock market symbols for a n
 
 predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data.
 
-## Full Screen Demo: GAS [SP500 Ticks Get]( https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/edit )
+## Full Screen Demo: GAS [SP500 Ticks Get 2]( https://docs.google.com/https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/edit )
 
 ## Embedded Web Page: SP500 Ticks Get
 
-<iframe src="https://docs.google.com/spreadsheets/d/1Qe8UxwBWIMmlFrsTMxkorJwlX4beGQAeRNANSjJ8TME/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
-### Deprecated: Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html ) <<
+### Deprecated: Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html )
 * Client-side HTML, CSS & JavaScript in single file
 * Fast, nice simple script
-* But no [FOSS]( https://en.wikipedia.org/wiki/Free_and_open-source_software ) way of getting it to run on a schedule unattended
+* But there's no [FOSS]( https://en.wikipedia.org/wiki/Free_and_open-source_software ) way of getting it to run on a schedule unattended
 
 
 ## Concept
@@ -25,7 +25,7 @@ Request and obtain stock market intraday data for any number of ticker symbols s
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
 
-* Create simple effective ways of scraping public data with unattended scheduling
+* Create simple effective ways of scraping historical market tick public data with unattended scheduling
 * Use open [RESTful]( https://en.wikipedia.org/wiki/Representational_state_transfer ) Web services
 
 ### Vision
@@ -35,16 +35,21 @@ Identify outliers or 'Black Swans' as they are occurring
 
 ## Developer Notes
 
-Issue:files hosted on GitHub Pages cannot be set to run at fixed time
+Issue: JavaScript files hosted on GitHub Pages cannot be set to run at fixed time
 
-Solution: write and run files using Google Apps Script which allows for triggers to run scripts at fixed times and intervals
+Solution: write and run files using [Google Apps Script]( https://developers.google.com/apps-script/ ) (GAS) which allows for triggers to run scripts at fixed times and intervals
 
-Issue: Using GAS, cannot send 500 files to GitHub all at once.
+Issue: There is a six minute limit to the duration of any script running on GAS. Using GAS, it takes over six minutes to send 500 files to GitHub all at once.
 
-Solution: Triggers can be set for every 30, 15, 10, 5 or 1 minutes
+Solution: Set up GAS triggers - these can be set for every 30, 15, 10, 5 or 1 minutes. This allows for multiple six minute sessions.
 
+Another approach might be to run multiple sessions. See
+
+[Running things in parallel using HTML service]( http://ramblings.mcpher.com/Home/excelquirks/htmlservice/parallel )
+
+<!--
 Current timings: sending 25 symbols once a minute. Takes over a thousand seconds, but has had very few failures. Speed-ups will be explored.
-
+-->
 
 ### Issues
 
@@ -53,10 +58,10 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
-* 2017-05-16 ~ Add getNamedRange to getSingleTick
-* 2017-05-16 ~ Start connecting display output to named ranges
-* 2017-05-16 ~ Add getNamedRange to getSha
-
+* 2017-05-18 ~ Obtain data from multiple sources << Yahoo next
+* 2017-05-18 ~ Set trigger to run daily
+* 2017-05-18 ~ Improve use of named or pre-selected ranges
+* 2017-05-18 ~ Fix remaining glitches in messages
 
 More
 * Select exchange & portfolio
@@ -75,6 +80,23 @@ More
 
 ****Manage versions before making changes!!****
 
+
+### 2017-05-18 ~ Theo
+
+* Successful hand-off run around 11:00 am
+
+### 2017-05-17 ~ Theo
+
+One complete run-through: no errors
+
+GAS is quite wonderful - but it's taken a lot of time to unlearn/relearn in order make it function nicely
+
+Did I take a long tie because I'm old and slow or because the task was unusual and complex?
+
+
+* 2017-05-16 ~ Add getNamedRange to getSingleTick
+* 2017-05-16 ~ Start connecting display output to named ranges
+* 2017-05-16 ~ Add getNamedRange to getSha
 
 ### 2017-05-16 ~ Theo
 
