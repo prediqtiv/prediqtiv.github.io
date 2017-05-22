@@ -90,6 +90,13 @@ More
 
 ****Manage versions before making changes!!****
 
+### 2017-05-21 ~ Theo
+
+Friday's run failed. Fingers crossed today's cleanup fixed things
+
+* Full code cleanup and streamline
+
+
 
 ### 2017-05-18 ~ Theo
 
