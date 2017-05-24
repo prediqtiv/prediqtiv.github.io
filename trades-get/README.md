@@ -67,8 +67,9 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 ### Wish List / To Do
 
 Soon
+* 2017-05-23 ~ at init: delete all old triggers
+* 2017-05-23 ~ Add go back and retry getting ticks missed in prior run
 * 2017-05-18 ~ Obtain data from multiple sources << Yahoo next
-* 2017-05-18 ~ Set trigger to run daily
 * 2017-05-18 ~ Improve use of named or pre-selected ranges
 * 2017-05-18 ~ Fix remaining glitches in messages
 
@@ -90,12 +91,20 @@ More
 
 ****Manage versions before making changes!!****
 
+
+### 2017-05-23 ~ Theo
+
+* Ongoing effort to catch errors as they happen
+	* Takes much time as each run takes twenty or so minutes to complete
+	* Most of times runs without errors
+	* Learning how to simulate errors ;-)
+
 ### 2017-05-21 ~ Theo
 
 Friday's run failed. Fingers crossed today's cleanup fixed things
 
 * Full code cleanup and streamline
-
+* 2017-05-18 ~ Set trigger to run daily
 
 
 ### 2017-05-18 ~ Theo
