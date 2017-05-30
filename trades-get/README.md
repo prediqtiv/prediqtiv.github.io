@@ -92,6 +92,10 @@ More
 ****Manage versions before making changes!!****
 
 
+### 2017-05-30 ~ Theo
+
+* May have fixed not reading last row issues
+
 ### 2017-05-23 ~ Theo
 
 * Ongoing effort to catch errors as they happen
