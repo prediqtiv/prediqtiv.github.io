@@ -1,4 +1,4 @@
-MSFT,Microsoft Corp.,Information Technology,7,Systems Software,542764987351,24805510
+MSFT,Microsoft Corp.,Information Technology,7,Systems Software,542842586113,24805510
 a1495805400,69.74,69.8,69.74,69.8,346728
 1,69.61,69.78,69.52,69.75,92412
 2,69.5801,69.6601,69.5801,69.61,115494
