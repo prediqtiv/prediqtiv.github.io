@@ -3,9 +3,9 @@
 
 ![]( https://prediqtiv.github.io/images/predIQtiv-logo2.png )
 
-
+<!--
 ### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
-
+-->
 ### Full Screen Demo: [eyeCue Replay Dev ]( https://prediqtiv.github.io/eye-cue/replay/dev/ )
 
 ### Full Screen Demo: [eyeCue Realtime ]( https://prediqtiv.github.io/eye-cue/realtime/ )
@@ -18,9 +18,11 @@
 
 _Development version - may have issues_
 
+<!--
 ## Issues
 * 2017-05-03 ~ No eyeCue data for Tuesday, 2017-05-02
 * 2017-05-01 ~ eyeCue Replay Heads-Up display reports Twitter cashtag count incorrectly << 2017-05-04 ~ Things are improving
+-->
 
 ## Concept
 
