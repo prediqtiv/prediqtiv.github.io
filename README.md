@@ -214,7 +214,15 @@ _One day this list will be as long as your arm_
 
 _Most changes are noted in Read Me files in folders containing the associated scripts._
 
-### 2017-05-14 ~
+
+### 2017-06-02 ~ Theo
+
+* Status Update: [2017-06-02 ~ Data Scraping: LinkedIn]( https://github.com/prediqtiv/prediqtiv.github.io/issues/10 )
+* Status Update: [2017-06-02 ~ New Source of Market Tick Data: Alpha Vantage]( https://github.com/prediqtiv/prediqtiv.github.io/issues/9 ) post
+
+Started thinking about building the eyeCue series using [A-frame]( https://aframe.io/ ). We need to be thinking about what the SP500 look like in virtual reality or augmented reality.
+
+### 2017-05-14 ~ Theo
 
 * Add urls get
 
