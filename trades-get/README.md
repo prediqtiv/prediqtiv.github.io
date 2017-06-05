@@ -91,10 +91,15 @@ More
 
 ****Manage versions before making changes!!****
 
+### 2017-06-04 ~ Theo
+
+* SP500 Get Ticks Alpha Vantage just about operational
+* Need to send only most recent days trades
+
 ### 2017-06-02 ~ Theo
 
 * [Status Update]( https://github.com/prediqtiv/prediqtiv.github.io/issues/9 ) post
-* Started [SP500 Get Ticks2]( https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/edit )
+* Started [SP500 Get Ticks Alpha Vantage]( https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/edit )
 
 
 ### 2017-05-30 ~ Theo
