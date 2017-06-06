@@ -91,6 +91,12 @@ More
 
 ****Manage versions before making changes!!****
 
+
+### 2017-06-05 ~ Theo
+
+* Doing some trial runs with Alpha Vantage: looks like servers got overloaded
+
+
 ### 2017-06-04 ~ Theo
 
 * SP500 Get Ticks Alpha Vantage just about operational
