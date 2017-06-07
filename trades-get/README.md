@@ -92,6 +92,12 @@ More
 ****Manage versions before making changes!!****
 
 
+### 2017-06-07 ~ Theo
+
+* More runs and fixes with Alpha Vantage
+* Code cleanup and streamlining
+* Still getting fails with triggers not triggering
+
 ### 2017-06-05 ~ Theo
 
 * Doing some trial runs with Alpha Vantage: looks like servers got overloaded
