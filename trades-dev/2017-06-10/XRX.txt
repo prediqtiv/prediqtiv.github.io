@@ -1,4 +1,4 @@
-XRX,Xerox Corp.,Information Technology,7,Technology Hardware Storage & Peripherals,7015010222,6491873
+XRX,Xerox Corp.,Information Technology,7,Technology Hardware Storage & Peripherals,6954881624,6491873
 a1497015000,6.95,6.95,6.93,6.93,95745
 1,6.9505,6.96,6.92,6.94,18821
 2,6.96,6.96,6.951,6.955,12858

@@ -1,4 +1,4 @@
-XLNX,Xilinx Inc,Information Technology,7,Semiconductors,16271813306,3691503
+XLNX,Xilinx Inc,Information Technology,7,Semiconductors,15633558668,3691503
 a1497015000,68.19,68.35,68.19,68.35,27265
 1,68.26,68.4,68.19,68.21,5617
 2,68.42,68.42,68.24,68.265,3014

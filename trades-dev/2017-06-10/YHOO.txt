@@ -1,4 +1,4 @@
-YHOO,Yahoo Inc.,Information Technology,7,Internet Software & Services,57045622761,12987876
+YHOO,Yahoo Inc.,Information Technology,7,Internet Software & Services,55315101932,12987876
 a1497015000,56.11,56.155,56.1,56.155,389379
 1,56.14,56.16,56.02,56.13,325423
 2,56.7,56.76,56.13,56.14,248112

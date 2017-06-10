@@ -1,4 +1,4 @@
-YUM,Yum! Brands Inc,Consumer Discretionary,1,Restaurants,25650352400,2526904
+YUM,Yum! Brands Inc,Consumer Discretionary,1,Restaurants,25348669729,2526904
 a1497015000,73.9,73.9,73.9,73.9,14205
 1,74.13,74.14,73.9,73.9,3100
 3,74.36,74.36,74.065,74.14,5413
