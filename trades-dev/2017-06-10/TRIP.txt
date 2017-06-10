@@ -1,4 +1,4 @@
-TRIP,TripAdvisor,Consumer Discretionary,1,Internet & Direct Marketing Retail,5308804687,3327550
+TRIP,TripAdvisor,Consumer Discretionary,1,Internet & Direct Marketing Retail,5321583867,3327550
 a1497015000,37.28,37.31,37.28,37.31,23949
 1,37.32,37.35,37.25,37.26,1311
 2,37.37,37.37,37.31,37.35,815

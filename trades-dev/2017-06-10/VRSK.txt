@@ -1,4 +1,4 @@
-VRSK,Verisk Analytics,Industrials,6,Research & Consulting Services,13179746066,1067832
+VRSK,Verisk Analytics,Industrials,6,Research & Consulting Services,13128911465,1067832
 a1497015000,80.39,80.39,80.39,80.39,8490
 2,80.435,80.435,80.435,80.435,100
 4,80.45,80.51,80.44,80.51,300

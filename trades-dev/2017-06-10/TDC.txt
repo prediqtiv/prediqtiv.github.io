@@ -1,4 +1,4 @@
-TDC,Teradata Corp.,Information Technology,7,Application Software,3616552706,1627355
+TDC,Teradata Corp.,Information Technology,7,Application Software,3633464656,1627355
 a1497015060,27.87,27.92,27.79,27.79,7299
 1,27.95,27.95,27.95,27.95,2800
 2,27.95,27.95,27.9,27.9,1700

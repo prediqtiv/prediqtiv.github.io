@@ -1,4 +1,4 @@
-TMK,Torchmark Corp.,Financials,4,Life & Health Insurance,9049269659,460452
+TMK,Torchmark Corp.,Financials,4,Life & Health Insurance,9225952224,460452
 a1497015000,75.58,75.58,75.58,75.58,1797
 1,75.21,75.22,75.21,75.22,200
 4,75.58,75.69,75.58,75.64,800

@@ -1,4 +1,4 @@
-TIF,Tiffany & Co.,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,11980814952,1845909
+TIF,Tiffany & Co.,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,12112572303,1845909
 a1497015000,93.89,93.89,93.89,93.89,10342
 1,93.87,93.876,93.87,93.87,507
 2,94.155,94.155,93.75,93.88,1477

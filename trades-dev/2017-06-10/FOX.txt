@@ -1,4 +1,4 @@
-FOX,Twenty-First Century Fox Class B,Consumer Discretionary,1,Publishing,51339266979,2960325
+FOX,Twenty-First Century Fox Class B,Consumer Discretionary,1,Publishing,52723492775,2960325
 a1497015000,26.92,27.02,26.92,27.02,27780
 1,26.84,26.95,26.83,26.87,3510
 2,26.8762,26.92,26.87,26.88,1650

@@ -1,4 +1,4 @@
-FOXA,Twenty-First Century Fox Class A,Consumer Discretionary,1,Publishing,51490347373,13049484
+FOXA,Twenty-First Century Fox Class A,Consumer Discretionary,1,Publishing,52878646642,13049484
 a1497015000,27.25,27.34,27.25,27.34,95745
 1,27.225,27.26,27.2,27.25,7950
 2,27.23,27.26,27.23,27.25,3719

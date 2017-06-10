@@ -1,4 +1,4 @@
-UAA,Under Armour Class A,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,9531630683,5114212
+UAA,Under Armour Class A,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,9842620694,5114212
 a1497015060,21.31,21.32,21.235,21.29,61422
 1,21.27,21.28,21.27,21.272,675
 2,21.31,21.31,21.26,21.272,7152

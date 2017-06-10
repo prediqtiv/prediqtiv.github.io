@@ -1,4 +1,4 @@
-VZ,Verizon Communications,Telecommunication Services,10,Integrated Telecommunication Services,189317583290,14853191
+VZ,Verizon Communications,Telecommunication Services,10,Integrated Telecommunication Services,191489812133,14853191
 a1497015000,46.17,46.17,46.17,46.17,1300
 1,46.21,46.21,46.14,46.17,190044
 2,46.21,46.2106,46.1776,46.2,13361

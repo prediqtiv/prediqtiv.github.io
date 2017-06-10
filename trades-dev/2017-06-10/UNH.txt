@@ -1,4 +1,4 @@
-UNH,United Health Group Inc.,Health Care,5,Managed Health Care,173415289609,2877711
+UNH,United Health Group Inc.,Health Care,5,Managed Health Care,174644644862,2877711
 a1497015000,181.75,181.84,181.75,181.84,24181
 1,182.28,182.28,181.75,182,1042
 2,182.3972,182.4,182.09,182.3,1192

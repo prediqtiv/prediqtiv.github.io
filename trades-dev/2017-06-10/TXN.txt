@@ -1,4 +1,4 @@
-TXN,Texas Instruments,Information Technology,7,Semiconductors,82012583974,4454145
+TXN,Texas Instruments,Information Technology,7,Semiconductors,78667507008,4454145
 a1497015000,84.23,84.23,84.23,84.23,86307
 1,84.43,84.43,84.21,84.25,29256
 2,84.48,84.48,84.37,84.43,2299

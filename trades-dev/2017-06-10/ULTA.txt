@@ -1,4 +1,4 @@
-ULTA,Ulta Salon Cosmetics & Fragrance Inc,Consumer Discretionary,1,Specialty Stores,19056396877,781903
+ULTA,Ulta Salon Cosmetics & Fragrance Inc,Consumer Discretionary,1,Specialty Stores,19093608507,781903
 a1497015000,308.33,308.33,308.33,308.33,5499
 1,309.5,309.5,307.53,308.5,6851
 2,309.52,309.89,309.52,309.67,1452

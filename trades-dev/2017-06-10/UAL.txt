@@ -1,4 +1,4 @@
-UAL,United Continental Holdings,Industrials,6,Airlines,24069407886,3348528
+UAL,United Continental Holdings,Industrials,6,Airlines,23897845660,3348528
 a1497015000,80.96,80.96,80.96,80.96,20088
 1,81.29,81.34,80.93,80.93,9400
 2,81.34,81.5,81.34,81.39,8150

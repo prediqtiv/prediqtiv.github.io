@@ -1,4 +1,4 @@
-TEL,TE Connectivity Ltd.,Information Technology,7,Electronic Manufacturing Services,28334587708,1459279
+TEL,TE Connectivity Ltd.,Information Technology,7,Electronic Manufacturing Services,28207002158,1459279
 a1497015000,79.91,80.05,79.91,80.05,14603
 1,79.95,80,79.92,79.93,1100
 3,79.95,79.99,79.95,79.99,1090

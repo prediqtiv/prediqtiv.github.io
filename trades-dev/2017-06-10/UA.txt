@@ -1,4 +1,4 @@
-UA,Under Armour Class C,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,9408778736,3742311
+UA,Under Armour Class C,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,9715760437,3742311
 a1497015000,19.64,19.64,19.64,19.64,28629
 1,19.6696,19.68,19.65,19.66,7700
 2,19.61,19.6799,19.61,19.66,2957
