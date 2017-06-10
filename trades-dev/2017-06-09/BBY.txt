@@ -1,4 +1,4 @@
-BBY,Best Buy Co. Inc.,Consumer Discretionary,1,Computer & Electronics Retail,17646860590,4973239
+BBY,Best Buy Co. Inc.,Consumer Discretionary,1,Computer & Electronics Retail,17354282064,4973239
 a1497015000,59.02,59.02,59.02,59.02,200
 1,59.08,59.09,58.96,59.03,37179
 2,59.09,59.13,59.06,59.11,1100

@@ -1,4 +1,4 @@
-CTL,CenturyLink Inc,Telecommunication Services,10,Integrated Telecommunication Services,14435054048,10252344
+CTL,CenturyLink Inc,Telecommunication Services,10,Integrated Telecommunication Services,14507279245,10252344
 a1497015060,25.95,25.96,25.92,25.95,56188
 1,25.97,25.97,25.94,25.94,6025
 2,25.97,25.99,25.97,25.975,9200

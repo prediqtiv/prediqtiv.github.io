@@ -1,4 +1,4 @@
-AKAM,Akamai Technologies Inc,Information Technology,7,Internet Software & Services,8383818840,3202001
+AKAM,Akamai Technologies Inc,Information Technology,7,Internet Software & Services,8250116777,3202001
 a1497015000,49,49.33,48.96,49.12,18233
 1,49.01,49.13,48.96,48.97,4405
 3,49.01,49.01,48.97,48.97,900

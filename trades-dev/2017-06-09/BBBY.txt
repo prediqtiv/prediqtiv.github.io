@@ -1,4 +1,4 @@
-BBBY,Bed Bath & Beyond,Consumer Discretionary,1,Specialty Stores,5134882167,2187414
+BBBY,Bed Bath & Beyond,Consumer Discretionary,1,Specialty Stores,5411211734,2187414
 a1497015000,33.855,33.855,33.85,33.85,12321
 1,34.04,34.155,33.84,33.84,5900
 2,33.97,34.04,33.97,34.03,4250

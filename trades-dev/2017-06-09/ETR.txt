@@ -1,4 +1,4 @@
-ETR,Entergy Corp.,Utilities,11,Electric Utilities,14026440082,1149084
+ETR,Entergy Corp.,Utilities,11,Electric Utilities,14021138311,1149084
 a1497015000,79.15,79.15,79.15,79.15,6751
 1,79.19,79.25,79.18,79.22,2561
 2,79.23,79.28,79.2,79.2,1200

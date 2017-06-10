@@ -1,4 +1,4 @@
-ALXN,Alexion Pharmaceuticals,Health Care,5,Biotechnology,24320701518,3678463
+ALXN,Alexion Pharmaceuticals,Health Care,5,Biotechnology,24902017312,3678463
 a1497015000,103.1,103.1,103.08,103.09,28344
 1,103.855,103.95,103.09,103.09,4899
 2,104,104,103.625,103.855,6533

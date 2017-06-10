@@ -1,4 +1,4 @@
-AME,AMETEK Inc,Industrials,6,Electrical Components & Equipment,14454459049,1556517
+AME,AMETEK Inc,Industrials,6,Electrical Components & Equipment,14552444182,1556517
 a1497015060,62.06,62.06,62.06,62.06,5487
 1,62.35,62.35,62.12,62.17,39024
 2,62.31,62.34,62.3,62.33,900

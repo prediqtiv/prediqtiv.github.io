@@ -1,4 +1,4 @@
-GPS,Gap Inc.,Consumer Discretionary,1,Apparel Retail,9100503245,6517134
+GPS,Gap Inc.,Consumer Discretionary,1,Apparel Retail,9320973148,6517134
 a1497015000,22.32,22.34,22.32,22.34,43247
 1,22.32,22.36,22.3,22.36,8399
 2,22.34,22.34,22.32,22.34,3000

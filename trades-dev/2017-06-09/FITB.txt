@@ -1,4 +1,4 @@
-FITB,Fifth Third Bancorp,Financials,4,Regional Banks,19160062119,6079951
+FITB,Fifth Third Bancorp,Financials,4,Regional Banks,19734946376,6079951
 a1497015000,24.45,24.45,24.45,24.45,56175
 1,24.61,24.64,24.49,24.5,13940
 2,24.59,24.65,24.55,24.64,11300

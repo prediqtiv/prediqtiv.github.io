@@ -1,4 +1,4 @@
-EQR,Equity Residential,Real Estate,9,Residential REITs,24960226960,1633984
+EQR,Equity Residential,Real Estate,9,Residential REITs,24900644932,1633984
 a1497015060,67.38,67.38,66.93,67.31,9115
 1,67.1,67.13,67.1,67.115,500
 2,67.04,67.1,67.04,67.1,400

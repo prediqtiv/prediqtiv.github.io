@@ -1,4 +1,4 @@
-CHK,Chesapeake Energy,Energy,3,Oil & Gas Exploration & Production,4456680608,40836808
+CHK,Chesapeake Energy,Energy,3,Oil & Gas Exploration & Production,4672932550,40836808
 a1497015000,4.775,4.78,4.775,4.78,210137
 1,4.81,4.82,4.77,4.78,179556
 2,4.8199,4.82,4.79,4.81,150115

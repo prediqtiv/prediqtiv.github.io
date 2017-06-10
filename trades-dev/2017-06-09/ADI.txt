@@ -1,4 +1,4 @@
-ADI,Analog Devices Inc.,Information Technology,7,Semiconductors,29421691808,4639411
+ADI,Analog Devices Inc.,Information Technology,7,Semiconductors,27503420882,4639411
 a1497015000,82.93,82.93,82.93,82.93,40431
 1,82.7,82.93,82.6463,82.93,12680
 2,82.9155,82.9155,82.7,82.7,2311

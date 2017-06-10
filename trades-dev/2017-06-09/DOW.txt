@@ -1,4 +1,4 @@
-DOW,Dow Chemical,Materials,8,Diversified Chemicals,79080666273,5741685
+DOW,Dow Chemical,Materials,8,Diversified Chemicals,80032560797,5741685
 a1497015060,64.04,64.1,64.02,64.07,51787
 1,64.12,64.14,64.08,64.086,3875
 2,64.23,64.23,64.11,64.11,7661

@@ -1,4 +1,4 @@
-EFX,Equifax Inc.,Industrials,6,Research & Consulting Services,16062237737,571677
+EFX,Equifax Inc.,Industrials,6,Research & Consulting Services,16070533866,571677
 a1497015060,135.48,135.48,135.48,135.48,2004
 8,134.97,135.255,134.97,135.255,800
 10,135.115,135.21,135.115,135.16,408

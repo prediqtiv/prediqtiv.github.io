@@ -1,4 +1,4 @@
-XEC,Cimarex Energy,Energy,3,Oil & Gas Exploration & Production,9384297748,1204163
+XEC,Cimarex Energy,Energy,3,Oil & Gas Exploration & Production,9506109906,1204163
 a1497015060,98.88,98.88,98.64,98.74,7983
 1,99.39,99.39,99.07,99.07,2003
 2,99.22,99.395,99.22,99.34,1400

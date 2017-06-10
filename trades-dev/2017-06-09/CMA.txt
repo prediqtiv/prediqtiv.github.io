@@ -1,4 +1,4 @@
-CMA,Comerica Inc.,Financials,4,Diversified Banks,13220261160,1642132
+CMA,Comerica Inc.,Financials,4,Diversified Banks,13571357027,1642132
 a1497015000,71.66,72,71.66,72,21745
 1,71.86,71.94,71.76,71.94,3525
 2,71.9,71.9,71.69,71.81,2911

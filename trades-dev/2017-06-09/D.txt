@@ -1,4 +1,4 @@
-D,Dominion Resources,Utilities,11,Electric Utilities,49376383333,2156694
+D,Dominion Resources,Utilities,11,Electric Utilities,49134670985,2156694
 a1497015000,79.47,79.47,79.47,79.47,15666
 1,79.44,79.55,79.44,79.55,200
 2,79.48,79.57,79.48,79.535,1800

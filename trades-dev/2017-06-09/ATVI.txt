@@ -1,4 +1,4 @@
-ATVI,Activision Blizzard,Information Technology,7,Home Entertainment Software,43749480465,6599758
+ATVI,Activision Blizzard,Information Technology,7,Home Entertainment Software,41928692169,6599758
 a1497015000,60.675,60.675,60.61,60.63,76486
 1,60.84,60.86,60.57,60.61,59139
 2,60.92,60.92,60.81,60.82,7021

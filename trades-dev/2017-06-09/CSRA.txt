@@ -1,4 +1,4 @@
-CSRA,CSRA Inc.,Information Technology,7,IT Consulting & Other Services,5188635876,990784
+CSRA,CSRA Inc.,Information Technology,7,IT Consulting & Other Services,5186986103,990784
 a1497015000,31.46,31.46,31.46,31.46,10076
 1,31.4829,31.4829,31.46,31.46,1800
 2,31.48,31.48,31.48,31.48,100

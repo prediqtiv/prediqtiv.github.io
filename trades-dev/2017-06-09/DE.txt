@@ -1,4 +1,4 @@
-DE,Deere & Co.,Industrials,6,Agricultural & Farm Machinery,40514934411,2802198
+DE,Deere & Co.,Industrials,6,Agricultural & Farm Machinery,40498850092,2802198
 a1497015000,126.35,126.35,126.27,126.27,18555
 1,126.19,126.35,126.09,126.3,20316
 2,126.23,126.47,126.125,126.24,36316

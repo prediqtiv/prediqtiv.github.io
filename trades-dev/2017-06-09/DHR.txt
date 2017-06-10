@@ -1,4 +1,4 @@
-DHR,Danaher Corp.,Health Care,5,Health Care Equipment,58048980105,2642654
+DHR,Danaher Corp.,Health Care,5,Health Care Equipment,58000934615,2642654
 a1497015000,84.82,84.82,84.73,84.73,30619
 1,84.6798,84.7,84.52,84.52,1800
 2,84.63,84.7,84.63,84.7,1540

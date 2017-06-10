@@ -1,4 +1,4 @@
-KO,Coca-Cola Company (The),Consumer Staples,2,Soft Drinks,192015590696,11259731
+KO,Coca-Cola Company (The),Consumer Staples,2,Soft Drinks,192824001509,11259731
 a1497015000,45.07,45.07,45.05,45.06,214075
 1,45.06,45.09,44.97,45.05,142308
 2,45.1301,45.14,45.06,45.065,68892

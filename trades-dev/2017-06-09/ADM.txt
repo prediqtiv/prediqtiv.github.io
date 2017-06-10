@@ -1,4 +1,4 @@
-ADM,Archer-Daniels-Midland Co,Consumer Staples,2,Agricultural Products,23939348715,3185756
+ADM,Archer-Daniels-Midland Co,Consumer Staples,2,Agricultural Products,23945053644,3185756
 a1497015060,41.98,41.98,41.79,41.81,44289
 1,41.98,41.99,41.95,41.95,1288
 2,42,42,41.93,41.99,2700

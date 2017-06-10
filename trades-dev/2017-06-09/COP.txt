@@ -1,4 +1,4 @@
-COP,ConocoPhillips,Energy,3,Oil & Gas Exploration & Production,54823286549,8096813
+COP,ConocoPhillips,Energy,3,Oil & Gas Exploration & Production,57050838472,8096813
 a1497015000,43.12,43.12,43.1,43.1,93612
 1,43.3,43.3,43.07,43.12,9616
 2,43.36,43.38,43.29,43.3,9026

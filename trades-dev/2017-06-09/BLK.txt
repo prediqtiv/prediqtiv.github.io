@@ -1,4 +1,4 @@
-BLK,BlackRock,Financials,4,Asset Management & Custody Banks,67886788338,631335
+BLK,BlackRock,Financials,4,Asset Management & Custody Banks,68421392374,631335
 a1497015060,416.185,416.57,415.36,416.57,5294
 1,416.205,416.205,415.46,415.46,400
 2,417.445,417.445,415.45,415.45,800

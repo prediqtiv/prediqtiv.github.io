@@ -1,4 +1,4 @@
-AMZN,Amazon.com Inc,Consumer Discretionary,1,Internet & Direct Marketing Retail,467700791626,3558452
+AMZN,Amazon.com Inc,Consumer Discretionary,1,Internet & Direct Marketing Retail,452905022972,3558452
 a1497015000,1012.99,1012.99,1012.5,1012.5,46574
 1,1012.202,1012.98,1011,1012.49,16640
 2,1011.26,1012.08,1010.585,1011.9,8362

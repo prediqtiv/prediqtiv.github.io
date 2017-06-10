@@ -1,4 +1,4 @@
-FL,Foot Locker Inc,Consumer Discretionary,1,Apparel Retail,7009366855,3063226
+FL,Foot Locker Inc,Consumer Discretionary,1,Apparel Retail,7126449845,3063226
 a1497015060,53.7993,53.95,53.7993,53.95,34540
 1,53.6,53.84,53.6,53.8,5755
 2,53.53,53.72,53.51,53.61,18961

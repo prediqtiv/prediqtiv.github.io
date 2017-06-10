@@ -1,4 +1,4 @@
-AAL,American Airlines Group,Industrials,6,Airlines,25039955744,6631949
+AAL,American Airlines Group,Industrials,6,Airlines,24203925119,6631949
 a1497015000,51.68,51.7,51.61,51.61,61653
 1,51.75,51.75,51.56,51.67,26338
 2,51.86,51.93,51.6866,51.75,63499

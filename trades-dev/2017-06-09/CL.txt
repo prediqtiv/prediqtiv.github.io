@@ -1,4 +1,4 @@
-CL,Colgate-Palmolive,Consumer Staples,2,Household Products,65738789512,4062322
+CL,Colgate-Palmolive,Consumer Staples,2,Household Products,66909425807,4062322
 a1497015000,75.85,75.85,75.85,75.85,35166
 1,75.9,76.09,75.88,75.905,9761
 2,75.84,76.03,75.83,75.925,8456

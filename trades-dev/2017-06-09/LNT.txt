@@ -1,4 +1,4 @@
-LNT,Alliant Energy Corp,Utilities,11,Electric Utilities,9318661352,1636475
+LNT,Alliant Energy Corp,Utilities,11,Electric Utilities,9320920172,1636475
 a1497015000,41.14,41.14,41.14,41.14,5432
 1,41.24,41.25,41.2,41.2,600
 2,41.26,41.27,41.25,41.25,1000

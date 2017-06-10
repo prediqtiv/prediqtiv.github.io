@@ -1,4 +1,4 @@
-AYI,Acuity Brands Inc,Industrials,6,Electrical Components & Equipment,7822240120,842431
+AYI,Acuity Brands Inc,Industrials,6,Electrical Components & Equipment,8000604029,842431
 a1497015060,174.21,174.21,174.21,174.21,2357
 2,174.097,174.37,174.097,174.37,1100
 3,174.13,174.13,174.13,174.13,100

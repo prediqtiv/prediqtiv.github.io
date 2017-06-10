@@ -1,4 +1,4 @@
-ALL,Allstate Corp,Financials,4,Property & Casualty Insurance,32103851602,1779687
+ALL,Allstate Corp,Financials,4,Property & Casualty Insurance,32404269338,1779687
 a1497015060,86.68,86.68,86.67,86.67,8724
 2,86.71,86.71,86.67,86.67,600
 3,86.81,86.81,86.6499,86.6499,1000

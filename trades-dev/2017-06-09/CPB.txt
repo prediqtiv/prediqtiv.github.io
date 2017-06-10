@@ -1,4 +1,4 @@
-CPB,Campbell Soup,Consumer Staples,2,Packaged Foods & Meats,17002539512,1704456
+CPB,Campbell Soup,Consumer Staples,2,Packaged Foods & Meats,16966535292,1704456
 a1497015000,56.71,56.71,56.71,56.71,6819
 1,56.68,56.7,56.68,56.7,2100
 2,56.68,56.68,56.61,56.68,1290

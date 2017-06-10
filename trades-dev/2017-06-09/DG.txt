@@ -1,4 +1,4 @@
-DG,Dollar General,Consumer Discretionary,1,General Merchandise Stores,20521391355,2934378
+DG,Dollar General,Consumer Discretionary,1,General Merchandise Stores,20947465423,2934378
 a1497015000,73.95,73.95,73.95,73.95,13736
 1,73.775,74.05,73.775,74.05,200
 2,73.7701,73.9,73.75,73.9,4581

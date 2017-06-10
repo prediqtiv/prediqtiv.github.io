@@ -1,4 +1,4 @@
-CFG,Citizens Financial Group,Financials,4,Regional Banks,18994471716,4601980
+CFG,Citizens Financial Group,Financials,4,Regional Banks,18779975446,4601980
 a1497015000,35.89,35.89,35.89,35.89,18379
 1,36.07,36.07,35.87,35.89,9746
 2,36.05,36.05,36.03,36.04,3600

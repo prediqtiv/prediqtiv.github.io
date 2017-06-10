@@ -1,4 +1,4 @@
-CNC,Centene Corporation,Health Care,5,Managed Health Care,13360123320,1736819
+CNC,Centene Corporation,Health Care,5,Managed Health Care,13330878618,1736819
 a1497015000,77.48,77.48,77.48,77.48,13765
 3,77.83,77.83,77.63,77.63,500
 4,77.71,77.89,77.71,77.84,600

@@ -1,4 +1,4 @@
-APH,Amphenol Corp,Information Technology,7,Electronic Components,23232724685,1013538
+APH,Amphenol Corp,Information Technology,7,Electronic Components,23104645204,1013538
 a1497015060,76.235,76.235,76.19,76.19,6380
 1,76.25,76.25,76.23,76.23,400
 2,76.22,76.23,76.2,76.23,600

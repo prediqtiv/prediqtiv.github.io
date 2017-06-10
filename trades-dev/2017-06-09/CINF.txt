@@ -1,4 +1,4 @@
-CINF,Cincinnati Financial,Financials,4,Property & Casualty Insurance,11974267975,580028
+CINF,Cincinnati Financial,Financials,4,Property & Casualty Insurance,12198595976,580028
 a1497015000,70.61,70.61,70.61,70.61,4526
 1,70.79,70.89,70.79,70.89,200
 3,70.82,70.86,70.7007,70.76,1025

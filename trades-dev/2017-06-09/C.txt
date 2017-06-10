@@ -1,4 +1,4 @@
-C,Citigroup Inc.,Financials,4,Diversified Banks,181261346153,15312909
+C,Citigroup Inc.,Financials,4,Diversified Banks,184817240357,15312909
 a1497015000,63.85,63.85,63.84,63.84,302
 1,63.995,64,63.82,63.82,450874
 2,64,64,63.92,63.99,172341

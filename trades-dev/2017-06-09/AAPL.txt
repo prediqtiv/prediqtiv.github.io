@@ -1,4 +1,4 @@
-AAPL,Apple Inc.,Information Technology,7,Technology Hardware Storage & Peripherals,774858123141,27586048
+AAPL,Apple Inc.,Information Technology,7,Technology Hardware Storage & Peripherals,744811666425,27586048
 a1497015000,155.1,155.19,155.1,155.19,284257
 1,155.08,155.15,155,155.08,126120
 2,154.79,155.11,154.79,155.0801,95373

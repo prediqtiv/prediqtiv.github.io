@@ -1,4 +1,4 @@
-AEP,American Electric Power,Utilities,11,Electric Utilities,35008417068,2392267
+AEP,American Electric Power,Utilities,11,Electric Utilities,34964630183,2392267
 a1497015000,71.71,71.71,71.71,71.71,100
 1,72,72.03,71.74,71.75,62267
 2,72,72.04,71.9688,71.98,3623

@@ -1,4 +1,4 @@
-COH,Coach Inc.,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,13174002132,3901918
+COH,Coach Inc.,Consumer Discretionary,1,Apparel Accessories & Luxury Goods,13239178309,3901918
 a1497015000,46.59,46.59,46.59,46.59,15421
 1,46.51,46.685,46.43,46.685,14619
 2,46.55,46.55,46.48,46.48,722

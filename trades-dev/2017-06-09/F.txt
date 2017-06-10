@@ -1,4 +1,4 @@
-F,Ford Motor,Consumer Discretionary,1,Automobile Manufacturers,44439617126,43749083
+F,Ford Motor,Consumer Discretionary,1,Automobile Manufacturers,44559724608,43749083
 a1497015060,11.081,11.1,11.08,11.09,413715
 1,11.07,11.089,11.07,11.087,32800
 2,11.075,11.09,11.07,11.08,133695

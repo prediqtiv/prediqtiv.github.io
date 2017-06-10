@@ -1,4 +1,4 @@
-AMG,Affiliated Managers Group Inc,Financials,4,Asset Management & Custody Banks,9154935519,580514
+AMG,Affiliated Managers Group Inc,Financials,4,Asset Management & Custody Banks,9310792683,580514
 a1497015060,160.05,160.98,159.93,160.98,6071
 1,160.23,160.23,159.85,159.85,4300
 2,160.59,160.59,160.46,160.46,200

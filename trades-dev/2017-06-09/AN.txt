@@ -1,4 +1,4 @@
-AN,AutoNation Inc,Consumer Discretionary,1,Specialty Stores,4066065752,1325585
+AN,AutoNation Inc,Consumer Discretionary,1,Specialty Stores,4165462444,1325585
 a1497015060,39.8699,39.8699,39.735,39.77,7565
 2,39.8,39.8,39.71,39.73,2300
 3,39.67,39.79,39.67,39.79,3685

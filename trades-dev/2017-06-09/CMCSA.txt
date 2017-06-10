@@ -1,4 +1,4 @@
-CMCSA,Comcast Corp.,Consumer Discretionary,1,Cable & Satellite,188614219521,18601413
+CMCSA,Comcast Corp.,Consumer Discretionary,1,Cable & Satellite,187462388524,18601413
 a1497015000,40.92,40.97,40.92,40.92,215230
 1,40.935,40.97,40.9,40.95,31443
 2,40.91,40.96,40.91,40.94,25148

@@ -1,4 +1,4 @@
-FLR,Fluor Corp.,Industrials,6,Construction & Engineering,6597076395,1482257
+FLR,Fluor Corp.,Industrials,6,Construction & Engineering,6761930408,1482257
 a1497015000,45.29,45.29,45.29,45.29,4310
 1,45.45,45.45,45.45,45.45,650
 4,45.44,45.44,45.43,45.43,200

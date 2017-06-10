@@ -1,4 +1,4 @@
-CXO,Concho Resources,Energy,3,Oil & Gas Exploration & Production,18476176215,1417485
+CXO,Concho Resources,Energy,3,Oil & Gas Exploration & Production,18884730588,1417485
 a1497015060,121.77,121.77,121.175,121.66,3816
 1,122.195,122.195,121.81,121.81,1590
 2,121.9,122.33,121.69,122.085,8185

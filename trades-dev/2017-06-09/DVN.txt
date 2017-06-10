@@ -1,4 +1,4 @@
-DVN,Devon Energy Corp.,Energy,3,Oil & Gas Exploration & Production,16896578908,5070301
+DVN,Devon Energy Corp.,Energy,3,Oil & Gas Exploration & Production,17481447086,5070301
 a1497015060,31.8,31.8,31.5481,31.57,34656
 1,31.88,31.88,31.76,31.76,7988
 2,31.82,31.88,31.7871,31.87,13326

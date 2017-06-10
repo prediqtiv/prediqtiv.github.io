@@ -1,4 +1,4 @@
-FE,FirstEnergy Corp,Utilities,11,Electric Utilities,12797581420,4291839
+FE,FirstEnergy Corp,Utilities,11,Electric Utilities,12903971777,4291839
 a1497015000,28.85,28.85,28.85,28.85,22204
 1,28.825,28.86,28.76,28.85,1900
 2,28.86,28.86,28.85,28.85,800

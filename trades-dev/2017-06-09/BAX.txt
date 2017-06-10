@@ -1,4 +1,4 @@
-BAX,Baxter International Inc.,Health Care,5,Health Care Equipment,32113531104,2818741
+BAX,Baxter International Inc.,Health Care,5,Health Care Equipment,31656761168,2818741
 a1497015060,59.93,59.94,59.87,59.87,12927
 1,59.95,59.97,59.9,59.94,1100
 2,59.9,59.97,59.9,59.97,743

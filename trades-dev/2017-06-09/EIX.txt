@@ -1,4 +1,4 @@
-EIX,Edison Int'l,Utilities,11,Electric Utilities,26352493729,1590546
+EIX,Edison Int'l,Utilities,11,Electric Utilities,26310413310,1590546
 a1497015060,81.3,81.3,81.2,81.2,16530
 1,81.42,81.44,81.34,81.35,1200
 2,81.25,81.37,81.23,81.37,1640

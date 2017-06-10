@@ -1,4 +1,4 @@
-CMG,Chipotle Mexican Grill,Consumer Discretionary,1,Restaurants,13136772753,745051
+CMG,Chipotle Mexican Grill,Consumer Discretionary,1,Restaurants,13169923076,745051
 a1497015060,460.67,461.37,460.67,461.37,4454
 1,461.25,461.9999,460.92,461.33,1200
 2,461.432,462.54,461.25,461.41,4400

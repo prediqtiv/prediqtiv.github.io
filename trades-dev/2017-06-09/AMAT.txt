@@ -1,4 +1,4 @@
-AMAT,Applied Materials Inc,Information Technology,7,Semiconductor Equipment,48251968730,9855767
+AMAT,Applied Materials Inc,Information Technology,7,Semiconductor Equipment,45515349889,9855767
 a1497015000,47.6,47.7,47.6,47.62,152176
 1,47.6,47.68,47.51,47.63,31474
 2,47.66,47.7,47.6,47.6,16524

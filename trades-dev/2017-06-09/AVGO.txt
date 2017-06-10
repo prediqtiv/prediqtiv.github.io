@@ -1,4 +1,4 @@
-AVGO,Broadcom,Information Technology,7,Semiconductors,97924921964,2771499
+AVGO,Broadcom,Information Technology,7,Semiconductors,93465545220,2771499
 a1497015000,255.5,255.88,255.5,255.51,32349
 1,255.15,256,255.08,255.6,20709
 2,255.13,255.3,255.03,255.05,4465

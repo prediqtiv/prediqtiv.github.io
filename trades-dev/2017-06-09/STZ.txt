@@ -1,4 +1,4 @@
-STZ,Constellation Brands,Consumer Staples,2,Distillers & Vintners,35110282622,1254999
+STZ,Constellation Brands,Consumer Staples,2,Distillers & Vintners,34697191933,1254999
 a1497015000,183.82,183.82,183.82,183.82,10555
 1,183.69,183.865,183.33,183.56,604
 2,183.8,183.81,183.22,183.415,2916

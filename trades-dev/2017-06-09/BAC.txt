@@ -1,4 +1,4 @@
-BAC,Bank of America Corp,Financials,4,Diversified Banks,239417966134,73992979
+BAC,Bank of America Corp,Financials,4,Diversified Banks,246714191276,73992979
 a1497015000,23.22,23.25,23.22,23.22,35293
 1,23.31,23.32,23.22,23.23,1497112
 2,23.27,23.31,23.21,23.31,391217

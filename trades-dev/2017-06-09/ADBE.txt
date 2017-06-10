@@ -1,4 +1,4 @@
-ADBE,Adobe Systems Inc,Information Technology,7,Application Software,67822297889,2212518
+ADBE,Adobe Systems Inc,Information Technology,7,Application Software,66100089450,2212518
 a1497015000,143.37,143.37,143.14,143.14,34628
 1,143.43,143.43,143.06,143.06,5433
 2,143.03,143.33,143.03,143.32,2706

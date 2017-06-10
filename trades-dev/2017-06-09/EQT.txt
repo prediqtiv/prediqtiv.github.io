@@ -1,4 +1,4 @@
-EQT,EQT Corporation,Energy,3,Oil & Gas Exploration & Production,10035614935,2362536
+EQT,EQT Corporation,Energy,3,Oil & Gas Exploration & Production,10076010145,2362536
 a1497015000,55.16,55.16,55.16,55.16,8053
 2,55.58,55.58,55.37,55.37,1855
 3,55.46,55.57,55.46,55.57,1175

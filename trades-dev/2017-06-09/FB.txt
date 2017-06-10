@@ -1,4 +1,4 @@
-FB,Facebook Inc.,Information Technology,7,Internet Software & Services,438157345279,17760696
+FB,Facebook Inc.,Information Technology,7,Internet Software & Services,423600252882,17760696
 a1497015000,154.77,154.79,154.75,154.77,205238
 1,154.5386,154.8085,154.46,154.76,76863
 2,154.59,154.6365,154.2,154.5499,132168

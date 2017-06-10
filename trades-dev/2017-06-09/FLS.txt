@@ -1,4 +1,4 @@
-FLS,Flowserve Corporation,Industrials,6,Industrial Machinery,6231643074,1331018
+FLS,Flowserve Corporation,Industrials,6,Industrial Machinery,6314410883,1331018
 a1497015000,46.65,46.98,46.65,46.75,4165
 1,46.665,46.78,46.6,46.66,1226
 5,46.72,46.72,46.72,46.72,100

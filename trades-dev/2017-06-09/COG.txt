@@ -1,4 +1,4 @@
-COG,Cabot Oil & Gas,Energy,3,Oil & Gas Exploration & Production,10757202428,6853255
+COG,Cabot Oil & Gas,Energy,3,Oil & Gas Exploration & Production,11027093250,6853255
 a1497015000,22.36,22.36,22.36,22.36,38842
 1,22.38,22.38,22.34,22.37,2488
 2,22.44,22.44,22.3726,22.3726,6796

@@ -1,4 +1,4 @@
-DOV,Dover Corp.,Industrials,6,Industrial Machinery,13044036370,1530522
+DOV,Dover Corp.,Industrials,6,Industrial Machinery,13145375310,1530522
 a1497015000,82.44,82.44,82.44,82.44,100
 1,82.43,82.55,82.43,82.49,5890
 3,82.73,82.73,82.46,82.53,1700

@@ -1,4 +1,4 @@
-COST,Costco Wholesale Corp.,Consumer Staples,2,Hypermarkets & Super Centers,78770443402,2313175
+COST,Costco Wholesale Corp.,Consumer Staples,2,Hypermarkets & Super Centers,78323205791,2313175
 a1497015000,181.71,181.71,181.71,181.71,21634
 1,181.4403,181.55,181.36,181.55,3150
 2,181.78,181.78,181.46,181.53,1700

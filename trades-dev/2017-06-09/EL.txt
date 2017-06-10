@@ -1,4 +1,4 @@
-EL,Estee Lauder Cos.,Consumer Staples,2,Personal Products,35271726796,1844347
+EL,Estee Lauder Cos.,Consumer Staples,2,Personal Products,35381883846,1844347
 a1497015000,95.99,95.99,95.99,95.99,11416
 1,95.99,96.01,95.91,95.91,2000
 2,96.04,96.04,95.97,95.97,1000

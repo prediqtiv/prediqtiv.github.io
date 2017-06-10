@@ -1,4 +1,4 @@
-GLW,Corning Inc.,Information Technology,7,Electronic Components,26469067192,6071895
+GLW,Corning Inc.,Information Technology,7,Electronic Components,26152884866,6071895
 a1497015000,29.3,29.3,29.3,29.3,300
 1,29.43,29.47,29.315,29.32,77803
 2,29.435,29.4475,29.43,29.44,6818

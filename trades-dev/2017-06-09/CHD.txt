@@ -1,4 +1,4 @@
-CHD,Church & Dwight,Consumer Staples,2,Household Products,13101369132,1615644
+CHD,Church & Dwight,Consumer Staples,2,Household Products,13146020095,1615644
 a1497015060,52.59,52.76,52.59,52.76,7196
 3,52.64,52.67,52.61,52.63,1440
 4,52.62,52.68,52.62,52.67,1868

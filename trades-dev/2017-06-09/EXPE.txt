@@ -1,4 +1,4 @@
-EXPE,Expedia Inc.,Consumer Discretionary,1,Internet & Direct Marketing Retail,22098015820,1886825
+EXPE,Expedia Inc.,Consumer Discretionary,1,Internet & Direct Marketing Retail,21264269696,1886825
 a1497015000,149.09,149.09,149.09,149.09,14494
 1,149.82,149.82,149.13,149.28,7268
 2,149.68,149.78,149.43,149.546,10600

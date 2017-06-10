@@ -1,4 +1,4 @@
-EMN,Eastman Chemical,Materials,8,Diversified Chemicals,12127435938,1211202
+EMN,Eastman Chemical,Materials,8,Diversified Chemicals,12307818717,1211202
 a1497015000,81.83,81.83,81.77,81.77,11473
 1,81.33,81.33,81.33,81.33,100
 2,81.685,81.685,81.685,81.685,15000
