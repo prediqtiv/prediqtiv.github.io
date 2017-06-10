@@ -1,4 +1,4 @@
-VRTX,Vertex Pharmaceuticals Inc,Health Care,5,Biotechnology,30775649070,1848243
+VRTX,Vertex Pharmaceuticals Inc,Health Care,5,Biotechnology,29981268787,1848243
 a1497015000,126.91,126.91,125.505,126.48,19790
 1,126.2,126.9,126.01,126.9,730
 3,126.3,126.52,126.28,126.5,2800

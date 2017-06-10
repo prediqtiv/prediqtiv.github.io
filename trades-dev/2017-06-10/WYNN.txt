@@ -1,4 +1,4 @@
-WYNN,Wynn Resorts Ltd,Consumer Discretionary,1,Casinos & Gaming,13507967221,2019549
+WYNN,Wynn Resorts Ltd,Consumer Discretionary,1,Casinos & Gaming,12992633681,2019549
 a1497015000,134.53,134.53,134.53,134.53,28347
 1,134.7611,134.99,134.4,134.52,12102
 2,134.5,134.77,134.5,134.72,3921

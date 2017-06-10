@@ -1,4 +1,4 @@
-WY,Weyerhaeuser Corp.,Real Estate,9,Specialized REITs,24661339242,3199907
+WY,Weyerhaeuser Corp.,Real Estate,9,Specialized REITs,25145629733,3199907
 a1497015000,32.61,32.61,32.6,32.6,16852
 1,32.68,32.68,32.57,32.61,14077
 2,32.66,32.68,32.6,32.68,35709

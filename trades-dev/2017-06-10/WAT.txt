@@ -1,4 +1,4 @@
-WAT,Waters Corporation,Health Care,5,Health Care Distributors,14847576066,490990
+WAT,Waters Corporation,Health Care,5,Health Care Distributors,14740799280,490990
 a1497015000,185.9,186.11,185.9,186.11,3543
 1,185.2,186.02,185.19,186.02,575
 2,185.66,185.73,185.35,185.73,1800

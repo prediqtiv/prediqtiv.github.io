@@ -1,4 +1,4 @@
-WDC,Western Digital,Information Technology,7,Technology Hardware Storage & Peripherals,25353372947,4154122
+WDC,Western Digital,Information Technology,7,Technology Hardware Storage & Peripherals,23957855158,4154122
 a1497015000,91.08,91.1,91.08,91.1,52977
 1,90.895,91.13,90.81,91.08,9997
 2,91.075,91.18,90.94,90.94,5410

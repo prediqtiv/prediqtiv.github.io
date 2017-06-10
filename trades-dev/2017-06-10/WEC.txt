@@ -1,4 +1,4 @@
-WEC,Wec Energy Group Inc,Utilities,11,Electric Utilities,19796783440,1589444
+WEC,Wec Energy Group Inc,Utilities,11,Electric Utilities,19969969992,1589444
 a1497015000,62.71,62.71,62.71,62.71,10709
 1,62.76,62.76,62.62,62.635,400
 2,62.77,62.82,62.77,62.8,600

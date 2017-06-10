@@ -1,4 +1,4 @@
-WHR,Whirlpool Corp.,Consumer Discretionary,1,Household Appliances,14120879453,728306
+WHR,Whirlpool Corp.,Consumer Discretionary,1,Household Appliances,14262027039,728306
 a1497015000,188.81,188.81,188.81,188.81,4700
 4,189,189,189,189,453
 5,188.8,189.48,188.19,189.48,2942

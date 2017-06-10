@@ -1,4 +1,4 @@
-WFM,Whole Foods Market,Consumer Staples,2,Food Retail,11588071718,4344034
+WFM,Whole Foods Market,Consumer Staples,2,Food Retail,11682891276,4344034
 a1497015000,35.44,35.44,35.44,35.44,27927
 1,35.32,35.42,35.25,35.42,2602
 2,35.41,35.41,35.31,35.3316,2855
