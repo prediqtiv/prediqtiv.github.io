@@ -1,4 +1,4 @@
-HAS,Hasbro Inc.,Consumer Discretionary,1,Leisure Products,13480411620,785490
+HAS,Hasbro Inc.,Consumer Discretionary,1,Leisure Products,13479169296,785490
 a1497274260,107.51,107.6,107.12,107.47,10382
 1,107.64,107.64,107.3701,107.3701,606
 2,108.16,108.16,107.71,107.799,911
