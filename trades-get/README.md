@@ -91,6 +91,14 @@ More
 
 ****Manage versions before making changes!!****
 
+### 2017-06-16 ~ Theo
+
+I thought the Google Doc spreadsheet hd been working, but no.
+Since past weekend, it appears to run successfully, but no data shows up on GitHub.
+
+* Oath checks out
+* Add clear commit display before each commit
+* Found the error: it was sitting in the chair: files were being sent to wrong folder ( trades-alpha-vantage )
 
 ### 2017-06-07 ~ Theo
 
