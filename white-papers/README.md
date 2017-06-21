@@ -9,7 +9,7 @@ Various [white papers]( https://en.wikipedia.org/wiki/White_paper )
 Defining and refining how you can visualize huge amounts of data
 
 
-## [Code, Styling and Abstraction]( https://prediqtiv.github.io/index.html#white-papers/code-styling-abstraction.md  )
+## [Code, Styling and Abstraction]( https://prediqtiv.github.io/index.html#white-papers/code-styling-abstraction.md )
 
 Adding to the mission and vision
 
