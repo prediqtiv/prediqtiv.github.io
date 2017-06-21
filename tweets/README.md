@@ -59,6 +59,7 @@ Our app captures 28 cashtags per minute until complete in order to comply with t
 
 * Stopped working on 9 June. Trying to figure out why
 * Could all be re-written in simpler way
+* Testing...
 
 ### 2017-05-09 ~ Theo
 
