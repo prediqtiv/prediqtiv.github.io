@@ -4,10 +4,10 @@
 <meta charset=utf-8 >
 <title>TooToo4 Basic</title>
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
-<meta name=description content='Default: Browse and view files on GitHub with remarkable ease.' >
+<meta name=description content='Browse and view files on GitHub with remarkable ease.' >
 <meta name=keywords content='CSS,HTML,JavaScript,GitHub,FOSS' >
 
-<meta name=date content='2017-5-31 16:33' >
+<meta name=date content='2017-5-30 16:25' >
 
 <!--
 
@@ -86,8 +86,6 @@ summary h3 { display: inline; }
 
 	TOO.initUser = function() {
 
-// if not, then overwrites. Fix this!
-
 		if ( window.self !== window.top ) { container.style.left = '-325px'; }
 
 		window.addEventListener( 'resize', TOO.setContentsWidth, false );
@@ -96,11 +94,9 @@ summary h3 { display: inline; }
 
 		window.addEventListener ( 'hashchange', TOO.onHashChange, false );
 
-		if ( location.protocol === 'file:' ) { // can help with local testing. Needs work.
+		if ( location.protocol === 'bbb file:' ) {
 
-			pathFull1 = user.path.replace( /-/g, '' ).replace( /\w+/g, '..' ) + '/';
-			pathFull = pathFull1 === '/' ? './' : pathFull1;
-			TOO.urlGHPages = pathFull;
+			TOO.urlGHPages = './';
 
 		} else if ( user.rawgit ) {
 
@@ -121,7 +117,7 @@ summary h3 { display: inline; }
 		MNU.init();
 
 		TOO.setMenu = MNU.tableOfContents !== undefined ? TOO.setMenuContents : TOO.setMenuDefault;
-		TOO.setMenu( user.path );
+		TOO.setMenu( user.folder );
 
 	}
 
@@ -134,7 +130,7 @@ summary h3 { display: inline; }
 		TOO.path = path;
 
 		url = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/contents/' + ( path ? path : '' );
-console.log( 'url', url );
+
 		menuTitle.innerHTML = 'All Files';
 		TOO.setBreadcrumbs( path );
 
@@ -177,7 +173,7 @@ console.log( 'url', url );
 			if ( item.type === 'file' ) {
 
 				menuItems.innerHTML +=
-					'<a id=file' + count++ + ' href=#' + encodeURI( item.path ) + ' style=width:100%;  > ' + item.name + '</a>' + b +
+					'<a id=file' + count++ + ' href=#' + item.path + ' style=width:100%;  > ' + item.name + '</a>' + b +
 				'';
 
 				TOO.files.push( item.path );
@@ -194,7 +190,7 @@ console.log( 'url', url );
 
 			CON.getFileSetContents( location.hash.slice( 1 ) );
 
-		} else if ( user.defaultFile !== undefined && user.path === TOO.path ) {
+		} else if ( user.defaultFile !== undefined && user.folder === TOO.path ) {
 
 			CON.getFileSetContents( user.defaultFile );
 
@@ -254,7 +250,7 @@ console.log( 'url', url );
 
 			CON.getFileSetContents( location.hash.slice( 1 )  );
 
-//		} else if ( user.defaultFile !== undefined && user.path === TOO.path ) {
+//		} else if ( user.defaultFile !== undefined && user.folder === TOO.path ) {
 		} else if ( user.defaultFile !== undefined ) {
 
 			CON.getFileSetContents( user.defaultFile );
@@ -299,7 +295,7 @@ console.log( 'url', url );
 
 		name = user.repo;
 
-//		name = user.path ? user.path : user.repo;
+		name = user.folder ? user.folder : user.repo;
 
 		txt = '<h3><a href=JavaScript:TOO.setMenuDefault(); >' + name + '</a> &raquo; </h3>';
 
@@ -558,7 +554,7 @@ console.log( 'url', url );
 
 			CON.getFileHTML( url );
 
-		} else if ( u.endsWith( '.gif' ) || u.endsWith( '.ico' ) || u.endsWith( '.jpg' ) || u.endsWith( '.jpeg' ) || u.endsWith( '.png' ) ||  u.endsWith( '.svg' ) ) {
+		} else if ( u.endsWith( '.gif' ) || u.endsWith( '.ico' ) || u.endsWith( '.jpg' ) || u.endsWith( '.png' ) ||  u.endsWith( '.svg' ) ) {
 
 			CON.getFileImage( url );
 
@@ -796,6 +792,9 @@ console.log( '', response  );
 
 	}
 </script>
+<!--
+<script src=../dev-repo/repo-prediqtiv.js ></script>
+-->
 <script>
 // repo-prediqtiv.js inserted
 
@@ -803,16 +802,12 @@ console.log( '', response  );
 
 	var user = {
 		user : 'prediqtiv',
-
+		subText : 'Invest smarter',
 		logo: '<img src=' + images + 'five-boxes.png height=32 >',
 		repo : 'prediqtiv.github.io',
 		branch : 'master',
-		path : '',
-
-		infoLink : 'https://github.com/prediqtiv',
+		folder : '',
 		title : '<img src=' + images + 'predIQtiv.png  height=64 >',
-		tagLine : 'Invest Smarter!',
-		subText : 'Invest smarter',
 //		defaultFile : 'README.md'
 	};
 
@@ -855,11 +850,9 @@ console.log( '', response  );
 		<div id=menu >
 
 			<h2>
-<!--
-					<a href=http://pushme-pullyou.github.io title="pushMe pullYou - your Github repo happy place" > &#x2766 </a><br>
--->
+				<a href=http://pushme-pullyou.github.io title="pushMe pullYou - your Github repo happy place" > &#x2766 </a><br>
 				<a id=mnuTitle href="" title="Click here to refresh this page" ></a>
-				<a id=mnuHelp href=https://github.com/pushme-pullyou onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>
+				~ <a href=https://github.com/pushme-pullyou onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>
 			</h2>
 
 			<div class=popUp id=popHelp style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>
@@ -899,10 +892,7 @@ console.log( '', response  );
 
 		let tagLine;
 
-		mnuHelp.href = user.help ? user.help : 'https://github.com/pushme-pullyou';
-
 		tagLine = user.tagLine ? user.tagLine : document.head.querySelector( "[name=description]" ).content;
-
 		mnuTitle.innerHTML = user.title ? user.title : user.user;
 		mnuTagline.innerHTML = '<small><p>' + tagLine + '</p></small>';
 

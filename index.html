@@ -2,30 +2,13 @@
 <html lang=en >
 <head>
 <meta charset=utf-8 >
-<title>TooToo4 Basic</title>
+<title>TooToo5 predIQtiv R1</title>
 <meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' >
 <meta name=description content='Browse and view files on GitHub with remarkable ease.' >
 <meta name=keywords content='CSS,HTML,JavaScript,GitHub,FOSS' >
-
-<meta name=date content='2017-5-30 16:25' >
-
-<!--
-
-TooToo Read Me
-===
-
-TooToo is a JavaScript app that helps you browse through GitHub repositories and read or access data in files really quickly and easily.
-
-It's part of the Pushme-Pullyou collection of JavaScript files: https://pushme-pullyou.github.io/
-
-This Read Me is embedded in every TooToo All-in-One script. For details see the main TooToo Read Me:/ https://pushme-pullyou.github.io/tootoo/
-
-Copyright © 2017 Pushme Pullyou authors. MIT License.
-
--->
+<meta name=date content='2017-06-20' >
 <style>
-
-html, body { font: 12pt monospace; height: 100%; margin: 0;  overflow: hidden; }
+html, body { font: 12pt monospace; height: 100%; margin: 0; overflow: hidden; }
 a { color: crimson; text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:active { background-color: yellow; }
@@ -56,763 +39,858 @@ summary h3 { display: inline; }
 
 #divMD {border: 0px orange solid; margin: 0 auto; max-width: 800px; overflow-x: hidden; position: adsolute; }
 
-#hamburger { background-color: #eee; left: 325px; position: absolute; top: 20px;  z-index: 1 }
-#hamburger h2, #menuItems h2, #menuItems h4 {margin: 0; }
+#hamburger { background-color: #eee; left: 325px; position: absolute; top: 20px; z-index: 1 }
+#hamburger h2, #menuItems h2, #menuItems h4 { margin: 0; }
 
 #ifr { /* border: 0px yellow solid; */ height: 500px; width: 100%; }
 #ifrHTML { border: 0px yellow solid; margin: 0 8%; height: 100%; padding: 0; width: 100%; }
 
 #menu { background-color: #eee; border: 1px #ccc solid; box-sizing:border-box; height: 100%; overflow-y: auto; padding: 0 10px; position: fixed; width: 325px; }
 #menu ul { margin:0; padding-left:20px; }
-#menuBreadcrumbs h2, #menuBreadcrumbs h3 { font-size: 14pt; margin: 0; }
-
-
+#menuBreadcrumbs h2, #menuBreadcrumbs h3, #mnuUserTitle h3 { font-size: 14pt; margin: 0; }
 
 
 </style>
-
-
 </head>
 <body>
 <script src=https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js ></script>
 <script>
-// ../dev/tootoo4.js inserted
 
-	let TOO = {};
+let basicHTML =
 
-	const b = '<br>';
+`	<div id=menu >
 
+<h2>
+<!--
+<a href=http://pushme-pullyou.github.io title="pushMe pullYou - your Github repo happy place" > &#x2766 </a><br>
+-->
+<a id=mnuTitle href="" title="Click here to refresh this page" ></a>
+<a id=mnuHelp href=https://github.com/pushme-pullyou onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>
+</h2>
 
+<div class=popUp id=popHelp style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>
 
-	TOO.initUser = function() {
+<div id=mnuTagline ><small></small></div>
 
-		if ( window.self !== window.top ) { container.style.left = '-325px'; }
+<div id=mnuSelectItem ></div>
 
-		window.addEventListener( 'resize', TOO.setContentsWidth, false );
+<div id=mnuSelectType ></div>
 
-		TOO.setContentsWidth();
+<div id=mnuContents ></div>
 
-		window.addEventListener ( 'hashchange', TOO.onHashChange, false );
+<div id=mnuSettings ></div>
+<div id=mnuCount ></div>
+<div id=mnuAbout ></div>
 
-		if ( location.protocol === 'bbb file:' ) {
+</div>
 
-			TOO.urlGHPages = './';
+<div id=hamburger onclick=container.style.left=container.style.left===""?"-325px":""; >
+<div id=bars title="Click this hamburger to slide the menu" > &#9776 </div>
+</div>
 
-		} else if ( user.rawgit ) {
+<div id=contents ></div>
 
-			TOO.urlGHPages = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/' ;
+<div id=butEditFile >Edit</div>
+<div id=butNextFile >&gt;</div>
+<div id=butPreviousFile >&lt;</div>
 
-		} else if ( user.repo === user.user + '.github.io' ) {
+`;
 
-			TOO.urlGHPages = 'https://' + user.user + '.github.io/';
 
-		} else {
+let MNU = {};
 
-			TOO.urlGHPages = 'https://' + user.user + '.github.io/' + user.repo + '/';
+MNU.init = function() {
 
-		}
+mnuSettings.innerHTML =
 
-		if ( MNU.tableOfContents ) { TOO.getFiles(); }
+'<details>' +
 
-		MNU.init();
+'<summary><h3>Settings</h3></summary>' +
 
-		TOO.setMenu = MNU.tableOfContents !== undefined ? TOO.setMenuContents : TOO.setMenuDefault;
-		TOO.setMenu( user.folder );
+'<div><button onclick=MNU.cssColors("#222","#ddd","#555"); >Dark</button>' +
+' <button onclick=MNU.cssColors("#fff","#000","#eee"); >Light</button>' +
+' <button onclick=MNU.cssColors("#f3eacb","#704214","#704214"); >Sepia</button>' +
+'</div>' + b +
 
-	}
+'<div><button onclick=MNU.cssFontOpenSans(); >Open Sans</button>' +
+' <button onclick=MNU.cssFontInconsolata(); >Inconsolata</button>' +
+' <button onclick=MNU.cssFontMonospace(); >Monospace</button>' +
+'</div>' + b +
 
+'<div><button onclick=MNU.cssFontSize("12pt"); >Normal</button>' +
+' <button onclick=MNU.cssFontSize("14pt"); >Larger</button>' +
+' <button onclick=MNU.cssFontSize("18pt"); >Largest</button>' +
+'</div>' + b +
 
+'</details>' +
+'';
 
-	TOO.setMenuDefault = function ( path ) {
+mnuAbout.innerHTML =
 
-		let url;
+'<details>' +
 
-		TOO.path = path;
+'<summary><h3>About</h3></summary>' +
 
-		url = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/contents/' + ( path ? path : '' );
+'<p>Copyright &copy; ' + ( new Date() ).getFullYear() + ' ' + user.user + ' authors. ' +
+'<a href=http://github.com/' + user.user + '/' + user.repo + ' >MIT license</a>.</p>' +
+'<p>Click the \'i in a circle\' icon for more <a href=#README.md title="Click here for help and information" >help</a>.</p>' +
 
-		menuTitle.innerHTML = 'All Files';
-		TOO.setBreadcrumbs( path );
+'</details>' +
 
-		TOO.requestFile( url, TOO.callbackFolderContents );
+'<hr>' +
 
-	}
+'<center><a href=javascript:menu.scrollTop=0; style=text-decoration:none; onmouseover=pop2.style.display=""; onmouseout=pop2.style.display="none"; ><h1>' + ( user.logo ? user.logo : '❦' ) + '</h1></a></center>' +
+'<div class=popUp id=pop2 style=display:none;bottom:20px; >' + user.user + ' - ' + user.subText + '.<br>Click here to return to the top of the page</div>' +
 
+'';
 
-	TOO.callbackFolderContents = function( xhr ) {
+};
 
-		let response, items, item, count;
 
-		response = xhr.target.response;
-		items = JSON.parse( response );
+MNU.cssColors = function( back, color, mnu ) {
 
-		TOO.files = [];
-		count = 0;
-		menuItems.innerHTML = '';
+document.body.style.backgroundColor = back;
+document.body.style.color = color;
+menu.style.backgroundColor = mnu;
 
-		for ( let i = 0; i < items.length; i++ ) {
+};
 
-			item = items[ i ];
 
-			if ( item.type === 'dir' ) {
+MNU.cssFontOpenSans = function() {
 
-				menuItems.innerHTML +=
-					'<a href=JavaScript:location.hash="";TOO.setMenuDefault("' + item.path  + '"); style=width:100%;  > 🗀 ' + item.name  + '</a>' + b +
-//					'<a href=JavaScript:TOO.setMenuDefault("' + item.path  + '"); style=width:100%;  > 🗀 ' + item.name  + '</a>' + b +
+let fontID = 'Open+Sans';
 
-				'';
+let font = document.body.appendChild( document.createElement( 'link' ) );
+font.id = fontID;
+font.rel = 'stylesheet';
+font.href = 'https://fonts.googleapis.com/css?family=' + fontID;
 
-			}
+document.body.style.fontFamily = 'Open Sans';
 
-		}
+};
 
-		for ( i = 0; i < items.length; i++ ) {
 
-			item = items[ i ];
+MNU.cssFontInconsolata = function() {
 
-			if ( item.type === 'file' ) {
+let fontID = 'Inconsolata';
 
-				menuItems.innerHTML +=
-					'<a id=file' + count++ + ' href=#' + item.path + ' style=width:100%;  > ' + item.name + '</a>' + b +
-				'';
+let font = document.body.appendChild( document.createElement( 'link' ) );
+font.id = fontID;
+font.rel = 'stylesheet';
+font.href = 'https://fonts.googleapis.com/css?family=' + fontID;
 
-				TOO.files.push( item.path );
+document.body.style.fontFamily = 'Inconsolata';
 
-			}
+};
 
-		}
 
+MNU.cssFontMonospace = function() {
 
+//	document.body.style.fontFamily = '"Lucida Console", Monaco, monospace';
+document.body.style.fontFamily = 'monospace';
 
-// move to TOO.setDefaultContents
+};
 
-		if ( location.hash !== '' && ( location.hash.includes( '/' ) || location.hash.includes( '.' ) ) )  {
 
-			CON.getFileSetContents( location.hash.slice( 1 ) );
+MNU.cssFontSize = function( size ) {
 
-		} else if ( user.defaultFile !== undefined && user.folder === TOO.path ) {
+document.body.style.fontSize = size;
 
-			CON.getFileSetContents( user.defaultFile );
+};
 
-		} else {
 
-			TOO.setDefaultContents();
 
-		}
 
-	}
+let CON = {};
 
 
-	TOO.setMenuContents = function() { // we have a table of contents / TOO.tableOfContents somewhere
+CON.editor = undefined;
 
-		var text, fNames, fName;
-		var index, ReadMe;
 
-		TOO.files = [];
+CON.initContents = function() {
 
-		if ( mnuSelect.innerHTML.includes( 'mnuUserTitle' ) ) {
+mnuContents.innerHTML =
 
-			mnuUserTitle.innerHTML = '<h2>' + ( user.title ? user.title : user.user ) + '</h2>';
-		}
+'<div id=mnuUserTitle ></div>' +
+'<div id=mnuUserTagline ></div>' + b +
 
-		showdown.setFlavor( 'github' );
+'<details open >' +
 
-		TOO.converter = new showdown.Converter();
+'<summary><h3 id=menuTitle >Contents</h3></summary>' +
 
-		text = CON.massageText( MNU.tableOfContents );
+'<div id=mnuBreadcrumbs ></div>' +
+'<div id=menuItems ></div>' +
 
-		menuItems.innerHTML = text;
+'</details>' + b +
 
-		fNames = MNU.tableOfContents.replace( / /g, '' ).replace( /(.*)\((.*)\)(.*)/gi, '$2' ).split( '\n' );
+'';
+}
 
-		for ( var i = 1; i < fNames.length - 1; i++ ) {
+CON.setDefaultContents = function() {
 
-			fName = fNames[ i ];
-			if ( fName.includes( '###' ) || fName === '' || fName.length < 5 ) { continue; }
+let txt, start, path, p;
 
-			TOO.files.push( fName.slice( 1 ) );
+for ( var i = 0; i < SEL.files.length; i++ ) {
 
-		}
+path = SEL.files[ i ];
+p = path.toLowerCase();
 
-// not needed??
-		index = TOO.files.indexOf( 'readme.md');
-		readMe = index > -1 ? TOO.files[ index ] : '';
-		index = TOO.files.indexOf( 'README.md');
-		readMe = index > -1 ? TOO.files[ index ] : readMe;
+//	if ( p.endsWith( 'readme.md' ) ) { CON.getFileSetContents( path ); return; }
+//	if ( p.endsWith( 'index.html' ) || p.endsWith( 'index.htm') ) { CON.getFileSetContents( path ); return; }
 
-		menuTitle.innerHTML = 'Table of Contents';
-		breadcrumbs.innerHTML = '';
+if ( p.endsWith( 'readme.md' ) ) { location.hash = path; onHashChange(); return; }
+if ( p.endsWith( 'index.html' ) || p.endsWith( 'index.htm') ) { location.hash = path; onHashChange(); return; }
 
+}
 
-// move to TOO.setDefaultContents
+// nothing found, so just display the first file found
 
-		if ( location.hash.length > 1 ) {
+path = SEL.files[ 0 ];
+location.hash = path;
+onHashChange();
 
-			CON.getFileSetContents( location.hash.slice( 1 )  );
+}
 
-//		} else if ( user.defaultFile !== undefined && user.folder === TOO.path ) {
-		} else if ( user.defaultFile !== undefined ) {
 
-			CON.getFileSetContents( user.defaultFile );
 
-		} else {
 
-			CON.getFileSetContents( readMe ); ///
+CON.getFileSetContents = function( path ) {
 
-		}
+CON.urlGHPages = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/' ;
 
-	}
+let url, u;
 
+if ( path === undefined ) {
 
-	TOO.setDefaultContents = function() {
+contents.innerHTML = '<center style=top:50%; >No files in this folder</center>';
 
-		let txt, start, path, p;
+return;
 
+}
 
-// change to: TOO.files.includes( 'readme.md' )
+url = CON.urlGHPages + path;
 
-		for ( var i = 0; i < TOO.files.length; i++ ) {
+u = url.toLowerCase();
 
-			path = TOO.files[ i ];
-			p = path.toLowerCase();
+if ( u.endsWith( '.md' ) ){
 
-// uppercase README gets selected before lower case index
+CON.getFileMD( url );
 
-			if ( p.endsWith( 'index.html' ) || p.endsWith( 'index.htm') ) { CON.getFileSetContents( path ); }
-			if ( p.endsWith( 'readme.md' ) ) { CON.getFileSetContents( path ); return; }
+} else if ( u.endsWith( '.html' ) || u.endsWith( '.htm' ) ) {
 
-		}
+CON.getFileHTML( url );
 
-		path = TOO.files[ 0 ];
-		CON.getFileSetContents( path  );
+} else if ( u.endsWith( '.gif' ) || u.endsWith( '.ico' ) || u.endsWith( '.jpg' ) || u.endsWith( '.jpeg' ) || u.endsWith( '.png' ) || u.endsWith( '.svg' ) ) {
 
-	}
+CON.getFileImage( url );
 
+} else {
 
-	TOO.setBreadcrumbs = function( path ) {
+CON.getFileCode( url );
 
-		let name, txt, folders, str;
+}
 
-		name = user.repo;
+CON.setButtons( path );
+SEL.highlightMenuItem();
 
-		name = user.folder ? user.folder : user.repo;
+//	menu.scrollTop = 0;
 
-		txt = '<h3><a href=JavaScript:TOO.setMenuDefault(); >' + name + '</a> &raquo; </h3>';
+}
 
-		folders = path ? path.split( '/' ) : [] ;
 
-		str = '';
+CON.getFileHTML = function( url ){
 
-		for ( let i = 0; i < folders.length; i++ ) {
+contents.innerHTML = '<iframe id=ifrHTML src=' + url + ' > ' + '<iframe>';
 
-			str += folders[ i ] + '/';
+}
 
-			txt += '<h3><a href=JavaScript:TOO.setMenuDefault("' + str.slice( 0, -1 ) + '"); >' + folders[ i ] + '</a> &raquo; </h3>';
 
-		}
+CON.massageText = function( response ){
 
-		breadcrumbs.innerHTML = txt;
+showdown.setFlavor( 'github' );
+CON.converter = new showdown.Converter();
+text = CON.converter.makeHtml( response );
 
-	}
+return text;
 
+};
 
-	TOO.onHashChange = function() {
 
-		if ( location.hash.slice( 1,2 ) === '!' ) {
-
-			CON.createPageOfImages( location.hash.slice( 2 ) );
-
-		} else {
-
-			CON.getFileSetContents( location.hash.slice( 1 ) );
-
-		}
-
-		if ( TOO.files ) {
-
-			links = document.getElementsByTagName( 'li' );
-
-			for ( let i = 0; i < links.length; i++ ) {
-
-				link = links[ i ];
-				text = link.firstChild.hash;
-
-				if ( text === location.hash ) {
-
-					link.style.backgroundColor = 'lightgreen';
-
-				} else {
-
-					link.style.backgroundColor = '';
-
-				}
-
-			}
-
-		}
-
-	}
-
-
-
-	TOO.setContentsWidth = function() {
-
-		contents.style.width = ( window.innerWidth - 325 ) + 'px';
-
-	}
-
-
-	TOO.getFiles = function() {
-
-		TOO.files = MNU.tableOfContents.replace( / /g, '' ).replace( /(.*)\((.*)\)(.*)/gi, '$2' ).split( '\n' );
-
-	};
-
-	TOO.requestFile = function ( fileName, callback ) {
-
-		var fileName, text, lines;
-
-		xhr = new XMLHttpRequest();
-		xhr.crossOrigin = 'anonymous';
-		xhr.open( 'GET', fileName, true );
-		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-		xhr.onload = callback;
-		xhr.send( null );
-
-	}
-
-</script>
-<script>
-// ../dev/menu4.js inserted
-
-
-	let MNU = {};
-
-	MNU.init = function() {
-
-		let txt;
-
-		if ( MNU.tableOfContents ) {
-
-				txt =
-					'<p>' +
-					'<button onclick=TOO.setMenu=TOO.setMenuContents;TOO.setMenu(); >Table of Contents</button>' +
-					' <button onclick=TOO.setMenu=TOO.setMenuDefault;TOO.setMenu(); >All Files</button>' +
-				'</p>';
-
-		} else {
-
-				txt = '';
-
-		}
-
-		mnuContents.innerHTML =
-
-			txt +
-
-			'<details open >' +
-
-				'<summary><h3 id=menuTitle >Contents</h3></summary>' +
-
-				'<div id=breadcrumbs ></div>' +
-				'<div id=menuItems ></div>' +
-
-			'</details>' + b +
-
-		'';
-
-		mnuSettings.innerHTML =
-
-			'<details>' +
-
-				'<summary><h3>Settings</h3></summary>' +
-
-				'<div><button onclick=MNU.cssColors("#222","#ddd","#555");  >Dark</button>' +
-					' <button onclick=MNU.cssColors("#fff","#000","#eee"); >Light</button>' +
-					' <button onclick=MNU.cssColors("#f3eacb","#704214","#704214"); >Sepia</button>' +
-				'</div>' + b +
-
-				'<div><button onclick=MNU.cssFontOpenSans(); >Open Sans</button>' +
-					' <button onclick=MNU.cssFontInconsolata(); >Inconsolata</button>' +
-					' <button onclick=MNU.cssFontMonospace(); >Monospace</button>' +
-				'</div>' + b +
-
-				'<div><button onclick=MNU.cssFontSize("12pt"); >Normal</button>' +
-					' <button onclick=MNU.cssFontSize("14pt"); >Larger</button>' +
-					' <button onclick=MNU.cssFontSize("18pt"); >Largest</button>' +
-				'</div>' + b +
-
-			'</details>' +
-		'';
-
-		mnuAbout.innerHTML =
-
-			'<details>' +
-
-				'<summary><h3>About</h3></summary>' +
-
-				'<p>Copyright &copy; ' + ( new Date() ).getFullYear() + ' ' + user.user + ' authors. ' +
-				'<a href=http://github.com/' + user.user + '/' + user.repo + ' >MIT license</a>.</p>' +
-				'<p>Click the \'i in a circle\' icon for more <a href=index.html#readme.md title="Click here for help and information" >help</a>.</p>' +
-
-			'</details>' +
-
-			'<hr>' +
-
-			'<center><a href=javascript:menu.scrollTop=0; style=text-decoration:none; onmouseover=pop2.style.display=""; onmouseout=pop2.style.display="none"; ><h1>' + ( user.logo ? user.logo : '❦' ) + '</h1></a></center>' +
-			'<div class=popUp id=pop2 style=display:none;bottom:20px; >' + user.user + ' - ' + user.subText + '.<br>Click here to return to the top of the page</div>' +
-
-		'';
-
-	};
-
-
-	MNU.cssColors = function( back, color, mnu ) {
-
-		document.body.style.backgroundColor = back;
-		document.body.style.color = color;
-		menu.style.backgroundColor = mnu;
-
-	};
-
-
-	MNU.cssFontOpenSans = function() {
-
-		let fontID = 'Open+Sans';
-
-		let font = document.body.appendChild( document.createElement( 'link' ) );
-		font.id = fontID;
-		font.rel = 'stylesheet';
-		font.href = 'https://fonts.googleapis.com/css?family=' + fontID;
-
-		document.body.style.fontFamily = 'Open Sans';
-
-	};
-
-
-	MNU.cssFontInconsolata = function() {
-
-		let fontID = 'Inconsolata';
-
-		let font = document.body.appendChild( document.createElement( 'link' ) );
-		font.id = fontID;
-		font.rel = 'stylesheet';
-		font.href = 'https://fonts.googleapis.com/css?family=' + fontID;
-
-		document.body.style.fontFamily = 'Inconsolata';
-
-	};
-
-
-	MNU.cssFontMonospace = function() {
-
-//		document.body.style.fontFamily = '"Lucida Console", Monaco, monospace';
-		document.body.style.fontFamily = 'monospace';
-
-	};
-
-
-	MNU.cssFontSize = function( size ) {
-
-		document.body.style.fontSize = size;
-
-	};
-
-
-
-
-</script>
-<script>
-// ../dev/contents4.js inserted
-
-
-	let CON = {};
-
-	CON.editor = undefined;
-
-	CON.getFileSetContents = function( path ) {
-
-		let url, u;
-
-		if ( path === undefined ) {
-
-			contents.innerHTML = '<center style=top:50%; >No files in this folder</center>';
-
-			return;
-
-		}
-
-		url = TOO.urlGHPages + path;
-
-		u = url.toLowerCase();
-
-		if ( u.endsWith( '.md' ) ){
-
-			CON.getFileMD( url );
-
-		} else if ( u.endsWith( '.html' ) || u.endsWith( '.htm' ) ) {
-
-			CON.getFileHTML( url );
-
-		} else if ( u.endsWith( '.gif' ) || u.endsWith( '.ico' ) || u.endsWith( '.jpg' ) || u.endsWith( '.png' ) ||  u.endsWith( '.svg' ) ) {
-
-			CON.getFileImage( url );
-
-		} else {
-
-			CON.getFileCode( url );
-
-		}
-
-		CON.setHighlightAndButtons( path );
-
-		location.hash = path;
-		menu.scrollTop = 0;
-
-	}
-
-
-	CON.getFileHTML = function( url ){
-
-		contents.innerHTML =
-//			'<iframe id=ifr src=' + url + ' width=' + ( window.innerWidth - 325 ) + ' height=' + ( window.innerHeight - 5 ) +
-//			'<iframe id=ifr src=' + url + ' width=' + ( window.innerWidth - 325 ) + ' height=100% ' +
-			'<iframe id=ifrHTML src=' + url + ' > ' +
-//			' style="border:0 none; " >' +
-		'<iframe>';
-
-	}
-
-
-	CON.massageText = function( response ){
-
-		CON.converter = new showdown.Converter();
-		text = CON.converter.makeHtml( response );
-
-		return text;
-
-	};
-
-
-	CON.getFileMD = function( url ) {
+CON.getFileMD = function( url ) {
 
 // https://github.com/showdownjs/showdown
 
-		showdown.setFlavor('github');
+let text, response;
 
-		TOO.requestFile( url, callbackMD );
+showdown.setFlavor('github');
 
-		function callbackMD( xhr ) {
+SEL.requestFile( url, callbackMD );
 
-			response = xhr.target.response;
+function callbackMD( xhr ) {
 
-			if ( response.includes( 'DOCTYPE') ) {
+response = xhr.target.response;
 
-console.log( '', response  );
+if ( response.includes( 'DOCTYPE') ) {
 
-				contents.innerHTML = '<h1 style=text-align:center; >file not found</h1>';
+// console.log( '', response );
 
-				return;
+contents.innerHTML = '<h1 style=text-align:center; >file not found</h1>';
 
-			}
+return;
 
-
-
-			text = CON.massageText( response );
-
-			contents.innerHTML =
-
-			'<div id=divMD >' + text + '</div>';
-
-			contents.scrollTop = 0;
-
-		}
-
-	}
+}
 
 
-	CON.getFileImage = function( url ){
+text = CON.massageText( response );
 
-		contents.innerHTML = '<img src="' + url + '" style="border: 0px solid gray; margin: 25px 0 0 50px; max-width: 800px; " >';
+contents.innerHTML =
 
-	}
+'<div id=divMD >' + text + '</div>';
+
+contents.scrollTop = 0;
+
+}
+
+}
 
 
-	CON.getFileCode = function( url ) {
+CON.getFileImage = function( url ){
+
+contents.innerHTML = '<img src="' + url + '" style="border: 0px solid gray; margin: 25px 0 0 50px; max-width: 800px; " >';
+
+}
+
+
+CON.getFileCode = function( url ) {
 
 // try embed gist
 
-		contents.innerHTML =
-			'<div id=contentsCode style="border: 0px red solid; height: 100%; margin: 0 auto; width: 900px; position: relative;" >' +
-			' item will appear here ' +
-		'</div>';
+contents.innerHTML =
+'<div id=contentsCode style="border: 0px red solid; height: 100%; margin: 0 auto; width: 900px; position: relative;" >' +
+' item will appear here ' +
+'</div>';
 
-		if ( CON.editor !== undefined ) {
+if ( CON.editor !== undefined ) {
 
-			setEditContents();
+setEditContents();
 
-		} else {
+} else {
 
 // check here for latest: https://cdnjs.com/libraries/ace/
 // Anyway to get latest automatically?
 // use GitHub code embed??
 
-			CON.editor = document.body.appendChild( document.createElement( 'script' ) );
-			CON.editor.onload = setEditContents;
-			CON.editor.src = 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js';
+CON.editor = document.body.appendChild( document.createElement( 'script' ) );
+CON.editor.onload = setEditContents;
+CON.editor.src = 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js';
 
-		}
+}
 
 
-		function setEditContents() {
+function setEditContents() {
 
-			editor = ace.edit( 'contentsCode' );
-			editor.$blockScrolling = Infinity;
-			editor.getSession().setMode( 'ace/mode/markdown' );
+editor = ace.edit( 'contentsCode' );
+editor.$blockScrolling = Infinity;
+editor.getSession().setMode( 'ace/mode/markdown' );
 
-			TOO.requestFile( url, callback );
+SEL.requestFile( url, callback );
 
-			function callback( xhr ) {
+function callback( xhr ) {
 
-				editor.setValue( xhr.target.response.slice( 0, 10000 ), -1 );
+editor.setValue( xhr.target.response.slice( 0, 10000 ), -1 );
 
-			}
+}
 
-		}
+}
 
-	}
+}
 
 
-	CON.createPageOfImages = function( path ) {
+CON.createPageOfImages = function( path ) {
 
-			let page, url, items, item, source;
+let page, url, items, item, source;
 
-			page = '';
+page = '';
 
-			url = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/contents/' + path;
+url = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/contents/' + path;
 
-			TOO.requestFile( url, callbackGalleryContents );
+SEL.requestFile( url, callbackGalleryContents );
 
-			function callbackGalleryContents( xhr ){
+function callbackGalleryContents( xhr ){
 
-				response = xhr.target.response;
-				items = JSON.parse( response );
+response = xhr.target.response;
+items = JSON.parse( response );
 
-				for ( let i = 0; i < items.length; i++ ) {
+for ( let i = 0; i < items.length; i++ ) {
 
-					item = items[ i ];
+item = items[ i ];
 
-					source = item.download_url;
+source = item.download_url;
 
-					if ( source.includes( '.thumb' ) || source.includes( '.highlight' ) || source.endsWith( '.dat' )  ||
-						source.endsWith( '.lock' ) ) { continue; }
+if ( source.includes( '.thumb' ) || source.includes( '.highlight' ) || source.endsWith( '.dat' ) ||
+source.endsWith( '.lock' ) ) { continue; }
 
-					page += '<div style=display:inline-block;margin:10px; >' +
-						'<a href=JavaScript:CON.getFileSetContents("' + item.path +'"); ><img src=' + source + ' height=200; title="' + url.slice( 0, -4 ) + '" ></a>' +
-					'</div>';
+page += '<div style=display:inline-block;margin:10px; >' +
+'<a href=JavaScript:CON.getFileSetContents("' + item.path +'"); ><img src=' + source + ' height=200; title="' + url.slice( 0, -4 ) + '" ></a>' +
+'</div>';
 
-				}
+}
 
-				contents.innerHTML = page;
+contents.innerHTML = page;
 
-				CON.setHighlightAndButtons( path, true );
+CON.setHighlightAndButtons( path, true );
 
-				location.hash = '!' + path;
+location.hash = '!' + path;
 
-			}
+}
 
-	}
+}
 
 
 
+CON.setButtons = function( path ) {
 
-	CON.setHighlightAndButtons = function( path, gallery ) {
+var index, folder, indexNext, indexPrevious;
 
-		var index, el, col, folder, indexNext, indexPrevious;
+if ( butEditFile ) {
 
-//highlight
+folder = user.path ? user.path + '/' : '';
 
-		if ( gallery ) {
+butEditFile.innerHTML = '<a href="https://github.com/' + user.user + '/' + user.repo + '/blob/' + user.branch + '/' + folder + path + '" target="_blank"> Edit </a>';
 
-			index = TOO.files.indexOf( '!' + path );
+}
 
-		} else {
+index = SEL.files.indexOf( path );
 
-			index = TOO.files.indexOf( path );
+indexNext = index + 1;
+if ( indexNext >= SEL.files.length ) { indexNext = 0; }
 
-		}
+indexPrevious = index - 1;
+if ( indexPrevious < 0 ) { indexPrevious = SEL.files.length - 1; }
 
-		for ( let i = 0; i < TOO.files.length; i++ ) {
+if ( butNextFile || butPreviousFile ) {
 
-			el = document.getElementById( 'file' + i );
+butNextFile.innerHTML = '<a href="#' + SEL.files[ indexNext ] + '" > &gt; </a>';
+butPreviousFile.innerHTML = '<a href="#' + SEL.files[ indexPrevious ] + '" > &lt; </a>';
 
-			col = ( i === index ) ? '#ccc' : '';
+}
 
-			if ( el ) {
+}
 
-				el.style.backgroundColor = col;
-				el.scrollIntoView();  // not working
+let SEL = {};
 
-			} // else ...
+SEL.typeSelectedIndex = 1;
 
-		}
+SEL.initSelectType = function() {
 
+mnuSelectType.innerHTML =
 
-// buttons
+'<details open>' +
 
-		if ( butEditFile ) {
+'<summary><h3>Select Menu Type</h3></summary>' +
 
-			folder = user.folder ? user.folder + '/' : '';
+'<select id=selType onchange=SEL.selectMenuType(); title="Select type of menu" size=6 style=width:100%; >' +
+'<option title="created by humans" >Table of Contents</option>' +
+'<option >All Files</option>' +
+'<option >Folders & Files</option>' +
+'<option >Folder Groups</option>' +
+'<option >List by Folders</option>' +
+'<option >Alphabetical</option>' +
+'</select>' + b +
 
-			butEditFile.innerHTML = '<a href="https://github.com/' + user.user + '/' + user.repo + '/blob/' + user.branch + '/' + folder + path + '" target="_blank"> Edit </a>';
+'</details>' + b +
 
-		}
+'';
 
 
-		indexNext = index + 1;
-		if ( indexNext >= TOO.files.length ) { indexNext = 0; }
+selType.selectedIndex = SEL.typeSelectedIndex;
 
-		indexPrevious = index - 1;
-		if ( indexPrevious < 0 ) { indexPrevious = TOO.files.length - 1; }
+}
 
-		if ( butNextFile || butPreviousFile ) {
 
-			if ( gallery ) {
 
-				butNextFile.innerHTML = '<a href=JavaScript:CON.createPageOfImages("' + TOO.files[ indexNext ].slice( 1 ) + '"); > &gt; </a>';
-				butPreviousFile.innerHTML = '<a href=JavaScript:CON.createPageOfImages("' + TOO.files[ indexPrevious ].slice( 1 ) + '"); > &lt; </a>';
+SEL.selectMenuType = function() {
 
-			} else {
+var types = [ SEL.setMenuContents, SEL.getTreeAllFiles, SEL.setMenuFoldersFiles, SEL.createGroups, SEL.listByFolders, SEL.listAlphabetical ]
+SEL.setMenu = types[ selType.selectedIndex ];
+SEL.setMenu();
 
-				butNextFile.innerHTML = '<a href=JavaScript:CON.getFileSetContents("' + TOO.files[ indexNext ] + '"); > &gt; </a>';
-				butPreviousFile.innerHTML = '<a href=JavaScript:CON.getFileSetContents("' + TOO.files[ indexPrevious ] + '"); > &lt; </a>';
+menuTitle.innerHTML = selType.value;
+mnuBreadcrumbs.innerHTML = '';
+// add about menu items
 
-			}
-		}
+}
 
-	}
-</script>
-<!--
-<script src=../dev-repo/repo-prediqtiv.js ></script>
--->
-<script>
-// repo-prediqtiv.js inserted
 
-	var images = 'https://prediqtiv.github.io/images/';
 
-	var user = {
-		user : 'prediqtiv',
-		subText : 'Invest smarter',
-		logo: '<img src=' + images + 'five-boxes.png height=32 >',
-		repo : 'prediqtiv.github.io',
-		branch : 'master',
-		folder : '',
-		title : '<img src=' + images + 'predIQtiv.png  height=64 >',
-//		defaultFile : 'README.md'
-	};
+SEL.setMenuContents = function() { // we have a table of contents / SEL.tableOfContents somewhere
 
+let text, fNames, fName;
 
-	MNU.tableOfContents =
+SEL.files = [];
+
+showdown.setFlavor( 'github' );
+
+SEL.converter = new showdown.Converter();
+
+text = CON.massageText( MNU.tableOfContents );
+
+menuItems.innerHTML = text;
+
+fNames = MNU.tableOfContents.replace( / /g, '' ).replace( /(.*)\((.*)\)(.*)/gi, '$2' ).split( '\n' );
+
+for ( let i = 1; i < fNames.length - 1; i++ ) {
+
+fName = fNames[ i ];
+if ( fName.includes( '##' ) || fName === '' || fName.length < 5 ) { continue; }
+
+SEL.files.push( fName.replace( '#', '' ) );
+
+}
+
+CON.setDefaultContents();
+
+}
+
+
+
+SEL.getTreeAllFiles = function( path ) {
+
+let url;
+
+url = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/contents/' + ( path ? path : '' );
+
+SEL.requestFile( url, callback );
+
+SEL.setBreadcrumbs( path );
+
+function callback( xhr ) {
+
+let response, items, item, link;
+
+response = xhr.target.response;
+items = JSON.parse( response );
+
+SEL.files = [];
+menuItems.innerHTML = '';
+
+for ( let item of items ) {
+
+if ( item.type === 'dir' ) {
+
+menuItems.innerHTML +=
+//	'<div><a href=JavaScript:location.hash="";SEL.getTreeAllFiles("' + item.path + '"); > 🗀 ' + item.name + '</a></div>' +
+'<div><a href=JavaScript:SEL.getTreeAllFiles("' + item.path + '"); > 🗀 ' + item.name + '</a></div>' +
+
+'';
+
+}
+
+}
+
+link = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/';
+
+for ( let item of items ) {
+
+if ( item.type === 'file' ) {
+
+menuItems.innerHTML +=
+'<div>' +
+'<a href=#' + encodeURI( item.path ) + ' > ' + item.name + '</a> ' +
+( item.path.endsWith( '.html') ? '<a href="' + encodeURI( link + item.path ) + '" target=_blank >&#x1F5D7;</a>' : '' ) +
+'</div>';
+
+SEL.files.push( item.path );
+
+}
+
+}
+
+CON.setDefaultContents();
+
+}
+
+}
+
+
+
+SEL.setMenuFoldersFiles = function() {
+
+var tree = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/git/trees/' + user.branch + '?recursive=1';
+
+SEL.requestFile( tree, callback );
+
+function callback( xhr ) {
+
+response = JSON.parse( xhr.target.response );
+SEL.files = [];
+
+for ( let file of response.tree ) {
+
+if ( file.type === 'tree' ) { continue; }
+
+SEL.files.push( file.path );
+
+}
+
+menuItems.innerHTML =
+'Files count: ' + SEL.files.length + b +
+SEL.files.map( function( a ){ return '<small><div>' + a.link( '#' + a ) + '</div></small>'; } ).join( '' );
+
+}
+
+}
+
+
+
+SEL.createGroups = function() {
+
+let headers;
+let response, file, fileName;
+
+let tree = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/git/trees/' + user.branch + '?recursive=1';
+SEL.files = [];
+SEL.requestFile( tree, callback );
+
+function callback( xhr ) {
+
+response = JSON.parse( xhr.target.response );
+
+menuItems.innerHTML = '<select id=selHeaders size=20 onchange=SEL.onHeaderSelected() style=width:100%; ></select>' + b + b +
+'<div id=selFile ></div>';
+
+SEL.headers = [];
+
+for ( let i = 0; i < response.tree.length; i++ ) {
+
+file = response.tree[ i ];
+
+if ( file.type === 'tree' ) { continue; }
+
+file = file.path;
+SEL.files.push( file );
+
+file = file.split( '/' );
+fileName = file.pop();
+file = file.join( '/' );
+
+if ( ! SEL.headers.includes( file ) ) {
+
+selHeaders[ selHeaders.length ] = new Option( file );
+
+SEL.headers.push( file );
+
+}
+
+}
+
+}
+
+}
+
+
+
+SEL.onHeaderSelected = function() {
+
+let txt, header, name;
+
+txt = '';
+
+header = selHeaders.value;
+
+for ( let file of SEL.files ) {
+
+if ( file.includes( header ) ) {
+
+name = file.replace( ( header + "\/" ), '' );
+txt += '<div>' + name.link( '#' + file ) + '</div>';
+}
+
+}
+
+selFile.innerHTML = 'Files count: ' + SEL.files.length + b + txt;
+
+}
+
+
+SEL.listByFolders = function () {
+
+let txt, headers, response, file, fName, path, folders;
+let tree = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/git/trees/' + user.branch + '?recursive=1';
+let link = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/';
+
+txt = '';
+headers = [];
+
+SEL.requestFile( tree, callback );
+
+function callback( xhr ) {
+
+response = JSON.parse( xhr.target.response );
+
+for ( let file of response.tree ) {
+
+if ( file.type === 'tree' ) { continue; }
+
+path = file.path;
+SEL.files.push( path )
+file = path.split( '/' );
+
+fName = file.pop();
+folders = file.join( '/' );
+
+if ( ! headers.includes( folders ) ) {
+
+txt += '<h4>' + folders + '</h4>';
+headers.push( folders );
+
+}
+
+txt += '<div>' +
+fName.link( '#' + path ) + ' ' +
+( path.endsWith( '.html') ? '<a href="' + encodeURI( link + path ) + '" target=_blank >&#x1F5D7;</a>' : '' ) +
+
+'</div>';
+
+}
+
+menuItems.innerHTML = txt;
+
+}
+
+}
+
+
+
+SEL.listAlphabetical = function() {
+
+let tree = 'https://api.github.com/repos/' + user.user + '/' + user.repo + '/git/trees/' + user.branch + '?recursive=1';
+let link = 'https://rawgit.com/' + user.user + '/' + user.repo + '/' + user.branch + '/';
+let response, txt, keys, path, name;
+
+SEL.requestFile( tree, callback );
+
+function callback( xhr ) {
+
+response = JSON.parse( xhr.target.response );
+
+txt = '';
+keys = [];
+SEL.files = [];
+
+for ( let file of response.tree ) {
+
+if ( file.type === 'tree' ) { continue; }
+
+path = file.path;
+name = path.split( '/' ).pop();
+
+SEL.files.push( file.path );
+keys.push( name + '#' + path );
+
+}
+
+keys = keys.sort();
+
+for ( let i = 0; i < keys.length; i++ ) {
+
+key = keys[ i ].split( '#' );
+path = key[ 1 ];
+txt +=
+'<div>' +
+'<a href=#' + path + ' title="' + path + '" >' + ( i + 1 ) + ' ' + key[ 0 ] + '</a> ' +
+( path.endsWith( '.html') ? '<a href="' + encodeURI( link + path ) + '" target=_blank >&#x1F5D7;</a>' : '' ) +
+'</div>';
+
+}
+
+menuItems.innerHTML = 'Files in repo: ' + SEL.files.length + b + txt;
+
+}
+
+}
+
+////////////////// utilities
+
+SEL.highlightMenuItem = function() {
+
+let links;
+
+links = document.getElementsByTagName( 'a' );
+
+for ( let link of links ) {
+
+link.parentElement.style.backgroundColor = link.hash && link.hash === location.hash ? 'lightgreen' : '';
+
+}
+
+}
+
+
+
+SEL.setBreadcrumbs = function( path ) {
+
+let name, txt, folders, str;
+
+name = user.repo;
+
+name = user.path ? user.path : user.repo;
+
+txt = '<h3><a href=JavaScript:SEL.getTreeAllFiles(); >' + name + '</a> &raquo; </h3>';
+
+folders = path ? path.split( '/' ) : [] ;
+
+str = '';
+
+for ( let folder of folders ) {
+
+str += folder + '/';
+
+txt += '<h3><a href=JavaScript:SEL.getTreeAllFiles("' + str.slice( 0, -1 ) + '"); >' + folder + '</a> &raquo; </h3>';
+
+}
+
+mnuBreadcrumbs.innerHTML = txt;
+
+}
+
+
+
+SEL.requestFile = function ( fileName, callback ) {
+
+xhr = new XMLHttpRequest();
+xhr.crossOrigin = 'anonymous';
+xhr.open( 'GET', fileName, true );
+xhr.onerror = function( xhr ) { console.log( 'error', xhr ); };
+xhr.onload = callback;
+xhr.send( null );
+
+}
+
+
+
+
+// Copyright 2017 Pushme Pullyou authors ~ MIT license
+
+var images = 'https://prediqtiv.github.io/images/';
+
+var user = {
+
+user: 'prediqtiv',
+repo: 'prediqtiv.github.io',
+branch: 'master',
+path: '',
+
+infoLink : 'https://github.com/prediqtiv/prediqtiv.github.io/',
+logo: '<img src=' + images + 'five-boxes.png height=32 >',
+tagLine : 'Invest smarter!',
+subText : 'Invest smarter!',
+title : '<img src=' + images + 'predIQtiv.png height=64 >',
+defaultFile : 'REAADME.md'
+}
+
+
+MNU.tableOfContents =
 
 `
 ### predIQtiv
@@ -820,8 +898,8 @@ console.log( '', response  );
 * [Copyright and license]( #license.md )
 ### eyeCue
 * [eyeCue Read Me]( #eye-cue/README.md )
-    * [eyeCue Replay Read Me](#eye-cue/replay/README.md )
-    * [eyeCue Realtime Read]( #eye-cue/realtime/README.md )
+* [eyeCue Replay Read Me](#eye-cue/replay/README.md )
+* [eyeCue Realtime Read]( #eye-cue/realtime/README.md )
 ### Trades
 * [Trades Get Read Me]( #trades-get/README.md )
 ### Tweets
@@ -830,75 +908,65 @@ console.log( '', response  );
 * [URL Get Read Me]( #url-get/README.md )
 ### White Papers
 * [White Papers Read Me]( #white-papers/README.md )
-    * [Markets, Outliers and Data Normalization]( #white-papers/outliers-data-normlization.md )
-    * [Code, Styling and Abstraction]( #white-papers/code-styling-abstraction.md )
+* [Markets, Outliers and Data Normalization]( #white-papers/outliers-data-normlization.md )
+* [Code, Styling and Abstraction]( #white-papers/code-styling-abstraction.md )
 ### [Blog Posts]( https://github.com/prediqtiv/prediqtiv.github.io/labels/blog%20post )
 `;
 
+SEL.typeSelectedIndex = 0;
+const b = '<br>';
 
-	CON.massageText = function( response ){
+init();
 
-		CON.converter = new showdown.Converter();
-		text = CON.converter.makeHtml( response );
+function init() {
 
-		return text;
+let tagLine;
 
-	};</script>
+container = document.body.appendChild( document.createElement( 'div' ) );
+container.id = 'container';
+container.innerHTML = basicHTML;
 
-	<div id=container >
+if ( window.self !== window.top ) { container.style.left = '-325px'; }
 
-		<div id=menu >
+window.addEventListener( 'resize', setContentsWidth, false );
 
-			<h2>
-				<a href=http://pushme-pullyou.github.io title="pushMe pullYou - your Github repo happy place" > &#x2766 </a><br>
-				<a id=mnuTitle href="" title="Click here to refresh this page" ></a>
-				~ <a href=https://github.com/pushme-pullyou onmouseover=popHelp.style.display=""; onmouseout=popHelp.style.display="none"; > &#x24D8; </a>
-			</h2>
+setContentsWidth();
 
-			<div class=popUp id=popHelp style=display:none; ><p>Hi there!</p>Click the i-in-circle, info icon for latest updates.</div>
+window.addEventListener ( 'hashchange', onHashChange, false );
 
-			<div id=mnuTagline ><small></small></div>
+tagLine = user.tagLine ? user.tagLine : document.head.querySelector( "[name=description]" ).content;
+mnuTitle.innerHTML = user.title ? user.title : document.title;
+mnuTagline.innerHTML = '<small><p>' + tagLine + '</p></small>';
+mnuHelp.href = user.infoLink ? user.infoLink : 'https://github.com/pushme-pullyou/pushme-pullyou.github.io/tree/master/tootoo/';
 
-			<div id=mnuSelect ></div>
+MNU.init();
 
-			<div id=mnuContents ></div>
+CON.initContents();
+SEL.initSelectType();
 
-			<div id=mnuSettings ></div>
-			<div id=mnuCount ></div>
-			<div id=mnuAbout ></div>
+//	mnuUserTitle.innerHTML = '<h3>User: ' + user.user + '</h3>';
+//	mnuUserTagline.innerHTML = 'Repo: ' + user.repo;
 
-		</div>
+SEL.selectMenuType();
 
-		<div id=hamburger onclick=container.style.left=container.style.left===""?"-325px":""; >
-			<div id=bars title="Click this hamburger to slide the menu" > &#9776 </div>
-		</div>
-
-		<div id=contents ></div>
-
-		<div id=butEditFile >Edit</div>
-		<div id=butNextFile >&gt;</div>
-		<div id=butPreviousFile >&lt;</div>
+}
 
 
-	</div>
+function onHashChange() {
 
-<script >
+CON.getFileSetContents( location.hash.slice( 1 ) );
+CON.setButtons( location.hash.slice( 1 ) );
+SEL.highlightMenuItem();
 
-// Copyright 2017 Pushme Pullyou authors ~ MIT license
+}
 
-	init();
 
-	function init() {
+function setContentsWidth() {
 
-		let tagLine;
+contents.style.width = ( window.innerWidth - 325 ) + 'px';
 
-		tagLine = user.tagLine ? user.tagLine : document.head.querySelector( "[name=description]" ).content;
-		mnuTitle.innerHTML = user.title ? user.title : user.user;
-		mnuTagline.innerHTML = '<small><p>' + tagLine + '</p></small>';
+}
 
-		TOO.initUser();
-
-	}
 
 </script>
 </body>

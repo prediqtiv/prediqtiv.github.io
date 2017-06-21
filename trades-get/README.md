@@ -62,16 +62,16 @@ Current timings: sending 25 symbols once a minute. Takes over a thousand seconds
 
 ### Issues
 
+* 2017-06-20 ~ ongoing incomplete run issues
+
 
 
 ### Wish List / To Do
 
 Soon
-* 2017-05-23 ~ at init: delete all old triggers
-* 2017-05-23 ~ Add go back and retry getting ticks missed in prior run
+* 2017-05-23 ~ at init: delete all triggers except daily run trigger
 * 2017-05-18 ~ Obtain data from multiple sources << Yahoo next
-* 2017-05-18 ~ Improve use of named or pre-selected ranges
-* 2017-05-18 ~ Fix remaining glitches in messages
+
 
 More
 * Reduce run time down to a few minutes and run multiple times during the day
@@ -90,6 +90,15 @@ More
 ****Remember to leave the app running with a trigger!!****
 
 ****Manage versions before making changes!!****
+
+### 2017-06-20 ~ Theo
+
+* Add send2log and return if weekend and market closed
+* 2017-05-23 ~ Add go back and retry getting ticks missed in prior run << done after verify
+* 2017-05-18 ~ Obtain data from multiple sources << Alpha Vantage underway
+* 2017-05-18 ~ Improve use of named or pre-selected ranges
+* 2017-05-18 ~ Fix remaining glitches in messages
+* 2017-06-20 ~ Add verify Sha - a start
 
 ### 2017-06-16 ~ Theo
 
