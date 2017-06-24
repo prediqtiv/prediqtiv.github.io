@@ -79,7 +79,6 @@ More
 * Get trades for selected symbols or portfolio of issues not in sp500
 
 
-
 ## Copyright and License
 
 * [Copyright and License]( https://prediqtiv.github.io/#license.md )
@@ -90,6 +89,16 @@ More
 ****Remember to leave the app running with a trigger!!****
 
 ****Manage versions before making changes!!****
+
+
+### 2017-06-22 ~ Theo
+
+* testing...
+
+### 2017-06-21 ~ Theo
+
+* fix send2gh using row instead of index
+* testing send...
 
 ### 2017-06-20 ~ Theo
 
