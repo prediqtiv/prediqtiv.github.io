@@ -5,11 +5,11 @@ _Request and obtain intraday trades for hundreds of stock market symbols for a n
 
 predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data.
 
-## Full Screen Demo: GAS [SP500 Ticks Get 2]( https://docs.google.com/https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/edit )
+## Full Screen Demo: GAS [SP500 Ticks Get 2]( https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/edit )
 
 ## Embedded Web Page: SP500 Ticks Get
 
-<iframe src="https://docs.google.com/spreadsheets/d/https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/pubhtml?widget=true&amp;headers=false" width=100% height=600px ></iframe>
 
 ### Deprecated: Full Screen Demo: [SP500 Trades Get ]( https://prediqtiv.github.io/trades-get/index.html )
 * Client-side HTML, CSS & JavaScript in single file
