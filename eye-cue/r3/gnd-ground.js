@@ -100,7 +100,7 @@
 		mesh.add( edges ); // add wireframe as a child of the parent mesh
 
 // Labels
-		let sp, ar, axis;
+		let sp, ar;
 
 		sp = THR.drawSprite( '0% vol avg', 0.1, '#ff00ff', -150, 12 , 0 );
 		sp.material.opacity = 0.5;
@@ -147,8 +147,8 @@
 		ar = new THREE.ArrowHelper( v( 0, -1, 0 ), v( 0, 0, -200 * Math.log( 7 ) ), 147, 0xff8888, 4, 3 );
 		GND.ground.add( ar );
 
-		GND.axisHelper = new THREE.AxisHelper( 50 );
-		GND.ground.add( GND.axisHelper );
+		GND.axesHelper = new THREE.AxesHelper( 50 );
+		GND.ground.add( GND.axesHelper );
 
 		scene.add( GND.ground );
 

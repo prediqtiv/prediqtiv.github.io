@@ -10,7 +10,7 @@
 				'<p><input type=checkbox id=chkSnailSlime onchange=symbols.lines.visible=!symbols.lines.visible; checked > Snail Slime</p>' +
 				'<p><input type=checkbox id=chkWire onchange=SET.toggleWireframe(); > Wireframe</p>' +
 				'<p><input type=checkbox onchange=GND.ground.visible=!GND.ground.visible; checked > Ground plane</p>' +
-				'<p><input type=checkbox onchange=GND.axisHelper.visible=!GND.axisHelper.visible; checked > Axes</p>' +
+				'<p><input type=checkbox onchange=GND.axesHelper.visible=!GND.axesHelper.visible; checked > Axes</p>' +
 				'<p><input type=checkbox onchange=THR.lightDirectional.shadow.camera.visible=!THR.lightDirectional.shadow.camera.visible; checked > lightbox</p>' +
 				'<p><input type=checkbox id=chkBackground onchange=SET.toggleBackgroundGradient(); checked > Gradient background</p>' +
 				'<p title="Press spacebar or click in window to stop." >' +
