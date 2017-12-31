@@ -1,7 +1,9 @@
 
 
-Trades Dev Read Me
-===
+# Trades Dev Read Me
+
+Folders with S&P 500 trade data
+
 
 ## Errors
 

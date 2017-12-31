@@ -5,7 +5,7 @@ _Request and obtain intraday trades for hundreds of stock market symbols for a n
 
 predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data.
 
-## Full Screen Demo: GAS [SP500 Ticks Get 2]( https://docs.google.com/spreadsheets/d/1lQ44DlwQ96khNTKk7DPFVzjt5ocXF5cyN2E7wzougEM/edit )
+## Full Screen Demo: GAS [SP500 Ticks Get4]( https://docs.google.com/spreadsheets/d/e/2PACX-1vSdXIsCATdFIqxA6GWenzmphvhiLXkBglXfP66if34v3y0Moc63o3wKGbFttGrIkP4SMl0IjzXRCMaF/pubhtml )
 
 ## Embedded Web Page: SP500 Ticks Get
 
@@ -15,6 +15,8 @@ predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps
 * Client-side HTML, CSS & JavaScript in single file
 * Fast, nice simple script
 * But there's no [FOSS]( https://en.wikipedia.org/wiki/Free_and_open-source_software ) way of getting it to run on a schedule unattended
+
+>> No longer works. Yahoo YQL has removed support for featues this script uses
 
 
 ## Concept

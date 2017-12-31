@@ -7,9 +7,6 @@
 <body>
 <script>
 
-	txt = '';
-	count = 1;
-
 	init();
 
 	function init() {
@@ -44,8 +41,6 @@
 
 		}
 
-//		log.innerHTML = txt;
-console.log( 'txt', txt );
 	}
 
 
@@ -55,14 +50,15 @@ console.log( 'txt', txt );
 
 		response = xhr.target.response;
 //		symbol = JSON.parse( symbol );
-		log.innerHTML += ( count++ ) + ' ' + response.slice( 0, response.indexOf( ',' ) ) + '<br>';
 
-//console.log( 'name', response.slice( 0, response.indexOf( ',' ) ) );
+console.log( 'name', response.slice( 0, response.indexOf( ',' ) ) );
 
 	}
 
 
 	function requestFile( fileName, callback ) {
+
+//		var fileName, text, lines;
 
 		xhr = new XMLHttpRequest();
 		xhr.crossOrigin = 'anonymous';
@@ -70,6 +66,7 @@ console.log( 'txt', txt );
 		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
 		xhr.onload = callback;
 		xhr.send( null );
+
 
 	}
 
