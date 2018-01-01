@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang = "en" >
+<head>
+<meta charset = "utf-8" >
+<meta name = "viewport" content= "width=device-width, initial-scale=1">
+<meta name = "description" content = "Basic HTML template" >
+<meta name = "keywords" content = "JavaScript,GitHub,FOSS,3D,STEM" >
+<meta name = "date" content = "2017-12-15" >
+<title></title>
+<style>
+
+	body { font: 12pt monospace; margin: 0 auto; max-width: 800px; }
+	a { color: crimson; text-decoration: none; }
+	a:hover, a:focus { background-color: yellow; color: #aaa; text-decoration: underline }
+
+	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 5px; }
+	button:hover { background: #ccc; color: #fff }
+
+/*	#divMenu { left: 0; margin: 20px; max-width: 300px; position: absolute; top: 0; } */
+
+</style>
+</head>
+<body>
+
+	<div id = "divHeader" >
+
+		<div id = "divTitle" ></div>
+		<div id = "divContents" >
+
+			<p><button onclick=thing(); >button</button></p>
+			<div id=log ></div>
+			<div id=divError ></div>
+			<select id=selSymbols size = 25 ></select>
+
+		</div>
+
+	</div>
+
+	<div id = "divMenu" ></div>
+
+<script>
+// https://www.google.com/finance/getprices?q=AAPL&i=60&p=2d
+// https://www.google.com/finance/getprices?q=MMM&i=60
+
+// https://crossorigin.me/http://chartapi.finance.yahoo.com/instrument/1.0/GOOG/chartdata;type=quote;range=2d/csv
+
+// https://docs.google.com/spreadsheets/d/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/edit#gid=0
+
+
+	let WikipediaDataFileName = 'https://spreadsheets.google.com/feeds/list/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/1/public/values?alt=json';
+
+	let symbols;
+
+	init();
+
+	function init() {
+
+		loadWikiJSON();
+
+	}
+
+
+	function loadWikiJSON() {
+
+		let xhr, data, entries;
+		let entry, symbol;
+
+		symbols = { index: 0 };
+		symbols.keys = [];
+
+		xhr = new XMLHttpRequest();
+		xhr.open( 'GET', WikipediaDataFileName + '&t=' + Math.random(), true );
+		xhr.onload = callbackJSON;
+		xhr.send( null );
+
+		function callbackJSON() {
+
+			data = xhr.responseText;
+			data = JSON.parse( data );
+			entries = data.feed.entry;
+
+			for ( let i = 0; i < entries.length; i++  ) {
+
+				entry = entries[ i ];
+
+				sectorID  = parseInt( entry.gsx$sectorid.$t, 10 );
+				volumeAvg = parseInt( entry.gsx$volumeavg.$t, 10 );
+				marketCap = parseInt( entry.gsx$marketcap.$t, 10 );
+
+if ( isNaN( parseInt( sectorID, 10 ) ) ) { divError.innerHTML += entry.gsx$tickersymbol.$t + ' sectorID: ' + sectorID; sectorID = 12; }
+if ( isNaN( parseInt( volumeAvg, 10 ) ) ){ divError.innerHTML += entry.gsx$tickersymbol.$t + ' volumeAvg: ' + volumeAvg; volumeAvg = 2000000; }
+if ( isNaN( parseInt( marketCap, 10 ) ) ){ divError.innerHTML += entry.gsx$tickersymbol.$t + ' marketCap: ' + marketCap; marketCap = 50000000000}
+
+				symbol = {
+					symbol: entry.gsx$tickersymbol.$t.replace( '-', '.' ), // was for Yahoo. fix in ss?
+					name: entry.gsx$security.$t.replace( /,/g, '' ),
+					sector: entry.gsx$gicssector.$t,
+					sectorID: sectorID,
+					industry: entry.gsx$gicssubindustry.$t.replace( /,/g, '-' ),
+					cik: parseInt( entry.gsx$cik.$t, 10),
+					volumeAvg,
+					marketCap
+				};
+
+				symbols.keys[ i ] = symbol.symbol;
+				symbols[ symbol.symbol ] = symbol;
+
+			}
+
+			log.innerText = 'loaded symbols: ' + symbols.keys.length;
+
+			initSymbols();
+
+		}
+
+	}
+
+
+
+	function initSymbols() {
+
+		for ( let i = 0; i < symbols.keys.length; i++ ) {
+
+			selSymbols[ i ] = new Option( symbols.keys[ i ] );
+
+		}
+
+		selSymbols.selectedIndex = Math.floor( Math.random() * symbols.keys.length );
+
+//		setSymData( selSymbols.value );
+
+	}
+
+
+</script>
+</body>
+</html>
