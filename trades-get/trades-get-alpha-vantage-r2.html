@@ -27,18 +27,21 @@
 		<div id = "divTitle" ></div>
 		<div id = "divContents" >
 
-			<p><button onclick=thing(); >button</button></p>
+			<p><button onclick="timeStart = new Date();getTradeData();" >getTradeData</button></p>
 			<div id=log ></div>
 			<div id=divError ></div>
-			<select id=selSymbols size = 25 ></select>
-
+			<select id=selSymbols size = 15 ></select>
+			<div id=logTradeData ></div>
 		</div>
+
+		<p><button onclick=saveFile(); >Save File</button></p>
 
 	</div>
 
 	<div id = "divMenu" ></div>
 
 <script>
+
 // https://www.google.com/finance/getprices?q=AAPL&i=60&p=2d
 // https://www.google.com/finance/getprices?q=MMM&i=60
 
@@ -46,6 +49,9 @@
 
 // https://docs.google.com/spreadsheets/d/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/edit#gid=0
 
+	var count = 0;
+	var tradeData = '';
+	var timeStart;
 
 	let WikipediaDataFileName = 'https://spreadsheets.google.com/feeds/list/1_sv-QsJvHCfTCjRlpgv5ZwAUZetMCu-SfQHERAOuGZE/1/public/values?alt=json';
 
@@ -131,6 +137,66 @@ if ( isNaN( parseInt( marketCap, 10 ) ) ){ divError.innerHTML += entry.gsx$ticke
 
 	}
 
+
+
+	function getTradeData () {
+
+		if ( count < symbols.keys.length ) {
+
+			symbol = symbols.keys[ count ];
+
+			tradeData += '*** ' + symbol + '\n';
+
+			const url = 'http://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&outputsize=full&datatype=csv&symbol=' + symbol + '&interval=1min&apikey=TDB1';
+
+			requestFile( url );
+
+			logTradeData.innerHTML = count + '. ' + symbol + ' - ' + ( ( Date.now() - timeStart ) / 1000 ).toFixed();
+
+			count ++;
+
+		}
+
+	}
+
+
+	function requestFile( url ) {
+
+		const xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+//		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
+
+
+	function callback( xhr ) {
+
+		const response = xhr.target.response;
+
+//console.log( 'response', response );
+
+			tradeData += response.slice( 38 );
+
+			setTimeout( getTradeData, 200 );
+
+	}
+
+
+	function saveFile() {
+
+		var blob = new Blob( [ tradeData ] );
+		var a = document.body.appendChild( document.createElement( 'a' ) );
+		a.href = window.URL.createObjectURL( blob );
+		a.download = 'trade-data.txt';
+		a.click();
+		//		delete a;
+		a = null;
+
+	}
 
 </script>
 </body>
