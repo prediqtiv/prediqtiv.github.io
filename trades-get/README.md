@@ -5,7 +5,7 @@ _Request and obtain intraday trades for hundreds of stock market symbols for a n
 
 predIQtive uses a [Google Apps Script (GAS)]( https://developers.google.com/apps-script/ ) and spreadsheet in order to obtain its market data.
 
-## Full Screen Demo: GAS [SP500 Ticks Get4]( https://docs.google.com/spreadsheets/d/e/2PACX-1vSdXIsCATdFIqxA6GWenzmphvhiLXkBglXfP66if34v3y0Moc63o3wKGbFttGrIkP4SMl0IjzXRCMaF/pubhtml )
+## Full Screen Demo: GAS [SP500 Ticks Get4]( https://docs.google.com/spreadsheets/d/1cPnQAZPr3PBmWPQmevXXWXWJEdxZN7zATLAhP5fX6b0/edit#gid=0 )
 
 ## Embedded Web Page: SP500 Ticks Get
 
