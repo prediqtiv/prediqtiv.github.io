@@ -3,6 +3,10 @@
 
 ![]( https://prediqtiv.github.io/images/predIQtiv-logo2.png )
 
+## Due to changes in way Google allows access to financial data, the eyeCue scripts to gather fresh replay data are currently broken.
+
+## See start of new effort here: [PreIQtiv ~ Alpha Vantage Cookbook]( https://prediqtiv.github.io/alpha-vantage-cookbook/#README.md )
+
 <!--
 ### Full Screen Demo: [eyeCue Replay ]( https://prediqtiv.github.io/eye-cue/replay/ )
 -->
